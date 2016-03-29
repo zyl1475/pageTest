@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = false;
+		$.mobile.pushStateEnabled = false;
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+.ui-icon-person:after{ 
+background-image:url(images/person14.png);
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="login_page">
+        <div data-role="header">
+            <a href="#" data-rel="back" title="返回"> < </a><h2>赛事动态</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="footer" data-position="fixed">
+        	<div data-role="navbar">
+                <ul>
+                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active">赛事</a></li>        
+                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon">赛圈</a></li>        
+                    <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon">个人</a></li>   
+                </ul>
+        	</div>
+        </div>
+    </div>
+</body>
+</html>
