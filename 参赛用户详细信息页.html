@@ -21,12 +21,18 @@ background-image:url(images/个人.png);
 }
 a:link {
 	text-decoration: none;
+	font-weight:normal;
 }
 a:visited {
 	text-decoration: none;
 }
 a:active {
 	text-decoration: none;
+	font-weight:bold;
+}
+div ul li a{
+	font-size:36px;
+	font-weight:normal;
 }
 </style>
 <script>
@@ -34,8 +40,8 @@ a:active {
 </head>
 <body>
 <div data-role="page" data-theme="a" id="login_page">
-        <div data-role="header">
-            <a href="#" data-rel="back" title="返回"> < </a><h2>参赛用户个人信息</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="参赛用户.html" rel="external" data-rel="back" title="返回"><b> < </b></a><h2>参赛用户个人信息</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
             <!--该效果基于头像大小为160x160-->
         </div>
         <div data-role="content">
@@ -80,71 +86,17 @@ a:active {
                   <td colspan="4"><hr></td>
                 </tr>
                 <tr align="center">
-                  <td colspan="2"><img src="images/u1144.png">关注</td>
-                  <td colspan="2"><img src="images/点赞橙 - Assistor.png">点赞</td>
+                  <td colspan="2"><a href="#"><img src="images/u1144.png">关注</a></td>
+                  <td colspan="2"><a href="#"><img src="images/点赞橙 - Assistor.png">点赞</a></td>
                 </tr>
             </table>
-
-            <!--<table width="100%" border="0">
-            	<tr align="center">
-                  <td style="width:25%">&nbsp;</td>
-                  <td style="width:50%"><img src="images/userhead.png">雄鹰队8号球员</td>
-                  <td style="width:25%">&nbsp;</td>
-                </tr>
-                <tr>
-                  <td align="left">&nbsp;昵称</td>
-                  <td>&nbsp;</td>
-                  <td align="right">熊哥&nbsp;</td>
-                </tr>
-                <tr>
-                  <td colspan="3"><hr></td>
-                </tr>
-                <tr>
-                  <td align="left">&nbsp;性别</td>
-                  <td>&nbsp;</td>
-                  <td align="right">男&nbsp;</td>
-                </tr>
-                <tr>
-                  <td colspan="3"><hr></td>
-                </tr>
-                <tr>
-                  <td align="left">&nbsp;地区</td>
-                  <td>&nbsp;</td>
-                  <td align="right">广东&nbsp;深圳&nbsp;</td>
-                </tr>
-                <tr>
-                  <td colspan="3"><hr></td>
-                </tr>
-                <tr>
-                  <td align="left">&nbsp;个性签名</td>
-                  <td>&nbsp;</td>
-                  <td align="right">熊哥就是熊哥熊哥就是熊哥&nbsp;</td>
-                </tr>
-                <tr>
-                  <td colspan="3"><hr></td>
-                </tr>
-                <tr>
-                  <td align="left">&nbsp;QQ</td>
-                  <td>&nbsp;</td>
-                  <td align="right">1234567890&nbsp;</td>
-                </tr>
-                <tr>
-                  <td colspan="3"><hr></td>
-                </tr>
-                <tr>
-                  <td align="right"><img src="images/u1144.png">关注</td>
-                  <td>&nbsp;</td>
-                  <td align="left"><img src="images/点赞橙 - Assistor.png">点赞</td>
-                </tr>
-            </table>-->
-
     </div>
-        <div data-role="footer" data-position="fixed">
+        <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
         	<div data-role="navbar">
                 <ul>
-                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active">赛事</a></li>        
-                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon">赛圈</a></li>        
-                    <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon">个人</a></li>   
+                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛事</a></li>        
+                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛圈</a></li>        
+                    <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
                 </ul>
         	</div>
         </div>
