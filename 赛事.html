@@ -33,46 +33,78 @@ a:active {
 }
 </style>
 <script>
+	$(document).ready(function(){
+		$("#formerly").mousedown(function(){
+			$("#latest_game").hide();
+			$("#formerly_game").show();  
+		});
+		$("#latest").mousedown(function(){
+			$("#formerly_game").hide();
+			$("#latest_game").show();
+		});
+	});
 </script>
 </head>
 <body>
-    <div data-role="page" data-theme="a" id="login_page">
+    <div data-role="page" data-theme="a" id="eventcircle_page">
+    	<img src="images/3.jpg" width="100%" height="120px">
         <div data-role="navbar">
             <ul>
-                <li><a id="chat" href="#"><p>发布赛事</p></a></li>        
-                <li><a id="email" href="#"><p>参与赛事</p></a></li>
+                <li><a id="formerly" href="#"><p style="font-size:small">最新赛事</p></a></li>        
+                <li><a id="latest" href="#"><p style="font-size:small">往届赛事</p></a></li>
             </ul>
         </div>
         <div data-role="content">
-        	<div style="border:solid 1px red">
-            	<img src="images/1.jpg" width="100%" height="200px">
-                <h3>第二届完美杯足球赛</h3>
-                <span><img src="images/place.png">广东 深圳</span>&nbsp;
-                <span><img src="images/time.png">2016-12-12</span>
-                <h3>常规赛</h3>
+        	<div id="formerly_game">
+           		<div style="border:solid 1px #D3E8F1; margin-top:-10px">
+                    <table width="100%" style="font-size:small">
+                        <tr>
+                          <td colspan="4"><img src="images/1.jpg" width="100%" height="200px"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4"><b style="font-size:medium">第二届完美杯足球赛</b></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><img src="images/place.png">广东&nbsp;深圳</td>
+                          <td colspan="2"><img src="images/time.png">2016-12-12</td>
+                        </tr>
+                    </table>
+                    <p></p>
+                        <div style="float:left">
+                            <span>&nbsp;</span>
+                            <span style="background-color:#F97C43; border:solid 3px #F97C43">常规赛</span>
+                            <span style="background-color:#F97C43; border:solid 3px #F97C43">常规赛</span>
+                            <span style="background-color:#F97C43; border:solid 3px #F97C43">常规赛</span>
+                        </div>
+                        <div style="float:right">
+                        	<span style="background-color:#F97C43; border:solid 3px #F97C43">我要报名</span>
+                            <span>&nbsp;</span>
+                        </div>
+                    <p>&nbsp;</p>
+            	</div>
             </div>
-            <div style="border:solid 1px red">
-                <table width="100%" style="font-size:small">
-                    <tr>
-                      <td colspan="2"><img src="images/1.jpg" width="100%" height="200px"></td>
-                    </tr>
-                    <tr>
-                      <td colspan="2"><b>第二届完美杯足球赛</b></td>
-                    </tr>
-                    <tr>
-                      <td><img src="images/place.png">广东&nbsp;深圳</td>
-                      <td><img src="images/time.png">2016-12-12</td>
-                    </tr>
-                </table>
-                <b style="background-color:red">常规赛</b><b>常规赛</b><b>常规赛</b>
-                <li style="background-color:red">常规赛</li>
+            <div id="latest_game" hidden="">
+           		 <div style="border:solid 1px #D3E8F1; margin-top:-10px">
+                    <table width="100%" style="font-size:small">
+                        <tr>
+                          <td colspan="2"><img src="images/2.jpg" width="100%" height="200px"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><b style="font-size:medium">第二届完美杯足球赛</b></td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/place.png">广东&nbsp;深圳</td>
+                          <td><img src="images/time.png">2016-12-12</td>
+                        </tr>
+                    </table>
+            	</div>
             </div>
         </div>
         <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
         	<div data-role="navbar">
                 <ul>
-                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛事</a></li>        
-                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛圈</a></li>        
+                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛事</a></li>        
+                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛圈</a></li>        
                     <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
                 </ul>
         	</div>
