@@ -36,14 +36,14 @@ a:active {
 </style>
 <script>
 	function check(){
-		alert(" ");
+		alert("报名成功！");
 	}
 </script>
 </head>
 <body>
     <div data-role="page" data-theme="a" id="login_page">
         <div data-role="header" data-position="fixed" style="margin-top:-1px">
-            <a href="#" data-rel="back" title="返回"><b> < </b></a><h2>支付页面</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+            <a href="报名页面2.html" data-rel="back" title="返回" rel="external"><b> < </b></a><h2>支付页面</h2><a href="user(已登录-个人信息).html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
             <!--该效果基于头像大小为160x160-->
         </div>
         <div data-role="content">
@@ -73,15 +73,15 @@ a:active {
                     </tr>
                 </form>
             </table>
-			<a data-role="button" data-theme="a" onclick="check();">确认支付</a>
+			<a data-role="button" data-theme="a" onclick="check();" href="赛事动态主页面.html" rel="external">确认支付</a>
         </div>
         <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
         	<div data-role="navbar">
                 <ul>
-                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛事</a></li>        
-                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛圈</a></li>        
-                    <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
-                </ul>
+                <li><a id="chat" href="赛事.html" rel="external" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛事</a></li>        
+                <li><a id="email" href="赛圈.html" rel="external" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛圈</a></li>
+                <li><a id="person" href="user(已登录-个人信息).html" rel="external" data-icon="person" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
+            </ul>
         	</div>
         </div>
     </div>
