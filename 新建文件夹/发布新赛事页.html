@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = false;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	})
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+.ui-icon-person:after{ 
+background-image:url(images/个人.png);
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+<script>
+	$(document).ready(function(){
+		$("#participate").mousedown(function(){
+			$("#release_game").hide();
+			$("#participate_game").show();  
+		});
+		$("#release").mousedown(function(){
+			$("#participate_game").hide();
+			$("#release_game").show();
+		});
+	});
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="eventcircle_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#" data-rel="back" title="返回"><b> < </b></a><h2>发布新赛事申请表</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<h3 align="center">新赛事申请表</h3>
+  			<form>
+            	姓名：<br><input type="text" id="applicant_name" placeholder="请输入真实姓名">
+                身份证件编号：<br><input type="text" id="applicant_id" placeholder="请输入身份证编号">
+                手机号：<br><input type="tel" id="applicant_phone" placeholder="请输入手机号码">
+                电子邮箱：<br><input type="email" id="applicant_email" placeholder="请输入常用电子邮箱">
+                赛事类别:<br><select>
+                                <option id="football">足球</option>
+                                <option id="marathon">马拉松</option>
+                        	</select>
+                所在地：<br><input type="text" id="suozaidi" placeholder="请输入所在地">
+                单位全称：<br><input type="text" id="danwei" placeholder="请输入单位全称">
+                赛事规模：<br><input type="text" id="guimo" placeholder="请输入赛事大致规模">
+                赛事日期：<br><input type="date" id="time" placeholder="请输入赛事举办日期">
+                赛事简介：<br><textarea id="jianjie" placeholder="请填写赛事简介"></textarea>
+            </form>
+            <a data-role="button" data-theme="a" onclick="check();">确认申请</a>
+        </div>
+        <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div data-role="navbar">
+                <ul>
+                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛事</a></li>        
+                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛圈</a></li>        
+                    <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
+                </ul>
+        	</div>
+        </div>
+    </div>
+</body>
+</html>

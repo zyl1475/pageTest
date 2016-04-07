@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = false;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+.ui-icon-person:after{ 
+background-image:url(images/个人.png);
+}
+a:link {
+	text-decoration: none;
+	font-weight:normal;
+}
+a:visited {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+	font-weight:bold;
+}
+div ul li a{
+	font-size:36px;
+	font-weight:normal;
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="login_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="赛事动态.html" rel="external" data-rel="back" title="返回"><b> < </b></a><h2>赛事动态详细内容页</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<div>
+                <table width="100%" style="font-size:small">
+                    <tr>
+                    	<td width="10%" rowspan="2"><img src="images/eventeasy.png" style="border-radius:50%" width="45px" height="45px"></td>
+                    	<td width="90%">大赛易</td>
+                    </tr>
+                    <tr>
+                    	<td>2016-03-12&nbsp;20:30</td>
+                    </tr>
+                </table>
+                <hr>
+                <h2 align="center">我是这篇文章的标题</h2>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块</h4>
+                <img src="../赛前子页板块/images/1.jpg" width="100%" height="200px">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块这里是赛事结果详细内容页正文测试板块</h4>
+            </div>
+            <div>
+            	<b>精彩评论 0</b>
+                <hr>
+                <table width="100%" style="font-size:small">
+                    <tr>
+                    	<td width="10%" rowspan="2"><img src="images/testhead200.png" style="border-radius:50%" width="45px" height="45px"></td>
+                    	<td width="90%">这个是大赛易用户的用户名</td>
+                    </tr>
+                    <tr>
+                    	<td>03-12&nbsp;20:30</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2">这是楼上用户发布的评论内容这是楼上用户发布的评论内容这是楼上用户发布的评论内容</td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div style="background-color:#f5faff; border: solid 1px #E0EDF7">
+            	<table width="100%">
+                    <tr>
+                        <td> </td>
+                        <td align="right"><img src="images/eventeasy.png" style="border-radius:50%" width="45px" height="45px"></td>
+                        <td align="left"><input type="text" name="va" id="va" placeholder="说说你的观点..."/></td>
+                        <td align="left"><button>+</button></td>
+                        <td> </td>
+                    </tr>
+                </table>
+            </div>
+        	<div data-role="navbar">
+                <ul>
+                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛事</a></li>        
+                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛圈</a></li>        
+                    <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
+                </ul>
+        	</div>
+        </div>
+    </div>
+</body>
+</html>
