@@ -19,6 +19,12 @@
 </script>
 <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 <style type="text/css">
+.ui-icon-event:after{ 
+background-image:url(images/赛事.png);
+}
+.ui-icon-eventcircle:after{ 
+background-image:url(images/赛圈.png);
+}
 .ui-icon-person:after{ 
 background-image:url(images/个人.png);
 }
@@ -35,8 +41,8 @@ a:active {
 	margin-top:15px;
 }
 .user{
-margin-top:-68px;
-margin-left:15px;
+	margin-top:-68px;
+	margin-left:15px;
 }
 .user_head{
 	height: 90px; 
@@ -77,11 +83,11 @@ margin-left:15px;
 </head>
 <body>
     <div data-role="page" data-theme="a" id="event_page">
-    	<img src="images/3.jpg" width="100%" height="120px">
+    	<img src="images/3.jpg" width="100%" height="150px">
         <div data-role="navbar">
             <ul>
-                <li><a id="formerly" href="#"><p style="font-size:small">最新赛事</p></a></li>        
-                <li><a id="latest" href="#"><p style="font-size:small">往届赛事</p></a></li>
+                <li><a id="formerly" href="#" style="font-size:medium; font-weight:normal"><table><tr></tr><tr>最新赛事</tr><tr></tr></table></a></li>
+                <li><a id="latest" href="#" style="font-size:medium; font-weight:normal"><table><tr></tr><tr>往届赛事</tr><tr></tr></table></a></li>
             </ul>
         </div>
         <div data-role="content">
@@ -89,14 +95,14 @@ margin-left:15px;
            		<div style="border:solid 1px #D3E8F1; margin-top:-10px">
                     <table width="100%" style="font-size:small">
                         <tr>
-                          <td colspan="4"><img src="images/1.jpg" width="100%" height="200px"></td>
+                          	<td colspan="4"><img src="images/1.jpg" width="100%" height="200px"></td>
                         </tr>
                         <tr>
-                          <td colspan="4"><b style="font-size:medium">第二届完美杯足球赛</b></td>
+                          	<td colspan="4"><span style="font-size:medium">第二届完美杯足球赛</span></td>
                         </tr>
                         <tr>
-                          <td colspan="2"><img src="images/place.png">广东&nbsp;深圳</td>
-                          <td colspan="2"><img src="images/time.png">2016-12-12</td>
+                          	<td colspan="2"><img src="images/place.png">广东&nbsp;深圳</td>
+                          	<td colspan="2"><img src="images/time.png">2016-12-12</td>
                         </tr>
                     </table>
                     <p></p>
@@ -110,33 +116,42 @@ margin-left:15px;
                         <div style="float:right">
                         	<span style="background-color:#F97C43; border:solid 3px #F97C43">我要报名</span>
                             <span>&nbsp;</span>
-                        </div></div>
-                    <p style="margin-bottom:8px">&nbsp;</p>
+                        </div>
+                    </div>
+                    <p style="margin-bottom:6px">&nbsp;</p>
             	</div>
             </div>
             <div id="latest_game" hidden="">
            		 <div style="border:solid 1px #D3E8F1; margin-top:-10px">
                     <table width="100%" style="font-size:small">
                         <tr>
-                          <td colspan="2"><img src="images/2.jpg" width="100%" height="150px"></td>
+                          	<td colspan="2"><img src="images/2.jpg" width="100%" height="200px"></td>
                         </tr>
                         <tr>
-                          <td colspan="2"><b style="font-size:medium">第二届完美杯足球赛</b></td>
+                          	<td colspan="2"><span style="font-size:medium">第二届完美杯足球赛</span></td>
                         </tr>
                         <tr>
-                          <td><img src="images/place.png">广东&nbsp;深圳</td>
-                          <td><img src="images/time.png">2016-12-12</td>
+                          	<td><img src="images/place.png">广东&nbsp;深圳</td>
+                          	<td><img src="images/time.png">2016-12-12</td>
                         </tr>
                     </table>
+                    <p></p>
+                    <div style="margin-top:-10px">
+                        <span>&nbsp;</span>
+                        <span style="background-color:#F97C43; border:solid 3px #F97C43">常规赛</span>
+                        <span style="background-color:#F97C43; border:solid 3px #F97C43">常规赛</span>
+                        <span style="background-color:#F97C43; border:solid 3px #F97C43">常规赛</span>
+                        <p style="margin-bottom:-10px"></p>
+                    </div>
             	</div>
             </div>
         </div>
         <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
         	<div data-role="navbar">
                 <ul>
-                    <li><a id="chat" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛事</a></li>        
-                    <li><a id="email" href="#eventcircle_page" data-transition="flip" data-icon="person" class="ui-nodisc-icon" style="font-size:small">赛圈</a></li>        
-                    <li><a id="person" href="#user_page" data-icon="person" data-transition="flip" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
+                    <li><a id="event" href="#" data-icon="event" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">赛事</a></li>        
+                    <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">赛圈</a></li>        
+                    <li><a id="person" href="#user_page" data-icon="person" data-transition="flip" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">个人</a></li>   
                 </ul>
         	</div>
         </div>
@@ -155,32 +170,33 @@ margin-left:15px;
            		 <div style="border:solid 1px #D3E8F1; margin-top:-10px">
                     <table width="100%" style="font-size:small">
                         <tr>
-                          <td colspan="2"><img src="images/1.jpg" width="100%" height="200px"></td>
+                          	<td colspan="2"><img src="images/1.jpg" width="100%" height="200px"></td>
                         </tr>
                         <tr>
-                          <td colspan="2"><b style="font-size:medium">第二届完美杯足球赛</b></td>
+                          	<td colspan="2"><span style="font-size:medium">第二届完美杯足球赛</span></td>
                         </tr>
                         <tr>
-                          <td><img src="images/place.png">广东&nbsp;深圳</td>
-                          <td><img src="images/time.png">2016-12-12</td>
+                          	<td><img src="images/place.png">广东&nbsp;深圳</td>
+                          	<td><img src="images/time.png">2016-12-12</td>
                         </tr>
                     </table>
             	</div>
+                <p style="margin-top:-13px"></p>
                 <!--<a href="#"><img src="images/1.jpg" width="100%" height="100px" alt="发布新赛事"></a>-->
-                <a href="#"><div style="color:#FFFFFF; background-color:#6dafe3; font-size:80px; font-weight:bolder" align="center">+<p style="font-size:30px; margin-top:-20px">发布新赛事</p></div></a>
+                <a href="#"><div style="color:#FFFFFF; background-color:#6dafe3; font-size:80px; font-weight:bolder" align="center">+<p style="font-size:30px; font-weight:normal; margin-top:-20px">发布新赛事</p></div></a>
             </div>
             <div id="participate_game" hidden="">
            		 <div style="border:solid 1px #D3E8F1; margin-top:-10px">
                     <table width="100%" style="font-size:small">
                         <tr>
-                          <td colspan="2"><img src="images/1.jpg" width="100%" height="200px"></td>
+                          	<td colspan="2"><img src="images/3.jpg" width="100%" height="200px"></td>
                         </tr>
                         <tr>
-                          <td colspan="2"><b style="font-size:medium">第二届完美杯足球赛</b></td>
+                          	<td colspan="2"><span style="font-size:medium">第二届完美杯足球赛</span></td>
                         </tr>
                         <tr>
-                          <td><img src="images/place.png">广东&nbsp;深圳</td>
-                          <td><img src="images/time.png">2016-12-12</td>
+                          	<td><img src="images/place.png">广东&nbsp;深圳</td>
+                         	<td><img src="images/time.png">2016-12-12</td>
                         </tr>
                     </table>
             	</div>
@@ -189,9 +205,9 @@ margin-left:15px;
         <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
         	<div data-role="navbar">
                 <ul>
-                    <li><a id="chat" href="#event_page" data-icon="person" data-transition="flip" class="ui-nodisc-icon" style="font-size:small">赛事</a></li>        
-                    <li><a id="email" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active" style="font-size:small">赛圈</a></li>        
-                    <li><a id="person" href="#user_page" data-icon="person" data-transition="flip" class="ui-nodisc-icon" style="font-size:small">个人</a></li>   
+                    <li><a id="event" href="#event_page" data-icon="event" data-transition="flip" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">赛事</a></li>        
+                    <li><a id="eventcircle" href="#" data-icon="eventcircle" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">赛圈</a></li>        
+                    <li><a id="person" href="#user_page" data-icon="person" data-transition="flip" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">个人</a></li>   
                 </ul>
         	</div>
         </div>
@@ -199,8 +215,8 @@ margin-left:15px;
     
     
     <div data-role="page" data-theme="a" id="user_page">
-	<div data-role="header" data-position="fixed" style="margin-top:-1px">
-        <img alt="userbackground" src="images/bg1.png" width="100%" height="120px">
+	<div data-role="header" style="margin-top:-1px">
+        <img alt="userbackground" src="images/bg1.png" width="100%" height="150px">
         <div class="user">
             <div class="user_head" title="我的头像"><img alt="我的头像" src="images/userhead.png" width="100%" height="100%" style="border-radius:50%"></div>
             <div class="username"><h4>&nbsp;大赛易</h4></div>
@@ -210,43 +226,43 @@ margin-left:15px;
     <div class="user_information">
         <table width="100%">
             <tr>
-            <td><p></p></td>
-            <td><p></p></td>
-          </tr>
-          <tr onClick="test();">
-            <td align="left"><font color="#666666"><strong>&nbsp;昵称</strong></font></td>
-            <td align="right"><strong>大赛易&nbsp;</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center"><hr></td>
+            	<td><p></p></td>
+            	<td><p></p></td>
+          	</tr>
+          	<tr onClick="test();">
+            	<td align="left"><font color="#666666"><strong>&nbsp;昵称</strong></font></td>
+            	<td align="right"><strong>大赛易&nbsp;</strong></td>
+          	</tr>
+          	<tr>
+            	<td colspan="2" align="center"><hr></td>
             </tr>
-          <tr>
-            <td align="left"><font color="#666666"><strong>&nbsp;手机</strong></font></td>
-            <td align="right"><strong>18318337740&nbsp;</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center"><hr></td>
+          	<tr>
+            	<td align="left"><font color="#666666"><strong>&nbsp;手机</strong></font></td>
+            	<td align="right"><strong>18318337740&nbsp;</strong></td>
+          	</tr>
+          	<tr>
+            	<td colspan="2" align="center"><hr></td>
             </tr>
-          <tr>
-            <td align="left"><font color="#666666"><strong>&nbsp;性别</strong></font></td>
-            <td align="right"><strong>男&nbsp;</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center"><hr></td>
-          </tr>
-          <tr>
-            <td align="left"><font color="#666666"><strong>&nbsp;生日</strong></font></td>
-            <td align="right"><strong>11月11日&nbsp;</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center"><hr></td>
+          	<tr>
+            	<td align="left"><font color="#666666"><strong>&nbsp;性别</strong></font></td>
+            	<td align="right"><strong>男&nbsp;</strong></td>
+          	</tr>
+          	<tr>
+            	<td colspan="2" align="center"><hr></td>
+          	</tr>
+          	<tr>
+            	<td align="left"><font color="#666666"><strong>&nbsp;生日</strong></font></td>
+            	<td align="right"><strong>11月11日&nbsp;</strong></td>
+          	</tr>
+          	<tr>
+            	<td colspan="2" align="center"><hr></td>
             </tr>
-          <tr>
-            <td align="left"><font color="#666666"><strong>&nbsp;地区</strong></font></td>
-            <td align="right"><strong>广东&nbsp;韶关&nbsp;</strong></td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center"><hr></td>
+          	<tr>
+            	<td align="left"><font color="#666666"><strong>&nbsp;地区</strong></font></td>
+            	<td align="right"><strong>广东&nbsp;韶关&nbsp;</strong></td>
+          	</tr>
+          	<tr>
+            	<td colspan="2" align="center"><hr></td>
             </tr>
         </table>
     </div>
@@ -254,9 +270,9 @@ margin-left:15px;
     <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
         <div data-role="navbar">
             <ul>
-                <li><a id="chat" href="#event_page" data-icon="person" data-transition="flip" class="ui-nodisc-icon">赛事</a></li>        
-                <li><a id="email" href="#eventcircle_page" data-icon="person" data-transition="flip" class="ui-nodisc-icon">赛圈</a></li>        
-                <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon ui-btn-active">个人</a></li>   
+                <li><a id="event" href="#event_page" data-icon="event" data-transition="flip" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">赛事</a></li>
+                <li><a id="eventcircle" href="#eventcircle_page" data-icon="eventcircle" data-transition="flip" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">赛圈</a></li>
+                <li><a id="person" href="#" data-icon="person" class="ui-nodisc-icon" style="font-size:14px; font-weight:normal">个人</a></li>   
             </ul>
         </div>
     </div>  
