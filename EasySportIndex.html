@@ -36,26 +36,48 @@
 	#event,#eventcircle,#person{
 		font-size:14px;
 		font-weight:normal;
+		color:#7d7d7d;
+	}
+	#event_light,#eventcircle_light,#person_light{
+		font-size:14px;
+		font-weight:normal;
+		color:#6dafe3;
 	}
 	#formerly,#latest,#release,#participate{
 		font-size:large; 
 		font-weight:600;
 	}
-	#event:after{ 
+	#formerly,#release{
+		color:#6dafe3;
+	}
+	#event_light:after{ 
 		background: url("images/赛事.png") 50% 50% no-repeat; 
 		background-size: 36px 36px;
 	}
-	#eventcircle:after{ 
+	#eventcircle_light:after{ 
 		background: url("images/赛圈.png") 50% 50% no-repeat; 
 		background-size: 36px 36px;
 	}
-	#person:after{ 
+	#person_light:after{ 
 		background: url("images/个人.png") 50% 50% no-repeat;
 		background-size: 36px 36px;
-	} 
+	}
+	#event:after{ 
+		background: url("images/赛事灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#eventcircle:after{ 
+		background: url("images/赛圈灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#person:after{ 
+		background: url("images/个人灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}  
 	
 	a:link {
 		text-decoration: none;
+		font-weight:normal;
 	}
 	a:visited {
 		text-decoration: none;
@@ -100,19 +122,27 @@
 	$(document).ready(function(){
 		$("#formerly").mousedown(function(){
 			$("#latest_game").hide();
-			$("#formerly_game").show();  
+			$("#formerly_game").show(); 
+			$("#formerly").css("color","#6dafe3");
+			$("#latest").css("color","#000000");
 		});
 		$("#latest").mousedown(function(){
 			$("#formerly_game").hide();
 			$("#latest_game").show();
+			$("#formerly").css("color","#000000");
+			$("#latest").css("color","#6dafe3");
 		});
 		$("#participate").mousedown(function(){
 			$("#release_game").hide();
 			$("#participate_game").show();  
+			$("#release").css("color","#000000");
+			$("#participate").css("color","#6dafe3");
 		});
 		$("#release").mousedown(function(){
 			$("#participate_game").hide();
 			$("#release_game").show();
+			$("#participate").css("color","#000000");
+			$("#release").css("color","#6dafe3");
 		});
 	});
 </script>
@@ -150,7 +180,7 @@
                             <span style="font-size:14px; background-color:#e1e1e1; border:solid 4px #e1e1e1;">常规赛</span>
                         </div>
                         <div style="float:right; margin-top:-6px">
-                        	<span style="background-color:#F83236; border:solid 10px #F83236; color:#FFFFFF; font-size:16px">我要报名</span>
+                        	<a href="#"><span style="background-color:#F83236; border:solid 10px #F83236; color:#FFFFFF; font-size:16px">我要报名</span></a>
                             <span>&nbsp;</span>
                         </div>
                     </div>
@@ -185,7 +215,7 @@
         <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
         	<div class="nav-glyphish-example" data-role="navbar">
                 <ul>
-                    <li><a id="event" href="#event_page" data-transition="flip" data-icon="event" class="ui-btn-active">赛事</a></li>        
+                    <li><a id="event_light" href="#event_page" data-transition="flip" data-icon="event" class="ui-btn-active">赛事</a></li>        
                     <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle">赛圈</a></li>        
                     <li><a id="person" href="#user_page" data-icon="person" data-transition="flip">个人</a></li>   
                 </ul>
@@ -258,7 +288,7 @@
         	<div class="nav-glyphish-example" data-role="navbar">
                 <ul>
                     <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
-                    <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle">赛圈</a></li>        
+                    <li><a id="eventcircle_light" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle" class="ui-btn-active">赛圈</a></li>        
                     <li><a id="person" href="#user_page" data-icon="person" data-transition="flip">个人</a></li>   
                 </ul>
         	</div>
@@ -321,7 +351,7 @@
                 <ul>
                     <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
                     <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle">赛圈</a></li>        
-                    <li><a id="person" href="#" data-icon="person" data-transition="flip">个人</a></li>   
+                    <li><a id="person_light" href="#" data-icon="person" data-transition="flip" class="ui-btn-active">个人</a></li>   
                 </ul>
             </div>
         </div>  
@@ -370,7 +400,7 @@
         	<div class="nav-glyphish-example" data-role="navbar">
                 <ul>
                     <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
-                    <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle">赛圈</a></li>        
+                    <li><a id="eventcircle_light" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle" class="ui-btn-active">赛圈</a></li>        
                     <li><a id="person" href="#user_page" data-transition="flip" data-icon="person">个人</a></li>   
                 </ul>
         	</div>
