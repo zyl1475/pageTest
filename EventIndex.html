@@ -1,0 +1,506 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+	 	$.mobile.hashListeningEnabled = false;
+	 	$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+	.ui-page {  
+		backface-visibility: hidden;
+	}  
+	body,table,tr,td{
+		font-family: "Microsoft YaHei UI", "微软雅黑", Arial, "宋体";
+	}
+	.nav-glyphish-example .ui-btn{
+		padding-top: 40px;
+	}
+	.nav-glyphish-example .ui-btn:after{ 
+		width: 36px; 
+		height: 36px; 
+		margin-left: -18px;
+		margin-top: -4px; 
+		box-shadow: none;  
+		border-radius: 0;
+	}
+	#event,#eventcircle,#person{
+		font-size:14px;
+		font-weight:normal;
+		color:#7d7d7d;
+	}
+	#event_light,#eventcircle_light,#person_light{
+		font-size:14px;
+		font-weight:normal;
+		color:#6dafe3;
+	}
+	#event_light:after{ 
+		background: url("images/赛事.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#eventcircle_light:after{ 
+		background: url("images/赛圈.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#person_light:after{ 
+		background: url("images/个人.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#event:after{ 
+		background: url("images/赛事灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#eventcircle:after{ 
+		background: url("images/赛圈灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#person:after{ 
+		background: url("images/个人灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#home,#before,#during,#after,#other{
+		font-size:large; 
+		font-weight:600;
+	}
+	h3,h4{
+		color:#000000;
+	}
+	a:link {
+		text-decoration: none;
+		font-weight:normal;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+	}
+	
+.img{
+	width:64px;
+	height:64px;}
+	
+li a img{
+	width:100%;
+	height:100%;
+}	
+td img{ 
+	border-radius:50%;
+}
+
+
+.button1:hover{
+	background-image:url(images/baoming.png);
+	background-repeat:no-repeat;
+	border-radius:10px;
+}
+.button2:hover{
+	background-image:url(images/fatie.png);
+	background-repeat:no-repeat;
+	border-radius:10px;
+}
+</style>
+
+<script>
+	$(document).ready(function(){
+		$("#home").mousedown(function(){
+			$("#before_game").hide();
+			$("#during_game").hide();
+			$("#after_game").hide();
+			$("#other_game").hide();
+			$("#home_game").show();
+			$("#home").css("color","#6dafe3");
+			$("#before").css("color","#000000");
+			$("#during").css("color","#000000");
+			$("#after").css("color","#000000");
+			$("#other").css("color","#000000");    
+		});
+		$("#before").mousedown(function(){
+			$("#during_game").hide();
+			$("#after_game").hide();
+			$("#other_game").hide();
+			$("#home_game").hide();
+			$("#before_game").show();
+			$("#home").css("color","#000000");
+			$("#before").css("color","#6dafe3");
+			$("#during").css("color","#000000");
+			$("#after").css("color","#000000");
+			$("#other").css("color","#000000");
+		});
+		$("#during").mousedown(function(){
+			$("#before_game").hide();
+			$("#after_game").hide();
+			$("#other_game").hide();
+			$("#home_game").hide();
+			$("#during_game").show();
+			$("#home").css("color","#000000");
+			$("#before").css("color","#000000");
+			$("#during").css("color","#6dafe3");
+			$("#after").css("color","#000000");
+			$("#other").css("color","#000000");
+		});
+		$("#after").mousedown(function(){
+			$("#before_game").hide();
+			$("#other_game").hide();
+			$("#home_game").hide();
+			$("#during_game").hide();
+			$("#after_game").show();
+			$("#home").css("color","#000000");
+			$("#before").css("color","#000000");
+			$("#during").css("color","#000000");
+			$("#after").css("color","#6dafe3");
+			$("#other").css("color","#000000");
+		});
+		$("#yibaoming").mousedown(function(){
+			$("#more_1").hide();
+			$("#yibaoming_1").show();    
+		});
+		$("#more").mousedown(function(){
+			$("#yibaoming_1").hide();
+			$("#more_1").show();
+		});
+		$("ul li a #other").click(function(){
+			$(this).find(".jnNav").show(300);
+		},function(){
+			$(this).find(".jnNav").hide(300);
+		});
+	});
+
+
+/*实现页内跳转定位到某个ID*/
+function goTotop(obj){
+	$("#purchase").click(function(){
+			$("#during_game").hide();
+			$("#after_game").hide();
+			$("#other_game").hide();
+			$("#home_game").show();
+			$("#before_game").hide();
+			$("#formerly").focus();
+			$("#home").css("color","#6dafe3");
+			$("#before").css("color","#000000");
+			$("#during").css("color","#000000");
+			$("#after").css("color","#000000");
+			$("#other").css("color","#000000");
+			
+	var _targetTop = $('#'+obj).offset().top;//获取位置
+	jQuery("html,body").animate({scrollTop:_targetTop},1);//跳转
+		});
+
+}
+</script>
+
+</head>
+<body>
+<div data-role="page" data-theme="a" id="detail_page">
+           
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       	<a href="#" data-rel="back" title="返回"><b> < </b></a><h2>XXXX赛事详情页</h2><a href="" style="width:10px; height:16px; border-radius:50%; border:0" data-transition="flip"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    </div>
+    
+    <div data-role="content">
+        <div id="home_game">
+        <!--主页内容开始-->
+           <!--我要报名开始-->
+        <img src="images/top.png" width="100%" height="150px">
+        <div>
+        <table width="100%" align="center">
+        	<tr>
+            	<td colspan="4"><a href="#" data-role="button" style="background-color:#F83236; color:#FFFFFF">我要报名</a></td>
+            </tr>
+            <tr>
+                <td colspan="4"><br></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td align="center"><img src="images/place.png">&nbsp;河南&nbsp;信阳市</td>
+                <td>&nbsp;</td>
+                <td><img src="images/time.png">&nbsp;2016.03.15&nbsp;15:55</td>
+            </tr>
+            <tr>
+                <td colspan="4"><br></td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+        </table>
+     </div>
+         <!--我要报名结束-->
+         <!--赛事详情开始-->
+         <div>  
+            <div><h3>赛事详情</h3></div>                       
+            <div style=" width:90%; margin-left:5%;"><p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+            </p>
+        </div>
+        </div>
+        <!--赛事详情结束-->
+        <!--简介/规则开始-->
+        <div>  
+           <div><h3>简介/规则</h3></div>                       
+           <div style=" width:90%; margin-left:5%;"><p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+            </p>
+          </div>
+          </div>
+       <!--简介/规则结束-->
+         <!--已报名开始-->
+       <div style="cursor:pointer;">
+       <table width="200" border="0">
+            <tr>
+            <td><a id="yibaoming"><h4>已报名</h4></a></td>
+            <td><a id="more"><h4>更多</h4></a></td>
+            </tr>
+       </table>
+       </div>
+       <div style="font-size:12px; text-align:center;" >
+          <div id="yibaoming_1" >
+          <table width="100%" border="0">
+              <tr>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+              </tr>
+              <tr>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/组 1 副本 6.png" class="img"><div>樱桃</div></td>
+              </tr>
+          </table>
+          </div>
+          <div id="more_1" hidden="">
+          <table width="100%" border="0">
+              <tr>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+              </tr>
+              <tr>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+                  <td><img src="images/头像 - Assistor.png" class="img"><div>樱桃</div></td>
+              </tr>
+          </table>                 
+          </div>
+       </div>
+       <!--已报名结束-->
+       <!--组织者开始-->
+       <div class="box04_con" id="xcshow" >
+            <h3>组织者</h3>
+            <div align="center"><img src="images/eventeasy.png" style="border-radius:50%">
+            	<br>深圳市主球协会<br>@footbor
+            </div>
+       </div>
+       <!--组织者结束-->
+       <!--电话开始-->
+       <h3>联系电话</h3><hr>
+		<div align="center">
+            <table width="100%" style="margin-top:-20px">
+                <tr>
+                  <td width="10%" rowspan="4">&nbsp;</td>
+                  <td colspan="3">&nbsp;</td>
+                  <td width="30%" rowspan="4">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="20%" rowspan="2"><img src="images/phone.png" style="width:80px; height:80px;"></td>
+                  <td width="20%">18318318311</td>
+                  <td width="20%">18181818181</td>
+                </tr>
+                <tr>
+                  <td>18318318318</td>
+                  <td>18318318318</td>
+                </tr>
+                <tr>
+                  <td colspan="3"></td>
+                </tr>
+            </table>
+            <hr>
+		</div>
+      <!--电话结束-->
+        <!--竞赛项目/分组开始-->
+        <div class="box04_con" id="xwbg">  
+           <div><h3>竞赛项目/分组</h3></div>                       
+           <div style=" width:90%; margin-left:5%;"><p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+            </p>
+          </div>
+          </div>
+       <!--竞赛项目/分组结束-->
+       <!--商标开始-->
+    <div>
+        <ul data-role="listview" style="margin-top:0px; font-size:small" data-inset="true">
+            <li data-icon="false">
+             <div align="center"><img src="images/eventeasy.png" width="15px;" height="15px;">由大赛易提供报名技术支持</div>
+            </li>
+        </ul>
+      </div>
+       <!--商标结束-->
+    
+     <!--按钮开始-->
+        <div  style="margin:0 auto; position:fixed; bottom:10%;border-radius:50%">
+          <a href="#"><div class="button1"><img src="images/baoming.png" style="opacity:0.3;"></div></a>
+         <a href="#"><div class="button2"><img src="images/fatie.png" style="opacity:0.3"></div></a>
+        
+       </div>
+     <!--按钮结束-->
+  </div>
+ <!--主页内容结束-->
+ 
+ <!--赛前内容开始-->
+        <div id="before_game" hidden="">
+            <h3>赛前动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false" style="height:311px">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="开幕式.html" rel="external">
+                                <img src="images/开幕式@2x.png"/>
+                                <h2>开幕式</h2>
+                            </a>
+                        </li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+        
+            <!--赛前内容结束-->
+            
+            <!--赛时内容开始-->
+        <div id="during_game" hidden="">
+            <h3>赛时动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="赛时动态.html" rel="external">
+                                <img src="images/组 2.png">
+                                <h2 style="margin-top:-5px">赛时动态</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="参赛用户队伍.html" rel="external">
+                                <img src="images/组 3.png">
+                                <h2 style="margin-top:-5px" >参赛用户队伍</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="赛事结果详细内容页.html" rel="external">
+                                <img src="images/组 4.png">
+                                <h2 style="margin-top:-5px">赛事结果</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+           
+            <!--赛时内容结束-->
+            
+            <!--赛后内容开始-->
+        <div id="after_game" hidden="">
+            <h3>赛后动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="赛事结果.html" rel="external">
+                                <img src="images/足球图片 - Assistor.png">
+                                <h2 style="margin-top:-5px">赛事结果</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="数据统计页面.html" rel="external">
+                                <img src="images/数据统计.jpg">
+                                <h2 style="margin-top:-5px" >数据统计</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="闭幕式页面.html" rel="external">
+                                  <img src="images/闭幕式.jpg">
+                                <h2 style="margin-top:-5px">闭幕式</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+           </ul>
+        </div>        
+       
+        <!--赛后内容结束-->
+        
+        <!--...内容开始-->
+   	 	<div id="five_game" hidden="">
+           
+    	</div>        
+     </div>
+        <!--...内容结束-->
+        
+        <!--页脚内容开始-->
+    <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        <div class="nav-glyphish-example" data-role="navbar">
+            <ul>
+                <li><a id="home" style="color:#6dafe3"><table><tr></tr><tr>主页</tr><tr></tr></table></a></li>
+                <li><a id="before"><table><tr></tr><tr>赛前</tr><tr></tr></table></a></li>
+                <li><a id="during"><table><tr></tr><tr>赛时</tr><tr></tr></table></a></li>
+                <li><a id="after"><table><tr></tr><tr>赛后</tr><tr></tr></table></a></li>
+                <li><a id="other" href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop"><table><tr></tr><tr>...</tr><tr></tr></table></a></li>
+            </ul>
+        </div>
+    </div>    
+        <!--页脚内容结束-->
+        
+	<div data-role="popup" id="purchase" data-overlay-theme="c" class="ui-content" style="position:absolute;width:120px; margin-left:45px; margin-top:-70px;">
+        <table border="1px" cellspacing="0px" style="border-collapse:collapse" class="table1">
+            <tr>
+                <td><a  href="赛事动态主页面.html javascript:void(0)" onclick="goTotop('xwbg')" data-rel="back" data-inline="true" data-mini="true">竞赛项目/分组</a></td>
+            </tr>
+            <tr>
+                <td><a a href="javascript:void(0)" onclick="goTotop('xcshow')"  data-rel="back" data-inline="true" data-mini="true">组织者信息</a></td>
+            </tr>
+            <tr>
+                <td><a href="赛场定位.html" rel="external">赛场定位</a></td>
+            </tr>
+            <tr>
+                <td><a href="扫码签到.html" rel="external">扫码签到</a></td>
+            </tr>
+            <tr>
+                <td><a href="幸运抽奖.html" rel="external">幸运抽奖</a></td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
+</body>
+</html>
