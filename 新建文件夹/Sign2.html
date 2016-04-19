@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = false;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+	h3{
+		color:#000000;
+	}
+	a:link {
+		text-decoration: none;
+		font-weight:normal;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+		font-weight:bold;
+	}
+</style>
+<script>
+	/*$(function check(){
+	
+		$.mobile.changePage("#pay_page",{
+	
+			transition:'slideup'
+	
+		});
+	
+	});*/
+
+	function check(){
+		$.mobile.changePage("#pay_page",{transition:'slideup'});
+	}
+	function checkpay(){
+		alert("报名成功！");
+		$.mobile.changePage("EventIndex.html",{transition:'flip'});
+	}
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="sign_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="EventIndex2.html" rel="external" title="返回"><b> < </b></a><h2>报名页面</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+            <h3 align="center">武汉奔跑吧成立一周年庆典报名</h3>            
+            <div style="border: solid 1px #D3E8F1; font-size:small; border-radius:5px">
+                <table width="100%">
+                    <tr>
+                      <td rowspan="4"></td>
+                      <td colspan="3">全程马拉松选手招募[团体]&nbsp;&nbsp;<span style="background-color:#DDE300; border: solid 2px #DDE300;">正在报名</span></td>
+                    </tr>
+                    <tr>
+                      <td>竞赛项目:&nbsp;全程马拉松选手</td>
+                      <td rowspan="2"></td>
+                      <td rowspan="2" align="center"><a href="#fill_page" data-transition="slideup"><span style="background-color:#F83236; border: solid 6px #F83236; font-size:18px; color:#FFFFFF">我要报名</span></a></td>
+                    </tr>
+                    <tr>
+                      <td>年龄要求:&nbsp;18岁-60岁</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">截止时间:&nbsp;2016.05.04 21:05</td>
+                    </tr>
+                </table>
+            </div>
+            <p></p>
+            <div style="border: solid 1px #D3E8F1; font-size:small; border-radius:5px">
+                <table width="100%">
+                    <tr>
+                      <td rowspan="4"></td>
+                      <td colspan="3">半程马拉松选手招募[个人]&nbsp;&nbsp;<span style="background-color:#CBCBCB; border: solid 2px #CBCBCB;">已结束</span></td>
+                    </tr>
+                    <tr>
+                      <td>竞赛项目:&nbsp;半程马拉松选手</td>
+                      <td rowspan="2"></td>
+                      <td rowspan="2" align="center"><a href="#" data-transition="slideup"><span style="background-color:#CBCBCB; border:solid 6px #CBCBCB; font-size:18px; color:#FFFFFF">我要报名</span></a></td>
+                    </tr>
+                    <tr>
+                      <td>年龄要求:&nbsp;18岁-70岁</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">截止时间:&nbsp;2016.05.04 21:05</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+	
+    <div data-role="page" data-theme="a" id="fill_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#sign_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名信息填写页面</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<form>
+            	姓名：<br><input type="text" id="applicant_name" placeholder="请输入真实姓名">
+                出生日期：<br><input type="date" id="applicant_birthday" placeholder="请选择出生日期">
+                <table width="100%">
+                	性别：<br><tr>
+                    	<td colspan="2">
+                            <label>
+                            	<input type="radio" name="sex" value="男" id="sex_0">男
+                            </label>
+                		</td>
+                        <td colspan="2">
+                          <label>
+                            <input type="radio" name="sex" value="女" id="sex_1">女
+                            </label>
+                        </td>
+               		</tr>
+                    <tr>
+                    	<td>
+                            血型：<br><label>
+                            	<input type="radio" name="blood" value="A" id="blood_0">A
+                            </label>
+                		</td>
+                		<td>
+                            <br><label>
+                            	<input type="radio" name="blood" value="B" id="blood_1">B
+                            </label>
+                		</td>
+                        <td>
+                            <br><label>
+                            	<input type="radio" name="blood" value="O" id="blood_2">O
+                            </label>
+                		</td>
+                		<td>
+                            <br><label>
+                            	<input type="radio" name="blood" value="AB" id="blood_3">AB
+                            </label>
+                		</td>
+                	</tr>
+            	</table>
+                身份证件编号：<br><input type="text" id="applicant_id" placeholder="请输入身份证编号">
+                手机号：<br><input type="tel" id="applicant_phone" placeholder="请输入手机号码">
+                电子邮箱：<br><input type="email" id="applicant_email" placeholder="请输入常用电子邮箱">
+                紧急联系人：<br><input type="text" id="emergency_name" placeholder="请输入紧急联系人姓名">
+                紧急联系电话：<br><input type="tel" id="emergency_phone" placeholder="请输入紧急联系人的电话号码">
+                通讯地址：<br><input type="text" id="applicant_name" placeholder="请输入通讯地址">
+            </form>
+            <a data-role="button" onclick="check();">下一步</a>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="pay_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#fill_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>支付页面</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+            <table width="100%">
+            	<form>
+                    <tr>
+                        <td width="4%"><img src="images/userhead.png" style="border-radius:50%" width="60px" height="60px"></td>
+                        <td width="96%">大赛易</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><b>￥0.00</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            支付方式:<select>
+                                <option>微信支付</option>
+                                <!--<option>大赛易钱包支付</option>-->
+                                <option>银行卡支付</option>
+							</select>
+						</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">支付密码:<input type="password" placeholder="支付密码"></td>
+                    </tr>
+                </form>
+            </table>
+			<a data-role="button" onclick="checkpay();" href="EventIndex.html">确认支付</a>
+        </div>
+    </div>
+    
+</body>
+</html>

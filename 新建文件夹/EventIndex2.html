@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+	 	$.mobile.hashListeningEnabled = false;
+	 	$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+	.ui-page {  
+		backface-visibility: hidden;
+	}  
+	body,table,tr,td{
+		font-family: "Microsoft YaHei UI", "微软雅黑", Arial, "宋体";
+	}
+	.nav-glyphish-example .ui-btn{
+		padding-top: 40px;
+	}
+	.nav-glyphish-example .ui-btn:after{ 
+		width: 36px; 
+		height: 36px; 
+		margin-left: -18px;
+		margin-top: -4px; 
+		box-shadow: none;  
+		border-radius: 0;
+	}
+	#home,#before,#during,#after,#other{
+		font-size:14px;
+		font-weight:normal;
+		color:#7d7d7d;
+	}
+	#home_light,#before_light,#during_light,#after_light,#other_light{
+		font-size:14px;
+		font-weight:normal;
+		color:#6dafe3;
+	}
+	#home_light:after{ 
+		background: url("images/主页.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#before_light:after{ 
+		background: url("images/赛前.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#during_light:after{ 
+		background: url("images/赛时.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#after_light:after{ 
+		background: url("images/赛后.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#other_light:after{ 
+		background: url("images/更多.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#home:after{ 
+		background: url("images/主页灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#before:after{ 
+		background: url("images/赛前灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#during:after{ 
+		background: url("images/赛时灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#after:after{ 
+		background: url("images/赛后灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#other:after{ 
+		background: url("images/更多灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#tel{
+		color:#008CFF;
+	}
+	h3,h4{
+		color:#000000;
+	}
+	a:link {
+		text-decoration: none;
+		font-weight:normal;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+	}
+	
+	li a img{
+		width:100%;
+		height:100%;
+	}	
+	#signed tr td img{ 
+		border-radius:50%;
+		width:55px;
+		height:55px;
+	}
+	#organizer img{
+		border-radius:50%;
+		width:120px;
+		height:120px;
+	}
+	.sign:hover{
+		background-image:url(images/我要报名.png);
+		background-repeat:no-repeat;
+	}
+</style>
+
+<script>
+	$(document).ready(function(){
+		
+		$("ul li a #other").click(function(){
+			$(this).find(".jnNav").show(300);
+		},function(){
+			$(this).find(".jnNav").hide(300);
+		});
+	});
+
+
+/*实现页内跳转定位到某个ID*/
+
+</script>
+</head>
+<body>
+	<!--主页-->
+	<div data-role="page" id="home_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EasySportIndex.html" rel="external" title="返回"><b> < </b></a><h2>武汉奔跑吧成立一周年庆典</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<div id="home_game">
+				<img src="images/武汉奔跑吧成立一周年庆典.jpg" width="100%" height="150px">
+                <div>
+                    <table width="100%" align="center">
+                        <tr>
+                            <td colspan="4"><a href="Sign.html" rel="external" data-role="button" style="background-color:#F83236; color:#FFFFFF">我要报名</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><br></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><img src="images/place.png">&nbsp;湖北&nbsp;武汉市</td>
+                            <td>&nbsp;</td>
+                            <td><img src="images/time.png">&nbsp;2016.04.05&nbsp;21:04</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><p></p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><hr></td>
+                        </tr>
+					</table>
+				</div>
+				<div>  
+                    <h3>赛事详情</h3>                       
+                    <div>
+                    	<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                	</div>
+                    <hr>
+				</div>
+                <div>  
+                   	<h3>简介/规则</h3>                      
+					<div style="font-size:14px">
+                   		<p>武汉奔跑吧</p>
+                  	</div>
+                    <hr>
+				</div>
+				<div>
+                    <h3>已报名<font color="#FC0105" size="-6">(110)</font></h3>
+				</div><p></p>
+				<div style="font-size:12px; text-align:center;" id="signed">
+					<div>
+                        <table width="100%">
+							<tr>
+								<td><a href="#"><img src="images/组 1 副本 6.png"></a></td>
+                                <td><a href="#"><img src="images/testhead200.png"></a></td>
+                                <td><a href="#"><img src="images/头像 - Assistor.png"></a></td>
+                                <td><a href="#"><img src="images/组 5.png"></a></td>
+                                <td><a href="#"><img src="images/组 1.png"></a></td>
+                            </tr>
+                            <tr>
+                             	<td width="20%">雪旅</td>
+                              	<td width="20%">章鱼哥</td>
+                              	<td width="20%">吴一凡</td>
+                              	<td width="20%">樱桃</td>
+                              	<td width="20%">一语点醒梦中人</td>
+                            </tr>
+                            <tr>
+                              	<td><a href="#"><img src="images/头像@2x.png"></a></td>
+                                <td><a href="#"><img src="images/组 6.png"></a></td>
+                                <td><a href="#"><img src="images/userhead.png"></a></td>
+                                <td><a href="#"><img src="images/eventeasy.jpg"></a></td>
+                                <td><a href="#"><img src="images/组 2.png"></a></td>
+                            </tr>
+                            <tr>
+                              	<td>Anyso</td>
+                              	<td>本宝宝</td>
+                              	<td>该用户是帅哥</td>
+                              	<td>游客3145</td>
+                              	<td>挑战者</td>
+                            </tr>
+                        </table>
+					</div>
+                    <hr>
+               	</div>
+               	<div id="organizer">
+					<h3>组织者</h3>
+                    <div align="center">
+                        <img src="images/武汉奔跑吧组织者.jpg" style="border-radius:50%">
+                        <br>武汉奔跑吧<br>@漠之
+                    </div>
+               	</div>
+				<h3>联系电话</h3>
+                <hr>
+				<div align="center">
+                    <table width="50%">
+                        <tr align="right">
+                          <td rowspan="3"><img src="images/phone.png" style="width:60px; height:60px;"></td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td id="tel">18062693335</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    <hr>
+				</div>
+                <div>  
+					<h3 id="competition">竞赛项目/分组</h3>                       
+					<div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                  	</div>
+                    <hr>
+                </div>
+                <a href="Sign.html" rel="external" data-role="button" style="background-color:#F83236; color:#FFFFFF">我要报名</a>
+				<div align="center" style="font-size:smaller">
+                    <img src="images/eventeasy.png" width="20px;" height="20px;">本赛事由大赛易提供报名技术支持
+                </div>
+				<div style="margin:0 auto; position:fixed; bottom:10%;border-radius:50%">
+					<a href="Sign.html" rel="external">
+                    	<div class="sign">
+                        	<img src="images/我要报名.png" style="opacity:0.3">
+                        </div>
+                    </a>
+                </div>
+        	</div>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home_light" href="#" data-icon="home" class="ui-btn-active">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during" data-transition="flip">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    <!--赛前页-->
+    <div data-role="page" id="before_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>武汉奔跑吧成立一周年庆典</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<h3>赛前动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false" style="height:311px">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="OpeningCeremony.html" rel="external">
+                                <img src="images/开幕式@2x.png"/>
+                                <h2>开幕式</h2>
+                            </a>
+                        </li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before_light" href="#" data-icon="before" class="ui-btn-active">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during" data-transition="flip">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    <!--赛时页-->
+    <div data-role="page" id="during_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>武汉奔跑吧成立一周年庆典</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<h3>赛时动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="DuringDynamic.html" rel="external">
+                                <img src="images/组 2.png">
+                                <h2 style="margin-top:-5px">赛时动态</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="Participant.html" rel="external">
+                                <img src="images/组 3.png">
+                                <h2 style="margin-top:-5px" >参赛用户队伍</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="DuringResult.html" rel="external">
+                                <img src="images/组 4.png">
+                                <h2 style="margin-top:-5px">赛时结果</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during_light" href="#" data-icon="during" class="ui-btn-active">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    <!--赛后页-->
+    <div data-role="page" id="after_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>武汉奔跑吧成立一周年庆典</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<h3>赛后动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="CompetitionResult.html" rel="external">
+                                <img src="images/足球图片 - Assistor.png">
+                                <h2 style="margin-top:-5px">赛事结果</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="DataStatistics.html" rel="external">
+                                <img src="images/数据统计.jpg">
+                                <h2 style="margin-top:-5px" >数据统计</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="ClosingCeremony.html" rel="external">
+                                <img src="images/闭幕式.jpg">
+                                <h2 style="margin-top:-5px">闭幕式</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+           </ul>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during" data-transition="flip">赛时</a></li>
+                    <li><a id="after_light" href="#" data-icon="after" class="ui-btn-active">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    
+    <div data-role="page" id="other_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>武汉奔跑吧成立一周年庆典</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<table>
+            	<tr><a href="#home_page" data-role="button" data-transition="flip" onClick="goTotop('organizer');">竞赛项目/分组</a></tr>
+                <tr><a href="#home_page" data-role="button" data-transition="flip" onClick="goTotop('competition');">组织者</a></tr>
+                <tr><a href="#location_page" data-role="button" data-transition="slideup">赛场定位</a></tr>
+                <tr><a href="#sign_page" data-role="button" data-transition="slideup">扫码签到</a></tr>
+                <tr><a href="#lottery_page" data-role="button" data-transition="slideup">幸运抽奖</a></tr>
+            </table>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other_light" href="#" data-icon="other" class="ui-btn-active">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    
+    <div data-role="page" id="location_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="#other_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>赛场定位</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<img src="images/ditu.PNG" width="100%" height="100%">
+        </div>
+    </div>
+    
+    <div data-role="page" id="sign_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="#other_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>扫码签到</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<img src="images/大赛易微信二维码.png" width="100%" height="100%" alt="我的二维码">
+            <a href="#other_page" data-role="button" data-transition="slidedown">扫码完毕</a>
+        </div>
+    </div>
+    
+    <div data-role="page" id="lottery_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="#other_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>幸运抽奖</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<img src="images/大赛易微信二维码.png" width="100%" height="100%">
+			<a href="#other_page" data-role="button" data-transition="slidedown">开始抽奖</a>
+        </div>
+    </div>
+    
+</body>
+</html>

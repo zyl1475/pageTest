@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+	 	$.mobile.hashListeningEnabled = false;
+	 	$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+	.ui-page {  
+		backface-visibility: hidden;
+	}  
+	body,table,tr,td{
+		font-family: "Microsoft YaHei UI", "微软雅黑", Arial, "宋体";
+	}
+	.nav-glyphish-example .ui-btn{
+		padding-top: 40px;
+	}
+	.nav-glyphish-example .ui-btn:after{ 
+		width: 36px; 
+		height: 36px; 
+		margin-left: -18px;
+		margin-top: -4px; 
+		box-shadow: none;  
+		border-radius: 0;
+	}
+	#home,#before,#during,#after,#other{
+		font-size:14px;
+		font-weight:normal;
+		color:#7d7d7d;
+	}
+	#home_light,#before_light,#during_light,#after_light,#other_light{
+		font-size:14px;
+		font-weight:normal;
+		color:#6dafe3;
+	}
+	#home_light:after{ 
+		background: url("images/主页.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#before_light:after{ 
+		background: url("images/赛前.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#during_light:after{ 
+		background: url("images/赛时.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#after_light:after{ 
+		background: url("images/赛后.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#other_light:after{ 
+		background: url("images/更多.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#home:after{ 
+		background: url("images/主页灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#before:after{ 
+		background: url("images/赛前灰.png") 50% 50% no-repeat; 
+		background-size: 36px 36px;
+	}
+	#during:after{ 
+		background: url("images/赛时灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#after:after{ 
+		background: url("images/赛后灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#other:after{ 
+		background: url("images/更多灰.png") 50% 50% no-repeat;
+		background-size: 36px 36px;
+	}
+	#tel{
+		color:#008CFF;
+	}
+	h3,h4{
+		color:#000000;
+	}
+	a:link {
+		text-decoration: none;
+		font-weight:normal;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+	}
+	
+	li a img{
+		width:100%;
+		height:100%;
+	}	
+	#signed tr td img{ 
+		border-radius:50%;
+		width:55px;
+		height:55px;
+	}
+	#organizer img{
+		border-radius:50%;
+		width:120px;
+		height:120px;
+	}
+	.sign:hover{
+		background-image:url(images/我要报名.png);
+		background-repeat:no-repeat;
+	}
+</style>
+
+<script>
+	$(document).ready(function(){
+		
+		$("ul li a #other").click(function(){
+			$(this).find(".jnNav").show(300);
+		},function(){
+			$(this).find(".jnNav").hide(300);
+		});
+	});
+
+
+/*实现页内跳转定位到某个ID*/
+
+</script>
+</head>
+<body>
+	<!--主页-->
+	<div data-role="page" id="home_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EasySportIndex.html" rel="external" title="返回"><b> < </b></a><h2>中国上市公司五人足球涨停赛</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<div id="home_game">
+				<img src="images/中国上市公司五人足球涨停赛.jpg" width="100%" height="150px">
+                <div>
+                    <table width="100%" align="center">
+                        <tr>
+                            <td colspan="4"><a href="Sign.html" rel="external" data-role="button" style="background-color:#F83236; color:#FFFFFF">我要报名</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><br></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><img src="images/place.png">北京&nbsp;北京市</td>
+                            <td>&nbsp;</td>
+                            <td><img src="images/time.png">&nbsp;2016.05.01&nbsp;08:10</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><p></p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><hr></td>
+                        </tr>
+					</table>
+				</div>
+				<div>  
+                    <h3>赛事详情</h3>                       
+                    <div>
+                    	<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                	</div>
+                    <hr>
+				</div>
+                <div>  
+                   	<h3>简介/规则</h3>                      
+					<div style="font-size:14px">
+                   		<p>2016五星上将杯中国上市公司五人足球争霸赛暨中国主板、二板、三板上市公司双创发展峰会活动方案<br><br>赛会宗旨：赛里看协作、展斗志、亮风采、创辉煌，再吹新号角，会中听高论、开心智、绘新图、走大道，续写大篇章<br><br>主办单位：中国上市公司协作发展促进会<br>中国省市承办地地方人民政府<br><br>承办单位：中国上市公司协作发展促进会文化体育局<br>两岸伟业投资管理（北京）有限公司<br>承办地地方公司或机构<br><br>参加对象：中国境内主板、二板、三板上市公司代表队<br><br>邀请媒体：全球媒体共168家<br>A世界排名前十大通讯社<br>B中央电视台、凤凰卫视、全国34个省区的卫星电视<br>C全国经济报刊杂志<br>D全国网络经济媒体<br><br>金融机构：中国银行、工商银行、农业银行、建设银行、中信银行、光大银行、华夏银行、广东发展银行、深圳发展银行、招商银行、上海浦东发展银行、兴业银行、民生银行、恒丰银行、浙商银行、渤海银行和平安银行<br><br>投资机构：青云创投、高盛、红杉资本、鼎晖创投、枫丹国际、派杰投资银行、凯雷投资、长安私人资本、格林雷斯、汉能资本、启明创投、智基创投、美国光速创投、世盈创业投资有限公司、贝祥投资集团、德同资本管理有限公司、凯旋创投、天泉投资、祥峰资本、凯鹏华盈、联想投资、赛富亚洲投资资金、维思投资、艾库乐森新能源投资有限公司、北京京能能源科技投资有限公司、上海裕安投资有限公司、银杉投资顾问（北京)有限公司、科桥投资、开投基金、四维资本、英特尔投资、软银赛富、中欧投资、戈壁投资、厚朴基金、弘毅投资、汇丰直投、必百瑞、江苏高科投、深圳高科投、IDG投资、深圳创投、上海联创、海纳亚洲、凯雷、成为基金、联创策源、纪源资本、兰馨亚洲、摩根士丹利（上述机构筛选邀请）<br><br>奖品赞助：五星上将企业集团<br>爱国者集团<br><br>开球嘉宾：新中国著名球星——李惠堂、张俊秀、张宏根、容志行、迟尚斌、古广明、贾秀全、范志毅、郝海东、孙雯、高峰、邵佳一等（据需选择）。<br><br>目的意义：热门体育项目搭台、经济发展唱戏。政绩经济实际并存，上市公司与地方政府共赢。<br>A、对于地方政府：<br>1.这是一张靓丽名片，可借全球高端媒体深度传播本地盛名；<br>2.这是一个聚焦全国乃至全球目光的注意力经济的平台；在全国3000家上市公司中选出的64家经济实力卓著的足球代表队和参加峰会的200家上市公司负责人所代表的上市公司可与地方政府直接发生项目合作、资金合作、地方建设的经济关系。<br>3.让本地企业通过并购、收购、重组等形式直接与上市公司产生联系，为本地企业注入活力，为地方经发展增加新动力。<br>4.获得其他意外的发展机会。 <br>B、对于上市公司：<br>1.可借助一赛一会平台通过报道赛事的媒体进一步面向全球展示自己的团队配合、勃勃生机和后发力道，号召股民深度投资，巩固并扩大本上市公司的市盈成果；<br>2.可与政府界、金融界、企业界首脑产生直接关联，在资源为王的时代强力扩大政府界、金融界、企业界的人脉资源；<br>3.可以通过一赛一会在与地方企业的互动中通过并购、收购、重组等形式为上市公司本身纳入“发展没有截止点、创收没有天花板”的企业或项目，在“固本培元”中强化市盈率。<br>4.获得其他意外的合作机会。<br><br>一、赛事口号：价值冲顶 超越自我<br><br>二、活动时间：根据赛会适应的节令与承办地的具体情况而定<br><br>三、活动地点：承办地中心足球场+承办地各初赛晋级（学校）足球场<br><br>四、报名规则：<br>1.球队资格：必须是在中国境内证券市场（含港澳台）挂牌的上市公司以及与上市公司直接关联的银行业、投行业、证券业公司。<br> 2.球员资格：必须是在中国主板二板三板的现职上市公司员工（可男女混合组队。报名时需提供该球员在本公司的连续24个月的工资单影印件。银行业、投行业、证券业公司同此。拒绝造假）。<br>3.名额限制：原则上每个省份限报2个代表队，由赛会组委会核准。<br> 4.每队人数：共9人：领队1人（必须是公司董事长或总经理）、教练1人；球员7人（5人上场，2人替补）。每场比赛两队参加。每队上场队员不得多于5人，其中必须有1人为守门员。如果比赛前任何一队队员少于5人或在比赛中队员被罚出场致使场内队员少4人时（含犯规罚下），该场比赛队员少的队即为告负，对方2:0胜。每场比赛准许换2个人。<br> 5.报名时间：自赛会新闻发布会之日起，两个月内。<br> <br>五、赛制规则：<br>  1.赛制：淘汰赛。六轮比赛决出冠军。取前八名颁奖。<br> 第一轮：64进32。共32场比赛<br> 第二轮：32进16。共16场比赛<br> 第三轮：16进8。共8场比赛<br> 第四轮：8进4。共4场比赛<br> 第五轮：4进2。共2场比赛<br> 第六轮：决赛。冠军胜出<br> 2.前八名名次排列方法：<br> AB两区代表队进前八后，3-4名、5-8名按照积分、净胜球决定位次。积分、净胜球相同时，用点球决定先后位次。点球五个，每队每人踢一个。踢平再加赛一个点球，类推。直到决出胜负。<br> 6.场地规则。长度：最长75米，最短45米；宽度：最长56米，最短28米。在比赛场地内，禁区是以9米为半径向场内画一弧线与门柱两边的球门线相连的区域。点球点距球门线中点垂直距离为8米。中圈是以球场中心为中心半径为9米的圆。<br> 7.装备规则：运动员上场不准穿钢钉球鞋，队员服装统一，号码必须固定，队长戴袖标。<br>8.比赛时间：具体比赛日期与时间由赛事组委会与中国上市公司协作发展促进会文化体育局据实决定。<br>a.抽签编表后，必须按指定时间到场比赛。迟到超过10分钟，级按自动弃权处理，本场裁判有权判该队本场比赛0：2失败。<br>b.比赛时间分为两个25分钟相等的半场。在每半场比赛因各种原因损失的所有时间应被扣除。在每半场比赛结束时，如因执行罚点球，应允许延长时间执行罚完点球为止。<br>c.上下半场之间的休息时间不得超过10分钟。<br>d.半决赛及决赛，若在比赛时间内不能决出胜负，采用加时赛5分钟，仍为平局时，立即进行点球决战。点球5个，每队轮流每人踢一个。踢平再加赛一个点球，类推。直到决出胜负。<br><br>五、犯规与不正当行为：<br>裁判员认为，如果队员草率地、鲁莽地或使用过分的力量在双方进行争抢或对方队员控制球时实施铲抢，被视为严重犯规，判给对方直接任意球，可根据犯规严重情况给予黄牌警告或罚出场。这条规则是和十一人制规则最大的区别，说明七人制足球对于不论从各方向进行的铲球只要动作过大、力量过分都进行判罚。原则上不允许铲抢。<br> <br>六、任意球、点球、角球、球门球、界外球、越位<br> （一）任意球<br> 任意球有直接任意球和间接任意球两种，直接任意球直接入门得分，间接任意球直接入门不算得分，除非球入门前碰对方或本方队员进门可算得分。<br> 罚球程序：<br> 1、将球放定在犯规地点。<br>2、对方队员距球到少8米。<br>3、球被触动后即算比赛开始。<br>罚则：<br>1、球在踢出前对方进入距球9米以内，裁判员应该罚球延至符合规则规定后再开出，对进入9米内的对方球员给予警告。<br>2、球踢出后没有碰到本方队员或对方队员、踢任意球者再次触球示为重踢，判给对方在原地点踢间接任意球。<br>3、裁判员认为，罚球队员有意拖延比赛时间，可出黄牌，并判对方在原地点踢间接任意球。<br>4、在本方禁区内踢任意球，球要出罚球区比赛才算开始。在对方罚球区内踢任意球，球应放在距犯规地点最近的罚球区线上进行。<br>（二）点球<br>罚球点球规则同十一人制比赛规则。<br>（三）界外球<br>当球的整体从地面或空中越过边线后，应由球出界前最后触球的对方在球出界处踢界外球恢复比赛。掷界外球规则同十一人制比赛规则。掷界外球直接进门不算得分。<br>（四）球门球<br>罚球门球规则同十一人制比赛规则。<br>（五）角球<br>罚角球规则同十一人制比赛规则。<br>（六）越位<br>越位规则同十一人制比赛规则。<br><br>七、纪律及处罚条例 <br>1、在比赛中发生打架或对裁判、对方球员恐吓的球员或领队，按情节严重给予处罚，严重者取消本次赛会比赛资格。球员个别打架，立即被出示红牌。双方球员打群架，比赛立即结束，本场比赛无成绩，各记零分。<br>2、在比赛中，如对裁判执法不满可于赛后及时照会仲裁委员会，切不可作出不理智之行动。<br> 3、领红牌或同场两张黄牌者须自动停赛一场。<br>4、球队要在比赛前10分钟到场，球队负责人在比赛前5分钟要将参赛证交由当值裁判核对。<br>5、赛会有权保留修订赛例之权利，不另行通知。<br>6、参加之球队及领队负责人对以上之规定必需在赛前承诺一切责任。<br><br>八、裁判要求：<br>裁判员要对足球比赛规则有所了解并且能够严格执行裁判原则公平、公正、认真、准确裁决。有足球赛裁判工作经验；按照规定时间准时到场；裁判名单上交以后，对大家进行系统的培训。<br>  <br>九、注意事项：<br>所有参赛队必须充分展示中华民族礼仪之邦的大国风范，待友有请、待客有礼。保持所代表的公司的良好形象，保持居住宾馆及赛场内环境整洁。在比赛过程中禁止乱扔垃圾。比赛结束后，各队要做好赛场清洁工作。（违者扣分）<br><br>十、奖项设置：<br>1.前三名。奖品：参赛队将获得奖杯、奖牌、奖品和证书。<br> 冠军：金质奖杯1座、金质奖牌9枚（全队）、奖品9份和证书1本。<br>亚军：银质奖杯1座、银质奖牌9枚（全队）、奖品9份和证书1本。<br>季军：铜质奖杯1座、铜质奖牌9枚（全队）、奖品9份和证书1本。<br>第4—8名代表队获得铝制奖牌9枚（全队）、奖品9份和证书1本。<br>第9—64名代表队获得获得中国上市公司五人足球赛创始参与奖证书1本。<br>2.金靴奖。奖品：证书一个。纪念品一份。<br>本次比赛中进球数量最多的人可获得此奖。（一个）<br>3.金法槌奖：奖品：证书一个，笔记本一本。<br>评选标准<br>1）要求裁判员业务精通、操作熟练、判罚准确快速。能够向有异议人员耐心细致解释说明情况。裁判员）在执法中作风端正）严肃认真、公正准确）不徇私舞弊）不搞不正之风。<br>  2）金法槌奖由参赛的每个队的队长评出）每一场比赛结束）两个队的队长都要为本场比赛的裁判评分。评分0—5分）5分为最高分）每天取两人人评分的平均分。最后）累计平均分最高者为金法槌奖得主。<br>备注：各位队长要秉承公平、公正的原则）不可夹带个人恩怨。<br>4.最佳风度奖1队，证书一本。<br>评比范围：所有参赛队。<br>1）遵守竞赛规程的各项要求。<br>2）没有红、黄牌记录或红、黄牌最少的队伍。<br>3）评比结果直接与参赛单位是否维持场地卫生挂钩。<br>5.最佳协作奖1队，证书一本。<br>评比范围：所有参赛队。<br>1）赛事配合默契，遵守竞赛规程与纪律的各项要求。<br>2）遵守时间，统一进场退场。<br>3）队员服装整齐。<br>4）场上协调默契。<br><br>十一、赛场配置<br>1、足球场（8个。1个主赛场）<br>2、足球两个（每队带一个）每场<br>3、口哨四个(每场)<br>4、红牌黄牌若干<br>5、记分牌一个（每场）<br>6、计时器一个（每场）<br>7、医疗用品各系自备<br>8、笔纸若干<br>活动意义：<br> 足球运动的魅力在于展示的是一个团队的无私协作、争先恐后、公平竞争、拼搏进取、永不言败、积极向上。上市公司尤其应具有上述精神。<br> 足球竞技与经济竞争几无二致。参加者即为成功——它至少可以见证参加者的存在、展示参加者的团队风采。<br>正因为如此，习总书记才开展足球外交、亲自过问中国的足球事业改革并谈出关于足球的三大愿望：即，中国世界杯出线、举办世界杯比赛及获得世界杯冠军。<br> 赛会时间：2016年5月1日 <br>赛会地点：沈阳奥体中心（初定） <br>参加对象：中国境内（含港澳台）上市公司现职员工 <br>参赛队数：64个（每省区不得2个） <br>赛会宗旨：赛里看协作、展斗志、亮风采、创辉煌，再吹新号角<br>会中听高论、开心智、绘新图、走大道，续写大篇章 <br>奖项设置：团体奖项：冠军明星奖、亚军明星奖、季军明星奖，文明明星奖、组队明星奖。<br> 个人奖项：金球明星奖，金靴明星奖，门将明星奖，球感明星奖、协作明星奖，潜质明星奖。<br>
+						</p>
+                  	</div>
+                    <hr>
+				</div>
+				<div>
+                    <h3>已报名<font color="#FC0105" size="-6">(110)</font></h3>
+				</div><p></p>
+				<div style="font-size:12px; text-align:center;" id="signed">
+					<div>
+                        <table width="100%">
+							<tr>
+								<td><a href="#"><img src="images/组 1 副本 6.png"></a></td>
+                                <td><a href="#"><img src="images/testhead200.png"></a></td>
+                                <td><a href="#"><img src="images/头像 - Assistor.png"></a></td>
+                                <td><a href="#"><img src="images/组 5.png"></a></td>
+                                <td><a href="#"><img src="images/组 1.png"></a></td>
+                            </tr>
+                            <tr>
+                             	<td width="20%">雪旅</td>
+                              	<td width="20%">章鱼哥</td>
+                              	<td width="20%">吴一凡</td>
+                              	<td width="20%">樱桃</td>
+                              	<td width="20%">一语点醒梦中人</td>
+                            </tr>
+                            <tr>
+                              	<td><a href="#"><img src="images/头像@2x.png"></a></td>
+                                <td><a href="#"><img src="images/组 6.png"></a></td>
+                                <td><a href="#"><img src="images/userhead.png"></a></td>
+                                <td><a href="#"><img src="images/eventeasy.jpg"></a></td>
+                                <td><a href="#"><img src="images/组 2.png"></a></td>
+                            </tr>
+                            <tr>
+                              	<td>Anyso</td>
+                              	<td>本宝宝</td>
+                              	<td>该用户是帅哥</td>
+                              	<td>游客3145</td>
+                              	<td>挑战者</td>
+                            </tr>
+                        </table>
+					</div>
+                    <hr>
+               	</div>
+               	<div id="organizer">
+					<h3>组织者</h3>
+                    <div align="center">
+                        <img src="images/中国上市公司五人足球涨停赛组织者.jpg" style="border-radius:50%">
+                        <br>两岸伟业投资管理北京有限公司<br>@普罗米修斯
+                    </div>
+               	</div>
+				<h3>联系电话</h3>
+                <hr>
+				<div align="center">
+                    <table width="50%">
+                        <tr align="right">
+                          <td rowspan="3"><img src="images/phone.png" style="width:60px; height:60px;"></td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td id="tel">13601157778</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    <hr>
+				</div>
+                <div>  
+					<h3 id="competition">竞赛项目/分组</h3>                       
+					<div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                  	</div>
+                    <hr>
+                </div>
+                <a href="Sign.html" rel="external" data-role="button" style="background-color:#F83236; color:#FFFFFF">我要报名</a>
+				<div align="center" style="font-size:smaller">
+                    <img src="images/eventeasy.png" width="20px;" height="20px;">本赛事由大赛易提供报名技术支持
+                </div>
+				<div style="position:fixed; bottom:10%;border-radius:50%; right:10px">
+					<a href="Sign.html" rel="external">
+                    	<div class="sign">
+                        	<img src="images/我要报名.png" style="opacity:0.65">
+                        </div>
+                    </a>
+                </div>
+        	</div>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home_light" href="#" data-icon="home" class="ui-btn-active">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during" data-transition="flip">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    <!--赛前页-->
+    <div data-role="page" id="before_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>大赛易赛事赛前页</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<h3>赛前动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false" style="height:311px">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="OpeningCeremony.html" rel="external">
+                                <img src="images/开幕式@2x.png"/>
+                                <h2>开幕式</h2>
+                            </a>
+                        </li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before_light" href="#" data-icon="before" class="ui-btn-active">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during" data-transition="flip">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    <!--赛时页-->
+    <div data-role="page" id="during_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>大赛易赛事赛时页</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<h3>赛时动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="DuringDynamic.html" rel="external">
+                                <img src="images/组 2.png">
+                                <h2 style="margin-top:-5px">赛时动态</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="Participant.html" rel="external">
+                                <img src="images/组 3.png">
+                                <h2 style="margin-top:-5px" >参赛用户队伍</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="DuringResult.html" rel="external">
+                                <img src="images/组 4.png">
+                                <h2 style="margin-top:-5px">赛时结果</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during_light" href="#" data-icon="during" class="ui-btn-active">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    <!--赛后页-->
+    <div data-role="page" id="after_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>大赛易赛事赛后页</h2><a href="#" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<h3>赛后动态</h3>
+            <ul data-role="listview" data-inset="true">
+                <li data-icon="false">
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="CompetitionResult.html" rel="external">
+                                <img src="images/足球图片 - Assistor.png">
+                                <h2 style="margin-top:-5px">赛事结果</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="DataStatistics.html" rel="external">
+                                <img src="images/数据统计.jpg">
+                                <h2 style="margin-top:-5px" >数据统计</h2>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">
+                            <a href="ClosingCeremony.html" rel="external">
+                                <img src="images/闭幕式.jpg">
+                                <h2 style="margin-top:-5px">闭幕式</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+           </ul>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during" data-transition="flip">赛时</a></li>
+                    <li><a id="after_light" href="#" data-icon="after" class="ui-btn-active">赛后</a></li>
+                    <li><a id="other" href="#other_page" data-icon="other" data-transition="flip">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    
+    <div data-role="page" id="other_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="EventIndex.html" data-transition="flip" title="返回"><b> < </b></a><h2>大赛易赛事更多页</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<table>
+            	<tr><a href="#home_page" data-role="button" data-transition="flip" onClick="goTotop('organizer');">竞赛项目/分组</a></tr>
+                <tr><a href="#home_page" data-role="button" data-transition="flip" onClick="goTotop('competition');">组织者</a></tr>
+                <tr><a href="#location_page" data-role="button" data-transition="slideup">赛场定位</a></tr>
+                <tr><a href="#sign_page" data-role="button" data-transition="slideup">扫码签到</a></tr>
+                <tr><a href="#lottery_page" data-role="button" data-transition="slideup">幸运抽奖</a></tr>
+            </table>
+        </div>
+		<div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+			<div class="nav-glyphish-example" data-role="navbar">
+				<ul>
+                    <li><a id="home" href="#home_page" data-icon="home" data-transition="flip">主页</a></li>
+                    <li><a id="before" href="#before_page" data-icon="before" data-transition="flip">赛前</a></li>
+                    <li><a id="during" href="#during_page" data-icon="during">赛时</a></li>
+                    <li><a id="after" href="#after_page" data-icon="after" data-transition="flip">赛后</a></li>
+                    <li><a id="other_light" href="#" data-icon="other" class="ui-btn-active">更多</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    
+    <div data-role="page" id="location_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="#other_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>赛场定位</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<img src="images/ditu.PNG" width="100%" height="100%">
+        </div>
+    </div>
+    
+    <div data-role="page" id="sign_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="#other_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>扫码签到</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<img src="images/大赛易微信二维码.png" width="100%" height="100%" alt="我的二维码">
+            <a href="#other_page" data-role="button" data-transition="slidedown">扫码完毕</a>
+        </div>
+    </div>
+    
+    <div data-role="page" id="lottery_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       		<a href="#other_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>幸运抽奖</h2><a href="EasySportIndex.html" style="width:10px; height:16px; border-radius:50%; border:0"><img src="images/userhead.png" width="34px" height="34px" style="margin-top:-9px; margin-left:-12px; border-radius:50%"></a>
+    	</div>
+		<div data-role="content">
+			<img src="images/大赛易微信二维码.png" width="100%" height="100%">
+			<a href="#other_page" data-role="button" data-transition="slidedown">开始抽奖</a>
+        </div>
+    </div>
+    
+</body>
+</html>
