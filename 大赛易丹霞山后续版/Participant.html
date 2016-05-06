@@ -1,0 +1,477 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+a:link {
+	text-decoration: none;
+	font-weight:normal;
+}
+a:visited {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+	font-weight:bold;
+}
+	.head_user{
+		margin-top:-9px; 
+		margin-left:-12px; 
+		border-radius:50%
+	}
+	.head_a_user{
+		width:10px; 
+		height:16px; 
+		border-radius:50% !important; 
+		border:0;
+	}
+div ul li a{
+	font-size:36px;
+	font-weight:normal;
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="participant_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="EventIndex.html#during_page" rel="external" title="返回"><b> < </b></a><h2>参赛用户/队伍</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+            <div>
+           	  <h3 align="center">徒步穿越丹霞山参赛队伍</h3>
+            	<table width="100%">
+                    <tr align="center">
+                      	<td width="15%">队号</td>
+                      	<td width="40%">队员姓名</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1</td>
+                      	<td>龙坤生、刘辉<br>吴通涛、谢文静</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>2</td>
+                      	<td>张武、陈莉<br>王乐丰、许小宇</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>3</td>
+                      	<td>江硚、谢观华<br>阙小龙、黄模燕</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>4</td>
+                      	<td>徐连丰、周海燕<br>赵崇勇、林梦锦</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>5</td>
+                      	<td>申作文、黄垂功<br>赵祥素、黄勇兵</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>6</td>
+                      	<td>谢君、黄翔<br>罗建新、张婷婷</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>7</td>
+                      	<td>黄灿业、冯燕萍<br>吴瑞源、陈柱帆</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>8</td>
+                      	<td>谢为军、郭文轩<br>张新新、兰霞</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>9</td>
+                      	<td>唐山、黄东英<br>鞠桂武、浦月红</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>10</td>
+                      	<td>应日超、区杏间<br>陈纬、钱国轩</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>11</td>
+                      	<td>钟妙青、李建权<br>谢学威、朱文梁</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>12</td>
+                      	<td>钟金原、廖福明<br>李诗镜、付新妹</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>13</td>
+                      	<td>李卫平、黄世东<br>胡贵平、钟雄</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>14</td>
+                      	<td>曾庆生、谢军<br>彭坤洪、邓秋云</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>15</td>
+                      	<td>蒋丽红、何洪涛<br>郑周琴、张和英</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>16</td>
+                      	<td>赵雷横、林美华<br>戴琛璞、陈晓宇</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>17</td>
+                      	<td>吴佰和、代红霞<br>黄子芸、黄惠珍</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>18</td>
+                      	<td>邓志惠、黄霞<br>黄郁俊、张建辉</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>19</td>
+                      	<td>刘新建、牛振锋<br>李达、孔晓燕</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>20</td>
+                      	<td>吴海平、房太平<br>李军、徐吉创</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>21</td>
+                      	<td>潘路豹、江广赞<br>刘世伟、李娜娜</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>22</td>
+                      	<td>倪雪峰、石建华<br>黄金梅、林春寅</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>23</td>
+                      	<td>洪云辉、孙卫国<br>梁昌义、李旭兴</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>24</td>
+                      	<td>何广仪、唐峻<br>何凯龙、陈晓钿</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>25</td>
+                      	<td>谭英照、王志明<br>罗惠枫、钟秋琼</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>26</td>
+                      	<td>陶恩宇、姚颖<br>欧连梅、黄素琪</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>27</td>
+                      	<td>马勇、董兆昆<br>董铭、孙赟</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>28</td>
+                      	<td>何刚灵、郭海燕<br>罗世荣、扶飞翔</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>29</td>
+                      	<td>黄文和、戴德<br>邓环、张帅举</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>30</td>
+                      	<td>郭晓彤、梁瑞锋<br>龙明峰、王鹏</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>31</td>
+                      	<td>李永亮、陈兵<br>严顺池、肖靓</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>32</td>
+                      	<td>牟鸿、王文渊<br>向博、李世彧</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>33</td>
+                      	<td>张永辉、陈依然<br>陆方强、喻多祥</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>34</td>
+                      	<td>李良、朱玲<br>覃科杰、罗金伟</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>35</td>
+                      	<td>赵丽卿、黄仿青<br>周国荣、陈方智</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>36</td>
+                      	<td>张柏昌、伍小聪<br>皮红梅、张浩</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>37</td>
+                      	<td>梁晓敏、萧梓健<br>吴敏兰、崔敬伟</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>38</td>
+                      	<td>朱素贞、赖毅萍<br>张影辉、肖永中</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>39</td>
+                      	<td>何用华、张艳芳<br>黄东耀、谭淑妍</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>40</td>
+                      	<td>刘维华、陈维桢<br>郭翠和、朱炎成</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>41</td>
+                      	<td>马海敏、关宇勋<br>甘紫平、钱芳</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>42</td>
+                      	<td>黄宇峰、刘宇波<br>林晓辉、何治俭</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>43</td>
+                      	<td>李湘、吴志刚<br>张文生、毕秀华</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>44</td>
+                      	<td>李晓东、何长新<br>李晓凤、李晓琴</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>45</td>
+                      	<td>李彬、林旋<br>黄敏浩、张雪雨</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>46</td>
+                      	<td>陈红玉、李建宝<br>林永克、郑响峰</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>47</td>
+                      	<td>杨强、刘伟湘<br>谢亮、秦格辉</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>48</td>
+                      	<td>黄志文、谢文健<br>黄华飞、曾珊</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>49</td>
+                      	<td>喻强、黄成进<br>王晓玲、梁丽媛</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>50</td>
+                      	<td>钟振扬、何先德<br>黄美华、唐绍兴</td>
+                   	</tr>
+                    <tr>
+                      	<td colspan="2"><hr></td>
+                    </tr>
+                </table>
+			</div>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="participantdetails_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#participant_page" title="返回"><b> < </b></a><h2>参赛用户个人信息</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+        </div>
+        <div data-role="content">
+			<table width="100%" border="0">
+				<tr>
+					<td align="right" colspan="2"><img src="images/userhead.png" width="80" height="80" style="border-radius:50%"></td>
+                  	<td align="left" colspan="2">雄鹰队8号球员</td>
+                </tr>
+                <tr>
+                  	<td align="left" colspan="2" width="50%">&nbsp;昵称</td>
+                  	<td align="right" colspan="2" width="50%">长青&nbsp;</td>
+                </tr>
+                <tr>
+                  	<td colspan="4"><hr></td>
+                </tr>
+                <tr>
+                  	<td align="left" colspan="2">&nbsp;性别</td>
+                  	<td align="right" colspan="2">男&nbsp;</td>
+                </tr>
+                <tr>
+                  	<td colspan="4"><hr></td>
+                </tr>
+                <tr>
+                  	<td align="left" colspan="2">&nbsp;地区</td>
+                  	<td align="right" colspan="2">广东&nbsp;深圳&nbsp;</td>
+                </tr>
+                <tr>
+                  	<td colspan="4"><hr></td>
+                </tr>
+                <tr>
+                  	<td align="left" colspan="2">&nbsp;个性签名</td>
+                  	<td align="right" colspan="2">个性签名就是要有个性&nbsp;</td>
+                </tr>
+                <tr>
+                  	<td colspan="4"><hr></td>
+                </tr>
+                <tr>
+                  	<td align="left" colspan="2">&nbsp;QQ</td>
+                  	<td align="right" colspan="2">1234567890&nbsp;</td>
+                </tr>
+                <tr>
+                  	<td colspan="4"><hr></td>
+                </tr>
+                <tr align="center">
+                  	<td colspan="2"><a href="#"><img src="images/u1144.png">关注</a></td>
+                  	<td colspan="2"><a href="#"><img src="images/点赞橙 - Assistor.png">点赞</a></td>
+                </tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

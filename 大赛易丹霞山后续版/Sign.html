@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+	h3{
+		color:#000000;
+	}
+	a:link {
+		text-decoration: none;
+		font-weight:normal;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+		font-weight:bold;
+	}
+	.head_user{
+		margin-top:-9px; 
+		margin-left:-12px; 
+		border-radius:50%
+	}
+	.head_a_user{
+		width:10px; 
+		height:16px; 
+		border-radius:50% !important; 
+		border:0;
+	}
+	tr td:nth-child(2){
+		color:#000000;
+	}
+	form{
+		color:#000000;
+	}
+	span{
+		color:#7d7d7d;
+	}
+	.span_up,.span_over,.span_full{
+		font-size:11px; 
+		border-radius:5px; 
+		color:#FFFFFF;
+	}
+	.span_up{
+		background-color:#f2c61f; 
+		border: solid 5px #f2c61f; 
+	}
+	.span_over{
+		background-color:#CBCBCB; 
+		border: solid 5px #CBCBCB; 
+	}
+	.span_full{
+		background-color:#AD7FE5; 
+		border: solid 5px #AD7FE5; 
+	}
+	.sign_up{
+		background-color:#f91647 !important;
+		color:#ffffff !important;
+	}
+	.sign_over,.sign_full{
+		background-color:#CBCBCB !important;
+		color:#ffffff !important;
+	}
+	.must{
+		color:red;
+	}
+</style>
+<script>
+	/*$(function check(){
+	
+		$.mobile.changePage("#pay_page",{
+	
+			transition:'slideup'
+	
+		});
+	
+	});*/
+
+	function check(){
+		$.mobile.changePage("#pay_page",{transition:'slideup'});
+	}
+	function checkpay(){
+		alert("报名成功！");
+		$.mobile.changePage("EventIndex.html",{transition:'flip'});
+	}
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="sign_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="EventIndex.html" rel="external" title="返回"><b> < </b></a><h2>报名页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+            <h3 align="center">徒步穿越丹霞山</h3>
+            <div>报名项目</div>   <br>         
+          	<div style="border: solid 1px #D3E8F1; border-radius:5px">
+            	<div style="margin-top:5px; font-weight:600; color:#000;">&nbsp;团体报名</div><hr color="#D3E8F1">
+                <table width="100%">
+                	<tr>
+                    	<td colspan="2">徒步穿越丹霞山选手招募[团体]&nbsp;<span class="span_up">正在报名</span></td>
+                    </tr>
+                    <tr>
+                    	<td width="72px">竞赛项目:</td>
+                        <td>全程徒步穿越丹霞山</td>
+                    </tr>
+                    <tr>
+                    	<td>年龄要求:</td>
+                        <td>18岁-60岁</td>
+                    </tr>
+                    <tr>
+                    	<td>截止时间:</td>
+                        <td>2016.11.10 12:30</td>
+                    </tr>
+                    <tr>
+                    	<td>人数限制:</td>
+                        <td>4人</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><div style="width:80%"><a href="#team_page" data-role="button" class="sign_up">免费报名</a></div></td>
+                    </tr>
+                </table>
+                <hr color="#D3E8F1">
+                <table width="100%">
+                	<tr>
+                    	<td colspan="2">徒步穿越丹霞山队伍招募[团体]&nbsp;<span class="span_full">名额已满</span></td>
+                    </tr>
+                    <tr>
+                    	<td width="72px">竞赛项目:</td>
+                        <td>全程徒步穿越丹霞山</td>
+                    </tr>
+                    <tr>
+                    	<td>年龄要求:</td>
+                        <td>18岁-60岁</td>
+                    </tr>
+                    <tr>
+                    	<td>截止时间:</td>
+                        <td>2016.11.10 12:30</td>
+                    </tr>
+                    <tr>
+                    	<td>人数限制:</td>
+                        <td>4人</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><div style="width:80%"><a href="#" data-role="button" class="sign_full">名额已满</a></div></td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div style="border: solid 1px #D3E8F1; border-radius:5px">
+            	<div style="margin-top:5px; font-weight:600; color:#000;">&nbsp;个人报名</div><hr color="#D3E8F1">
+                <table width="100%">
+                	<tr>
+                    	<td colspan="2">徒步穿越丹霞山选手招募[个人]&nbsp;<span class="span_over">已经结束</span></td>
+                    </tr>
+                    <tr>
+                    	<td width="72px">竞赛项目:</td>
+                        <td>全程徒步穿越丹霞山</td>
+                    </tr>
+                    <tr>
+                    	<td>年龄要求:</td>
+                        <td>18岁-60岁</td>
+                    </tr>
+                    <tr>
+                    	<td>截止时间:</td>
+                        <td>2016.11.10 12:30</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><div style="width:80%"><a href="#fill_page" data-role="button" class="sign_over">报名已结束</a></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="team_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#sign_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名信息填写页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<form>
+            	<span class="must">*</span>&nbsp;选择您所属团队：<br><select>
+                                                                        <option>请选择您所属的团队</option>
+                                                                        <option>丹霞月雏(人数上限：4人，剩余名额：4个)</option>
+                                                                    </select>
+                <span class="must">*</span>&nbsp;团队邀请码：<br><input type="text" id="id" placeholder="请输入您的团队邀请码">
+                <p style="margin-top:-8px"></p><font size="-1" color="red">请填写邀请码避免报错团体，选择团体之前请和团体负责人联系沟通好！</font>
+            </form>
+            <a href="#build_page" data-role="button" style="background-color:#f91647; color:#FFFFFF">创建我的团队</a>
+            <a href="#fill_page" data-role="button">下一步</a>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="build_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#sign_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名信息填写页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<form>
+            	<span class="must">*</span>&nbsp;团队名称：<br><input type="text" id="team_name" placeholder="请输入团队名称">
+                <span class="must">*</span>&nbsp;组队类型:<br><select>
+                                <option>请选择</option>
+                                <option>单位组织</option>
+                                <option>自行组织</option>
+                        	</select>
+            	<span class="must">*</span>&nbsp;负责人姓名：<br><input type="text" id="teamapplicant_name" placeholder="请输入团队负责人真实姓名">
+                <span class="must">*</span>&nbsp;负责人手机号：<br><input type="tel" id="teamapplicant_phone" placeholder="请输入团队负责人手机号码">
+                <span class="must">*</span>&nbsp;所在地区：<br><input type="text" id="team_home" placeholder="请输入所在地">
+                <span class="must">*</span>&nbsp;设置邀请码：<br><input type="text" id="team_name" placeholder="请设置团队邀请码">
+            </form>
+            <a href="#" data-role="button">确认申请</a>
+        </div>
+    </div>
+	
+    <div data-role="page" data-theme="a" id="fill_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#sign_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名信息填写页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<form>
+            	<span class="must">*</span>&nbsp;姓名：<br><input type="text" id="applicant_name" placeholder="请输入真实姓名">
+                <span class="must">*</span>&nbsp;出生日期：<br><input type="date" id="applicant_birthday" placeholder="请选择出生日期">
+                <table width="100%">
+                	<span class="must">*</span>&nbsp;性别：<br><tr>
+                    	<td colspan="2">
+                            <label>
+                            	<input type="radio" name="sex" value="男" id="sex_0" checked="true"><span>男</span>
+                            </label>
+                		</td>
+                        <td colspan="2">
+                          <label>
+                            <input type="radio" name="sex" value="女" id="sex_1"><span>女</span>
+                            </label>
+                        </td>
+               		</tr>
+                    <tr>
+                    	<td>
+                            <span class="must">*</span>&nbsp;血型：<br><label>
+                            	<input type="radio" name="blood" value="A" id="blood_0" checked="true"><span>A</span>
+                            </label>
+                		</td>
+                		<td>
+                            <br><label>
+                            	<input type="radio" name="blood" value="B" id="blood_1"><span>B</span>
+                            </label>
+                		</td>
+                        <td>
+                            <br><label>
+                            	<input type="radio" name="blood" value="O" id="blood_2"><span>O</span>
+                            </label>
+                		</td>
+                		<td>
+                            <br><label>
+                            	<input type="radio" name="blood" value="AB" id="blood_3"><span>AB</span>
+                            </label>
+                		</td>
+                	</tr>
+            	</table>
+                <span class="must">*</span>&nbsp;身份证件编号：<br><input type="text" id="applicant_id" placeholder="请输入身份证编号">
+                <span class="must">*</span>&nbsp;手机号：<br><input type="tel" id="applicant_phone" placeholder="请输入手机号码">
+                <span class="must">*</span>&nbsp;电子邮箱：<br><input type="email" id="applicant_email" placeholder="请输入常用电子邮箱">
+                <span class="must">*</span>&nbsp;紧急联系人：<br><input type="text" id="emergency_name" placeholder="请输入紧急联系人姓名">
+                <span class="must">*</span>&nbsp;紧急联系电话：<br><input type="tel" id="emergency_phone" placeholder="请输入紧急联系人的电话号码">
+                <span class="must">*</span>&nbsp;通讯地址：<br><input type="text" id="applicant_name" placeholder="请输入通讯地址">
+            </form>
+            <a data-role="button" onclick="check();">下一步</a>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="pay_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#fill_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>支付页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+            <table width="100%">
+            	<form>
+                    <tr>
+                        <td width="4%"><img src="images/userhead.png" style="border-radius:50%" width="60px" height="60px"></td>
+                        <td width="96%">大赛易</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><b>￥0.00</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            支付方式:<select>
+                                <option>微信支付</option>
+                                <!--<option>大赛易钱包支付</option>-->
+                                <option>银行卡支付</option>
+							</select>
+						</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">支付密码:<input type="password" placeholder="支付密码"></td>
+                    </tr>
+                </form>
+            </table>
+			<a data-role="button" onclick="checkpay();" href="EventIndex.html" rel="external" data-ajax="false">确认支付</a>
+        </div>
+    </div>
+    
+</body>
+</html>

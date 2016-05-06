@@ -1,0 +1,1138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+	body,table,tr,td{
+		font-family: "Microsoft YaHei UI", "微软雅黑", Arial, "宋体";
+	}
+	.head_user{
+		margin-top:-9px; 
+		margin-left:-12px; 
+		border-radius:50%
+	}
+	.head_a_user{
+		width:10px; 
+		height:16px; 
+		border-radius:50% !important; 
+		border:0;
+	}
+	.nav-glyphish-example .ui-btn{
+		padding-top: 20px;
+	}
+	.nav-glyphish-example .ui-btn:after{ 
+		width: 20px; 
+		height: 20px; 
+		margin-left: -10px; 
+		margin-top: -7px;
+		box-shadow: none;  
+		border-radius: 0;
+	}
+	#event,#eventcircle,#person,#club{
+		font-size:14px;
+		font-weight:normal;
+		color:#7d7d7d;
+	}
+	#event_light,#eventcircle_light,#person_light,#club_light{
+		font-size:14px;
+		font-weight:normal;
+		color:#6dafe3;
+	}
+	#event_light:after{ 
+		background: url("images/赛事.png") 50% 50% no-repeat; 
+		background-size: 20px 20px;
+	}
+	#eventcircle_light:after{ 
+		background: url("images/赛圈.png") 50% 50% no-repeat; 
+		background-size: 20px 20px;
+	}
+	#club_light:after{
+		background: url("images/俱乐部.png") 50% 50% no-repeat;
+		background-size: 20px 20px;
+	}
+	#person_light:after{ 
+		background: url("images/个人.png") 50% 50% no-repeat;
+		background-size: 20px 20px;
+	}
+	#event:after{ 
+		background: url("images/赛事灰.png") 50% 50% no-repeat; 
+		background-size: 20px 20px;
+	}
+	#eventcircle:after{ 
+		background: url("images/赛圈灰.png") 50% 50% no-repeat; 
+		background-size: 20px 20px;
+	}
+	#club:after{
+		background: url("images/俱乐部灰.png") 50% 50% no-repeat;
+		background-size: 20px 20px;
+	}
+	#person:after{ 
+		background: url("images/个人灰.png") 50% 50% no-repeat;
+		background-size: 20px 20px;
+	}
+	#hot,#latest,#local,#release,#participate,#city,#active,#star{
+		font-size:medium; 
+		font-weight:600;
+	}
+	#hot,#release{
+		color:#6dafe3;
+	} 
+	.hot,.latest,.local{
+		height:2px;
+	}  
+	.latest,.local{
+		background-color:#949494;
+	} 
+	.hot{
+		background-color:#208EF4;
+	}  
+	.ui-page {  
+		backface-visibility: hidden;
+	} 
+	a:link {
+		text-decoration: none;
+		font-weight:normal;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:active {
+		text-decoration: none;
+	}
+	.user_information{
+		margin-top:15px;
+	}
+	.user{
+		margin-top:-68px;
+		margin-left:15px;
+	}
+	.user_head{
+		height: 90px; 
+		width: 90px;
+		border-radius: 50%;
+		border: solid 2px #6dafe3;
+		float: left;  
+		margin-top:-15px;
+		position:relative;
+	}
+	.username{
+		float: left;
+		margin-top:8px;
+		position:relative;
+	}
+	form{
+		color:#000000;
+	}
+	font{
+		font-size:large; 
+		font-weight:600; 
+		color:#000000;
+	}
+	strong{
+		color:#666666;
+	}
+	ul li a img{
+		width:100%;
+		height:100%;
+		border-radius:9px;
+	}
+	ul li a div{
+		float:right; 
+		width:70px; 
+		height:30px; 
+		background-color:#155CB0; 
+		color:#FFFFFF;
+		margin-bottom:-8px;
+		margin-top:8px;
+		margin-right:-12px;
+		border-radius:5px;
+	}
+	.sign_up,.gaming,.over,.audit,.audit_not_pass,.pass_audit{
+		float:right; 
+		color:#FFF; 
+		font-size:small; 
+		margin-top:-23px; 
+		margin-right:3px; 
+		width:100px; 
+		height:40px; 
+		border-radius:5px;
+	}
+	.sign_up{
+		background-color:#F83236;
+	}
+	.gaming{
+		background-color:#E3B103;
+	}
+	.over,.audit,.fail_audit{
+		background-color:#CBCBCB;
+	}
+	.pass_audit{
+		background-color:#01B654;
+	}
+	span,td img{
+		 border-radius:5px;
+	}
+	.span_bg{
+		background-color:#e1e1e1; 
+		border:solid 6px #e1e1e1;
+	}
+	p{
+		 margin-bottom:auto;
+	}
+	body,div,ul,li,a,img{
+		margin: 0;
+		padding: 0;
+	}
+  	ul,li{
+		list-style: none;
+	}
+  	a{
+		text-decoration: none;
+	}
+  	.banner{
+		width:100%; 
+		height:150px; 
+		overflow: hidden;
+	}
+  	.imgList{
+		width:100%; 
+		height:150px;
+	}
+  	.imgList li{
+		width:100%; 
+		height:150px; 
+		display: none;
+	}
+	.imgList li a img {
+		border-radius:0;
+	}
+  	.imgList .imgOn{
+		display: inline;
+	}
+	
+</style>
+
+<script>
+	$(document).ready(function(){
+		$("#hot").mousedown(function(){
+			$("#local_game").hide();
+			$("#latest_game").hide();
+			$("#hot_game").show(); 
+			$("#hot").css("color","#6dafe3");
+			$("#latest").css("color","#000000");
+			$("#local").css("color","#000000");
+			$(".hot").css("background-color","#208EF4");
+			$(".latest").css("background-color","#949494");
+			$(".local").css("background-color","#949494");
+		});
+		$("#latest").mousedown(function(){
+			$("#hot_game").hide();
+			$("#local_game").hide();
+			$("#latest_game").show();
+			$("#hot").css("color","#000000");
+			$("#local").css("color","#000000");
+			$("#latest").css("color","#6dafe3");
+			$(".hot").css("background-color","#949494");
+			$(".latest").css("background-color","#208EF4");
+			$(".local").css("background-color","#949494");
+		});
+		$("#local").mousedown(function(){
+			$("#hot_game").hide();
+			$("#latest_game").hide();
+			$("#local_game").show();
+			$("#hot").css("color","#000000");
+			$("#latest").css("color","#000000");
+			$("#local").css("color","#6dafe3");
+			$(".hot").css("background-color","#949494");
+			$(".latest").css("background-color","#949494");
+			$(".local").css("background-color","#208EF4");
+		});
+		$("#participate").mousedown(function(){
+			$("#release_game").hide();
+			$("#participate_game").show();  
+			$("#release").css("color","#000000");
+			$("#participate").css("color","#6dafe3");
+			$(".release").css("background-color","#949494");
+			$(".participate").css("background-color","#208EF4");
+		});
+		$("#release").mousedown(function(){
+			$("#participate_game").hide();
+			$("#release_game").show();
+			$("#participate").css("color","#000000");
+			$("#release").css("color","#6dafe3");
+			$(".participate").css("background-color","#949494");
+			$(".release").css("background-color","#208EF4");
+		});
+		$("#city").mousedown(function(){
+			$("#city_page").show();
+			$("#active_page").hide();
+			$("#star_page").hide();
+			$("#star").css("color","#000000");
+			$("#active").css("color","#000000");
+			$("#city").css("color","#6dafe3");
+			$(".star").css("background-color","#949494");
+			$(".active").css("background-color","#949494");
+			$(".city").css("background-color","#208EF4");
+		});
+		$("#active").mousedown(function(){
+			$("#city_page").hide();
+			$("#active_page").show();
+			$("#star_page").hide();
+			$("#star").css("color","#000000");
+			$("#active").css("color","#6dafe3");
+			$("#city").css("color","#000000");
+			$(".star").css("background-color","#949494");
+			$(".active").css("background-color","#208EF4");
+			$(".city").css("background-color","#949494");
+		});
+		$("#star").mousedown(function(){
+			$("#city_page").hide();
+			$("#active_page").hide();
+			$("#star_page").show();
+			$("#star").css("color","#6dafe3");
+			$("#active").css("color","#000000");
+			$("#city").css("color","#000000");
+			$(".star").css("background-color","#208EF4");
+			$(".active").css("background-color","#949494");
+			$(".city").css("background-color","#949494");
+		});
+		
+		
+		var curIndex = 0; 
+		var autoChange = setInterval(function(){ 
+			if(curIndex < $(".imgList li").length-1){ 
+			  curIndex ++; 
+			}else{ 
+			  curIndex = 0;
+			}
+			changeTo(curIndex); 
+			},3500);
+		
+		function changeTo(num){ 
+			$(".imgList").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
+		}
+	});
+
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="event_page">
+        <div class="banner">
+            <ul class="imgList">
+              <li class="imgOn"><a href="#"><img src="images/1.jpg" alt=""></a></li>
+              <li><a href="#"><img src="images/2.jpg" alt=""></a></li>
+              <li><a href="#"><img src="images/3.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a id="hot">热门</a></li>
+                <li><a id="latest">最新</a></li>
+                <li><a id="local">同城</a></li>
+            </ul>
+            <ul>
+                <li class="hot" style="background-color:#6dafe3; height:2px"></li>
+                <li class="latest" style="background-color:#949494; height:2px"></li>
+                <li class="local" style="background-color:#949494; height:2px"></li>
+            </ul>
+        </div>
+        
+        <div data-role="content">
+        	<div id="hot_game">
+            	<a href="EventIndex.html" rel="external">
+                    <div style="border:solid 1px #D3E8F1; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/徒步穿越丹霞山.jpg" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>徒步穿越丹霞山</font></td>
+                            </tr>
+                            <tr>
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;广东&nbsp;韶关市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2016.11.10</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-9px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;全程徒步穿越&nbsp;</span>
+                                <span class="span_bg">&nbsp;4人组&nbsp;</span>
+                            </div>
+                            <a href="Sign.html" rel="external">
+                            	<div class="sign_up" align="center">
+                                	<p>我要报名</p>
+                            	</div>
+                        	</a>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+                
+                <a href="EventIndex2.html" rel="external">
+                    <div style="border:solid 1px #D3E8F1; margin-top:5px; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/天津高校.jpg" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>天津高校</font></td>
+                            </tr>
+                            <tr>
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;天津&nbsp;天津市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2016.03.12</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-9px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;足球&nbsp;</span>
+                            </div>
+                            <a href="#" rel="external">
+                            	<div class="gaming" align="center">
+                                	<p>正在比赛</p>
+                            	</div>
+                        	</a>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div id="latest_game" hidden="">
+            	<a href="EventIndex.html" rel="external">
+                    <div style="border:solid 1px #D3E8F1; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/徒步穿越丹霞山.jpg" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>徒步穿越丹霞山</font></td>
+                            </tr>
+                            <tr> 
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;广东&nbsp;韶关市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2016.11.10</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-9px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;全程徒步穿越&nbsp;</span>
+                                <span class="span_bg">&nbsp;4人组&nbsp;</span>
+                            </div>
+                            <a href="#" rel="external">
+                            	<div class="sign_up" align="center">
+                                	<p>我要报名</p>
+                            	</div>
+                        	</a>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+                
+                <a href="EventIndex1.html" rel="external">
+                    <div style="border:solid 1px #D3E8F1; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/兰州马拉松急救跑者报名.jpg" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>兰州马拉松急救跑者报名</font></td>
+                            </tr>
+                            <tr>
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;甘肃&nbsp;兰州市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2016.06.10</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-9px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;全马急救跑者&nbsp;</span>
+                                <span class="span_bg">&nbsp;半马急救跑者&nbsp;</span>
+                            </div>
+                            <a href="Sign1.html" rel="external">
+                            	<div class="sign_up" align="center">
+                                	<p>我要报名</p>
+                            	</div>
+                        	</a>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+                
+                <a href="EventIndex3.html" rel="external">
+                    <div style="border:solid 1px #D3E8F1; margin-top:5px; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/2016第二届华贸杯红花湖群英马拉松赛.jpg" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>2016第二届华贸杯红花湖群英马拉松赛</font></td>
+                            </tr>
+                            <tr>
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;广东&nbsp;惠州市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2016.01.10</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-9px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;半程马拉松&nbsp;</span>
+                            </div>
+                            <a href="#" rel="external">
+                            	<div class="over" align="center">
+                                	<p>比赛结束</p>
+                            	</div>
+                        	</a>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div id="local_game" hidden="">
+            	<a href="EventIndex.html" rel="external">
+                    <div style="border:solid 1px #D3E8F1; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/徒步穿越丹霞山.jpg" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>徒步穿越丹霞山</font></td>
+                            </tr>
+                            <tr>
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;广东&nbsp;韶关市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2015.11.10</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-9px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;全程徒步穿越&nbsp;</span>
+                                <span class="span_bg">&nbsp;4人组&nbsp;</span>
+                            </div>
+                            <a href="#" rel="external">
+                            	<div class="sign_up" align="center">
+                                	<p>我要报名</p>
+                            	</div>
+                        	</a>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div class="nav-glyphish-example" data-role="navbar">
+                <ul>
+                    <li><a id="event_light" href="#event_page" data-transition="flip" data-icon="event" class="ui-btn-active">赛事</a></li>        
+                    <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle">赛圈</a></li>
+                    <li><a id="club" href="#club_page" data-transition="flip" data-icon="club">俱吧</a></li>      
+                    <li><a id="person" href="#user_page" data-icon="person" data-transition="flip">个人</a></li>   
+                </ul>
+        	</div>
+        </div>
+    </div>
+    
+    
+    <div data-role="page" data-theme="a" id="eventcircle_page">
+        <div data-role="navbar">
+            <ul>
+                <li><a id="release" href="#">发布赛事</a></li>        
+                <li><a id="participate" href="#">参与赛事</a></li>
+            </ul>
+            <ul>
+                <li class="release" style="background-color:#208EF4; height:2px"></li>
+                <li class="participate" style="background-color:#949494; height:2px"></li>
+            </ul>
+        </div>
+        <div data-role="content">
+        	<div id="release_game">
+           		 <a href="#released_page" data-transition="slideup">
+                     <div style="border:solid 1px #D3E8F1; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/top.png" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>第二届完美杯足球赛</font></td>
+                            </tr>
+                            <tr>
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;广东&nbsp;深圳市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2016.12.12</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-5px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;常规赛&nbsp;</span>
+                            </div>
+                            <a href="#" rel="external">
+                            	<div class="audit" align="center">
+                                	<p>待审核</p>
+                            	</div>
+                        	</a>
+                        </div>
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+                <p style="margin-top:5px"></p>
+                <a href="#release_page" data-transition="slideup"><div style="color:#FFFFFF; background-color:#6dafe3; font-size:80px; font-weight:bolder" align="center">+<p style="font-size:30px; font-weight:600; margin-top:-20px">发布新赛事</p></div></a>
+            </div>
+            <div id="participate_game" hidden="">
+                <a href="EventIndex.html" rel="external">
+                    <div style="border:solid 1px #D3E8F1; border-radius:5px">
+                        <table width="100%" style="font-size:small">
+                            <tr>
+                                <td colspan="2"><img src="images/徒步穿越丹霞山.jpg" width="100%" height="150px"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;<font>徒步穿越丹霞山</font></td>
+                            </tr>
+                            <tr>
+                                <td width="35%">&nbsp;<img src="images/place.png">&nbsp;广东&nbsp;韶关市</td>
+                                <td width="65%"><img src="images/time.png">&nbsp;2016.11.10</td>
+                            </tr>
+                        </table>
+                        <p></p>
+                        <div>
+                            <div style="float:left; font-size:11px; margin-top:-9px">
+                                <span>&nbsp;</span>
+                                <span class="span_bg">&nbsp;全程徒步穿越&nbsp;</span>
+                                <span class="span_bg">&nbsp;4人组&nbsp;</span>
+                            </div>
+                            <a href="#" rel="external">
+                            	<div class="over" align="center">
+                                	<p>比赛结束</p>
+                            	</div>
+                        	</a>
+                        </div> 
+                        <p>&nbsp;</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div class="nav-glyphish-example" data-role="navbar">
+                <ul>
+                    <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
+                    <li><a id="eventcircle_light" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle" class="ui-btn-active">赛圈</a></li>        
+                    <li><a id="club" href="#club_page" data-transition="flip" data-icon="club">俱吧</a></li>
+                    <li><a id="person" href="#user_page" data-icon="person" data-transition="flip">个人</a></li>   
+                </ul>
+        	</div>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="club_page">
+    	<div data-role="header">
+        	<div data-role="navbar">
+            <ul>
+                <li><a id="city" style="color:#6dafe3">同城</a></li>
+                <li><a id="active">活跃</a></li>
+                <li><a id="star">星级</a></li>
+            </ul>
+            <ul>
+                <li class="city" style="background-color:#208EF4; height:2px"></li>
+                <li class="active" style="background-color:#949494; height:2px"></li>
+                <li class="star" style="background-color:#949494; height:2px"></li>
+            </ul>
+        </div>
+        </div>
+        <div data-role="content">
+        	<a href="#create_page" data-transition="slidedown"><div align="center" style="width:100%; height:35px; background-color:#00A3FF; color:#FFFFFF; margin-top:-33px; margin-bottom:20px; border-radius:5px;"><p style="font-size:24px; font-weight:600;">创建俱乐部</p></div></a>
+        	<div id="city_page">
+            	<ul data-role="listview" data-inset="true" style="margin-top:-12px">
+                    <li data-icon="false">
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-1.jpg">
+                                    <h3 style="margin-top:auto;">韶关非常户外运动俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">非常户外，快乐精彩</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-2.jpg">
+                                    <h3 style="margin-top:auto;">狂野户外俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">自然 运动 健康 友情 安全 环保 自助 互助</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-3.jpg">
+                                    <h3 style="margin-top:auto;">易出行俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">提供韶关本土户外活动，全面优质服务</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-4.jpg">
+                                    <h3 style="margin-top:auto;">南雄烈风户外骑行俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">爱户外，动起来</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-5.jpg">
+                                    <h3 style="margin-top:auto;">韶关户外游</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">我秀我户外走进大自然 爱护大自然 你我同行</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-6.jpg">
+                                    <h3 style="margin-top:auto;">广发韶关碧桂园社区支行</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">广发有你有我生活更精彩！</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-7.jpg">
+                                    <h3 style="margin-top:auto;">韶关户外俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">广交户外爱好者</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-8.jpg">
+                                    <h3 style="margin-top:auto;">随风·户外团队</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">户外运动，安全第一</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-9.jpg">
+                                    <h3 style="margin-top:auto;">韶关捷安特骑乐俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">骑乐无穷</p>
+                                </a>
+                            </li>
+                        </ul>         
+                	</li>
+                </ul>          
+            </div>
+            
+            <div id="active_page" hidden="">
+            	<ul data-role="listview" data-inset="true" style="margin-top:-12px">
+                    <li data-icon="false">
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-2.jpg">
+                                    <h3 style="margin-top:auto;">狂野户外俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">自然 运动 健康 友情 安全 环保 自助 互助</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-9.jpg">
+                                    <h3 style="margin-top:auto;">韶关捷安特骑乐俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">骑乐无穷</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-1.jpg">
+                                    <h3 style="margin-top:auto;">韶关非常户外运动俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">非常户外，快乐精彩</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-4.jpg">
+                                    <h3 style="margin-top:auto;">南雄烈风户外骑行俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">爱户外，动起来</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-6.jpg">
+                                    <h3 style="margin-top:auto;">广发韶关碧桂园社区支行</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">广发有你有我生活更精彩！</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-3.jpg">
+                                    <h3 style="margin-top:auto;">易出行俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">提供韶关本土户外活动，全面优质服务</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-5.jpg">
+                                    <h3 style="margin-top:auto;">韶关户外游</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">我秀我户外走进大自然 爱护大自然 你我同行</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-8.jpg">
+                                    <h3 style="margin-top:auto;">随风·户外团队</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">户外运动，安全第一</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-7.jpg">
+                                    <h3 style="margin-top:auto;">韶关户外俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">广交户外爱好者</p>
+                                </a>
+                            </li>
+                        </ul>    
+                	</li>
+                </ul>          
+            </div>
+            
+            <div id="star_page" hidden="">
+            	<ul data-role="listview" data-inset="true" style="margin-top:-12px">
+                    <li data-icon="false">
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-9.jpg">
+                                    <h3 style="margin-top:auto;">韶关捷安特骑乐俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">骑乐无穷</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-8.jpg">
+                                    <h3 style="margin-top:auto;">随风·户外团队</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">户外运动，安全第一</p>
+                                </a>
+                            </li>
+                        </ul> 
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-7.jpg">
+                                    <h3 style="margin-top:auto;">韶关户外俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">广交户外爱好者</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-6.jpg">
+                                    <h3 style="margin-top:auto;">广发韶关碧桂园社区支行</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">广发有你有我生活更精彩！</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-5.jpg">
+                                    <h3 style="margin-top:auto;">韶关户外游</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">我秀我户外走进大自然 爱护大自然 你我同行</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-4.jpg">
+                                    <h3 style="margin-top:auto;">南雄烈风户外骑行俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">爱户外，动起来</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-3.jpg">
+                                    <h3 style="margin-top:auto;">易出行俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">提供韶关本土户外活动，全面优质服务</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-2.jpg">
+                                    <h3 style="margin-top:auto;">狂野户外俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">自然 运动 健康 友情 安全 环保 自助 互助</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul data-role="listview" data-inset="true">
+                            <li data-icon="false">
+                                <a href="Club.html" rel="external">
+                                    <img src="images/未标题-1.jpg">
+                                    <h3 style="margin-top:auto;">韶关非常户外运动俱乐部</h3>
+                                    <div align="center"><p>+&nbsp;<small>加入</small></p></div>
+                                    <p style="margin-top:25px; margin-bottom:-30px">非常户外，快乐精彩</p>
+                                </a>
+                            </li>
+                        </ul>  
+                	</li>
+                </ul>            
+            </div>
+        </div>
+        <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div class="nav-glyphish-example" data-role="navbar">
+                <ul>
+                    <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
+                    <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle">赛圈</a></li>        
+                    <li><a id="club_light" href="#club_page" data-transition="flip" data-icon="club" class="ui-btn-active">俱吧</a></li>
+                    <li><a id="person" href="#user_page" data-icon="person" data-transition="flip">个人</a></li>   
+                </ul>
+        	</div>
+        </div>
+    </div>
+      
+    <div data-role="page" data-theme="a" id="user_page">
+        <div data-role="header" style="margin-top:-1px">
+            <img alt="userbackground" src="images/bg1.png" width="100%" height="150px">
+            <div class="user">
+                <div class="user_head" title="我的头像"><img alt="我的头像" src="images/userhead.png" width="100%" height="100%" style="border-radius:50%"></div>
+                <div class="username"><h4 style="color:#000000">&nbsp;大赛易</h4></div>
+            </div>
+        </div> 
+        <div class="user_information">
+            <table width="100%">
+                <tr>
+                    <td colspan="2"><br></td>
+                </tr>
+                <tr>
+                    <td align="left"><strong>&nbsp;昵称</strong></td>
+                    <td align="right">大赛易&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>
+                <tr>
+                    <td align="left"><strong>&nbsp;手机</strong></td>
+                    <td align="right">18318337740&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>
+                <tr>
+                    <td align="left"><strong>&nbsp;性别</strong></td>
+                    <td align="right">男&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>
+                <tr>
+                    <td align="left"><strong>&nbsp;生日</strong></td>
+                    <td align="right">11月11日&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>
+                <tr>
+                    <td align="left"><strong>&nbsp;地区</strong></td>
+                    <td align="right">广东&nbsp;韶关&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>
+            </table>
+        </div>
+        <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+            <div class="nav-glyphish-example" data-role="navbar">
+                <ul>
+                    <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
+                    <li><a id="eventcircle" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle">赛圈</a></li>
+                    <li><a id="club" href="#club_page" data-transition="flip" data-icon="club">俱吧</a></li>        
+                    <li><a id="person_light" href="#" data-icon="person" data-transition="flip" class="ui-btn-active">个人</a></li>   
+                </ul>
+            </div>
+        </div>  
+	</div>
+
+
+	<div data-role="page" data-theme="a" id="release_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#eventcircle_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>发布新赛事申请表</h2><a href="#user_page" class="head_a_user" data-transition="flip"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<h3 align="center" style="color:#000000">新赛事申请表</h3>
+  			<form>
+            	姓名：<br><input type="text" id="applicant_name" placeholder="请输入真实姓名">
+                身份证件编号：<br><input type="text" id="applicant_id" placeholder="请输入身份证编号">
+                手机号：<br><input type="tel" id="applicant_phone" placeholder="请输入手机号码">
+                电子邮箱：<br><input type="email" id="applicant_email" placeholder="请输入常用电子邮箱">
+                单位全称：<br><input type="text" id="applicant_fullname" placeholder="请输入单位全称">
+                赛事类别:<br><select>
+                                <option id="football">足球</option>
+                                <option id="marathon">马拉松</option>
+                        	</select>
+                赛事全称：<br><input type="text" id="event_fullname" placeholder="请输入赛事全称">
+                所在地：<br><input type="text" id="event_home" placeholder="请输入所在地">
+                赛事规模：<br><input type="text" id="event_scale" placeholder="请输入赛事大致规模人数">
+				赛事日期：<br><input type="date" id="event_date" placeholder="请输入赛事举办日期">
+                赛事简介：<br><textarea id="event_intro" placeholder="请填写赛事简介"></textarea>
+            </form>
+            <a data-role="button" data-theme="a" onclick="check();">确认申请</a>
+        </div>
+        <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div class="nav-glyphish-example" data-role="navbar">
+                <ul>
+                    <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
+                    <li><a id="eventcircle_light" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle" class="ui-btn-active">赛圈</a></li>        
+                    <li><a id="club" href="#club_page" data-transition="flip" data-icon="club">俱吧</a></li>
+                    <li><a id="person" href="#user_page" data-transition="flip" data-icon="person">个人</a></li>   
+                </ul>
+        	</div>
+     	</div> 
+    </div>
+
+	<div data-role="page" data-theme="a" id="released_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#eventcircle_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>第二届完美杯足球赛申请表</h2><a href="#user_page" class="head_a_user" data-transition="flip"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<h3 align="center" style="color:#000000">第二届完美杯足球赛申请表</h3>
+  			<form>
+            	姓名：<br><input type="text" id="applicant_name" placeholder="请输入真实姓名" value="大赛易">
+                身份证件编号：<br><input type="text" id="applicant_id" placeholder="请输入身份证编号" value="406507198405305381">
+                手机号：<br><input type="tel" id="applicant_phone" placeholder="请输入手机号码" value="18318337409">
+                电子邮箱：<br><input type="email" id="applicant_email" placeholder="请输入常用电子邮箱" value="dasaiyi@163.com">
+                单位全称：<br><input type="text" id="applicant_fullname" placeholder="请输入单位全称" value="大赛易体育有限公司">
+                赛事类别:<br><select>
+                                <option id="football">足球</option>
+                                <option id="marathon">马拉松</option>
+                        	</select>
+                赛事全称：<br><input type="text" id="event_fullname" placeholder="请输入赛事全称" value="第二届完美杯足球赛">
+                所在地：<br><input type="text" id="event_home" placeholder="请输入所在地" value="广东深圳">
+                赛事规模：<br><input type="text" id="event_scale" placeholder="请输入赛事大致规模人数" value="40人">
+				赛事日期：<br><input type="date" id="event_date" placeholder="请输入赛事举办日期" value="2016-12-12">
+                赛事简介：<br><textarea id="event_intro" placeholder="请填写赛事简介">暂无</textarea>
+            </form>
+            <a href="#eventcircle_page" data-role="button" data-theme="a" onclick="check();">确认修改</a>
+        </div>
+        <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div class="nav-glyphish-example" data-role="navbar">
+                <ul>
+                    <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
+                    <li><a id="eventcircle_light" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle" class="ui-btn-active">赛圈</a></li>        
+                    <li><a id="club" href="#club_page" data-transition="flip" data-icon="club">俱吧</a></li>
+                    <li><a id="person" href="#user_page" data-transition="flip" data-icon="person">个人</a></li>   
+                </ul>
+        	</div>
+     	</div> 
+    </div>
+    
+    <div data-role="page" data-theme="a" id="create_page">
+    	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#eventcircle_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>创建俱乐部</h2><a href="#user_page" class="head_a_user" data-transition="flip"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<h3 align="center" style="color:#000000">俱乐部创建申请表</h3>
+  			<form>
+            	俱乐部图标：<br><input type="file" accept="image/*">
+            	名称：<br><input type="text" id="club_name" placeholder="请填写俱乐部名称">
+                所在地：<br><input type="text" id="club_home" placeholder="请填写所在地">
+                宣言：<br><input type="text" id="club_slogan" placeholder="请填写俱乐部宣言">
+                简介：<br><textarea id="club_intro" placeholder="请填写俱乐部简介"></textarea>
+                申请人姓名：<br><input type="text" id="club_admin_name" placeholder="请填写申请人的姓名">
+                联系电话：<br><input type="tel" id="club_phone" placeholder="请填写申请人的联系电话">
+            </form>
+            <a data-role="button" data-theme="a" onclick="check_club();">确认创建</a>
+        </div>
+        <div class="nav-glyphish-example" data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div class="nav-glyphish-example" data-role="navbar">
+                <ul>
+                    <li><a id="event" href="#event_page" data-transition="flip" data-icon="event">赛事</a></li>        
+                    <li><a id="eventcircle_light" href="#eventcircle_page" data-transition="flip" data-icon="eventcircle" class="ui-btn-active">赛圈</a></li>        
+                    <li><a id="club" href="#club_page" data-transition="flip" data-icon="club">俱吧</a></li>
+                    <li><a id="person" href="#user_page" data-transition="flip" data-icon="person">个人</a></li>   
+                </ul>
+        	</div>
+     	</div> 
+    </div>
+</body>
+</html>

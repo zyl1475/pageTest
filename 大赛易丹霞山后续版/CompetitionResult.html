@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+	.head_user{
+		margin-top:-9px; 
+		margin-left:-12px; 
+		border-radius:50%
+	}
+	.head_a_user{
+		width:10px; 
+		height:16px; 
+		border-radius:50% !important; 
+		border:0;
+	}
+</style>
+<script>
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="competitionresult_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="EventIndex.html#after_page" rel="external" title="返回"> < </a><h2>赛事成果</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<div>
+            	<h3 align="center">徒步穿越丹霞山参赛队伍排名表</h3>
+            	<table width="100%">
+                    <tr align="center">
+                      	<td width="15%">队号</td>
+                      	<td width="20%">用时</td>
+                      	<td width="15%">排名</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>232</td>
+                      	<td>4时37分</td>
+                      	<td>1</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>858</td>
+                      	<td>4时51分</td>
+                      	<td>2</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>523</td>
+                      	<td>5时14分</td>
+                      	<td>3</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>245</td>
+                      	<td>5时25分</td>
+                      	<td>4</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>7</td>
+                      	<td>5时40分</td>
+                      	<td>5</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>76</td>
+                      	<td>5时47分</td>
+                      	<td>6</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>786</td>
+                      	<td>5时55分</td>
+                      	<td>7</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>867</td>
+                      	<td>5时57分</td>
+                      	<td>8</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>944</td>
+                      	<td>6时04分</td>
+                      	<td>9</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>246</td>
+                      	<td>6时14分</td>
+                      	<td>10</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>62</td>
+                      	<td>6时20分</td>
+                      	<td>11</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>524</td>
+                      	<td>6时20分</td>
+                      	<td>12</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>823</td>
+                      	<td>6时32分</td>
+                      	<td>13</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1181</td>
+                      	<td>6时33分</td>
+                      	<td>14</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1212</td>
+                      	<td>6时34分</td>
+                      	<td>15</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>247</td>
+                      	<td>6时35分</td>
+                      	<td>16</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>844</td>
+                      	<td>6时35分</td>
+                      	<td>17</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1214</td>
+                      	<td>6时41分</td>
+                      	<td>18</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>205</td>
+                      	<td>6时42分</td>
+                      	<td>19</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1324</td>
+                      	<td>6时42分</td>
+                      	<td>20</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>858</td>
+                      	<td>6时42分</td>
+                      	<td>21</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>935</td>
+                      	<td>6时45分</td>
+                      	<td>22</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>847</td>
+                      	<td>6时45分</td>
+                      	<td>23</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>857</td>
+                      	<td>6时46分</td>
+                      	<td>24</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1162</td>
+                      	<td>5时50分</td>
+                      	<td>25</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>203</td>
+                      	<td>6时57分</td>
+                      	<td>26</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1019</td>
+                      	<td>6时59分</td>
+                      	<td>27</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>821</td>
+                      	<td>7时00分</td>
+                      	<td>28</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>860</td>
+                      	<td>7时03分</td>
+                      	<td>29</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>583</td>
+                      	<td>7时05分</td>
+                      	<td>30</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>31</td>
+                      	<td>7时06分</td>
+                      	<td>31</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>178</td>
+                      	<td>7时06分</td>
+                      	<td>32</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>221</td>
+                      	<td>7时09分</td>
+                      	<td>33</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>194</td>
+                      	<td>7时10分</td>
+                      	<td>34</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>839</td>
+                      	<td>7时13分</td>
+                      	<td>35</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1322</td>
+                      	<td>7时15分</td>
+                      	<td>36</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>617</td>
+                      	<td>7时17分</td>
+                      	<td>37</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>383</td>
+                      	<td>7时17分</td>
+                      	<td>38</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>33</td>
+                      	<td>7时18分</td>
+                      	<td>39</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>826</td>
+                      	<td>7时20分</td>
+                      	<td>40</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1394</td>
+                      	<td>7时22分</td>
+                      	<td>41</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>331</td>
+                      	<td>7时25分</td>
+                      	<td>42</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>43</td>
+                      	<td>7时25分</td>
+                      	<td>43</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>643</td>
+                      	<td>7时27分</td>
+                      	<td>44</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>1374</td>
+                      	<td>7时32分</td>
+                      	<td>45</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>348</td>
+                      	<td>7时33分</td>
+                      	<td>46</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>629</td>
+                      	<td>7时35分</td>
+                      	<td>47</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>447</td>
+                      	<td>7时36分</td>
+                      	<td>48</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>240</td>
+                      	<td>7时39分</td>
+                      	<td>49</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                    <tr align="center">
+                      	<td>824</td>
+                      	<td>7时39分</td>
+                      	<td>50</td>
+                    </tr>
+                    <tr>
+                      	<td colspan="3"><hr></td>
+                    </tr>
+                </table>
+			</div>
+        </div>
+    </div>
+    
+     <div data-role="page" data-theme="a" id="resultdetails_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#competitionresult_page" title="返回"> < </a><h2>赛事成果详情页</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<div>
+                <h3 align="center">第二届完美杯正式开幕</h3>
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试以下内容均为正文测试</h4>
+            </div>
+            <p align="center">--End--</p>
+            <br>
+            <div>
+                <b>评论 0</b>
+                <hr>
+                <table width="100%" style="font-size:small">
+                    <tr>
+                    	<td width="10%" rowspan="2"><img src="images/testhead200.png" style="border-radius:50%" width="45px" height="45px"></td>
+                    	<td width="90%">这个是大赛易用户的用户名</td>
+                    </tr>
+                    <tr>
+                    	<td>03-12&nbsp;20:30</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2">这是楼上用户发布的评论内容这是楼上用户发布的评论内容这是楼上用户发布的评论内容</td>
+                    </tr>
+                </table>
+                <hr>
+                <table width="100%" style="font-size:small">
+                    <tr>
+                    	<td width="10%" rowspan="2"><img src="images/testhead200.png" style="border-radius:50%" width="45px" height="45px"></td>
+                    	<td width="90%">这个是大赛易用户的用户名</td>
+                    </tr>
+                    <tr>
+                    	<td>03-12&nbsp;20:30</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2">这是楼上用户发布的评论内容这是楼上用户发布的评论内容这是楼上用户发布的评论内容</td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
+    	</div>
+        <div data-role="footer" data-position="fixed" style="margin-bottom:-1px">
+        	<div style="background-color:#f5faff; border: solid 1px #E0EDF7">
+            	<table width="100%">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td align="right"><img src="images/eventeasy.png" style="border-radius:50%" width="45px" height="45px"></td>
+                        <td align="left"><input type="text" name="va" id="va" placeholder="说说你的观点..."/></td>
+                        <td align="left"><a data-role="button">+</a></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+		</div>
+        
+    </div>
+</body>
+</html>
