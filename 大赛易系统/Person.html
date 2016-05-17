@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<link href="css/easysportstyle.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div data-role="page" data-theme="a" id="person_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       <a href="EasySportIndex.html#user_page" rel="external" title="返回"><b> < </b></a><h2>个人资料</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user"></a>
+    </div> 
+	<div>
+        <table width="100%" rules="rows" cellpadding="10">
+          <tr>
+            <td align="left">头像</td>
+            <td align="right"><img src="images/userhead.png" width="40px" height="40px"></td>
+          </tr>
+          <tr>
+            <td align="left">昵称</td>
+            <td align="right">大赛易</td>
+          </tr>
+          <tr>
+            <td align="left">手机</td>
+            <td align="right">18318337740</td>
+          </tr>
+          <tr>
+            <td align="left">性别</td>
+            <td align="right">男</td>
+          </tr>
+          <tr>
+            <td align="left">生日</td>
+            <td align="right">11月11日</td>
+          </tr>
+          <tr>
+            <td align="left">特长&amp;爱好</td>
+            <td align="right">跑步</td>
+          </tr>
+          <tr>
+            <td align="left">地区</td>
+            <td align="right">广东&nbsp;韶关</td>
+          </tr>
+        </table>
+	</div>
+    <div style="position:absolute; bottom:0; width:100%">
+    	<a href="#editor_page" data-role="button">编辑资料</a>
+        <br>
+    </div>
+</div>
+    
+<div data-role="page" data-theme="a" id="editor_page">
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+       <a href="#person_page" title="返回"><b> < </b></a><h2>个人资料</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+    </div> 
+      
+    <div data-role="content">
+    <form>
+    	我的头像：<input type="file" accept="image/*">
+		我的姓名：<input name="" type="text" placeholder="请输入您的真实姓名">
+        我的昵称：<input name="" type="text" placeholder="请输入您大赛易的昵称">
+		我的手机号码：<input name="" type="text" placeholder="请输入您的手机号码">
+		我的性别：<select name="sex">
+					<option value="male">男</option>
+            		<option value="female">女</option>
+			 	</select>
+		我的生日：<input type="date">
+		我的所在地：<input name="" type="text" placeholder="请输入您的所在地">
+        我的特长&amp;爱好：<input name="" type="text" placeholder="请输入您的特长爱好">
+	</form>
+    <p align="center"><img src="images/eventeasy.png" width="13px" height="13px"><span style="font-size:smaller" align="center">大赛易保证不会向他人泄露您的个人信息</span></p>
+	</div>
+    <p><br></p>
+    <div style="position:absolute; bottom:20px; width:100%;">
+    	<div style="width:50%; float:left"><a data-role="button" onClick="" style="background-color:#0073FD; color:#FFF;">保存</a></div>
+    	<div style="width:50%; float:left"><a data-role="button" onClick="" style="background-color:#0073FD; color:#FFF;">取消</a></div>
+    </div>
+</div>
+
+</body>
+</html>

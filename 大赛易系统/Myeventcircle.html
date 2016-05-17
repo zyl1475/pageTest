@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<link href="css/easysportstyle.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script> 
+</script>
+
+</head>
+<body>
+<div data-role="page" data-theme="a" id="mycircle_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="EasySportIndex.html#user_page" rel="external" title="返回"><b> < </b></a><h2>我的赛圈</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a> 
+    </div> 
+        
+    <div>
+       <table width="100%" rules="rows" cellpadding="5">
+            <tr onClick="parent.location='#notice_page'">
+                <td><img src="images/申请.png" class="person_img"></td>
+                <td width="99%">我申请过的赛事</td>
+                <td width="10px;">&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#attend_page'">
+                <td><img src="images/参加.png" class="person_img"></td>
+                <td>我参加过的赛事</td>
+                <td>&gt;</td>
+            </tr>
+        </table>
+    </div>      
+</div>
+
+<div data-role="page" data-theme="a" id="notice_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="#mycircle_page" rel="external" title="返回"><b> < </b></a><h2>赛事通知</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a> 
+    </div> 
+        
+    <div>
+		<table width="100%" rules="rows" cellpadding="5">
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td width="99%">望京公园一起跑</td>
+                <td width="10px;">&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>红花湖群英马拉松赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>2015年昌平区“康比特杯”足球联赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>2015秋季扬州5人制足球联赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>中国上市公司五人足球涨停赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>绵竹业余足球挑战赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>足协甲级联赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>踏春跑</td>
+                <td>&gt;</td>
+            </tr>
+		</table>
+    </div>     
+</div>
+
+<div data-role="page" data-theme="a" id="attend_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="#mycircle_page" rel="external" title="返回"><b> < </b></a><h2>参加赛事</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+    </div> 
+        
+    <div>
+		<table width="100%" rules="rows" cellpadding="5">
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td width="99%">2月1日参加望京公园一起跑</td>
+                <td width="10px;">&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>3月1日参加红花湖群英马拉松赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>3月15日参加昌平区“康比特杯”足球联赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>4月1日秋季扬州5人制足球联赛</td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#details_page'">
+                <td><img src="images/saishi.png" class="person_img"></td>
+                <td>4月15日参加踏春跑</td>
+                <td>&gt;</td>
+            </tr>
+		</table>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="details_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="#attend_page" title="返回"><b> < </b></a><h2>通知详情</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+    </div> 
+        
+    <div>
+		<table width="100%" rules="rows" cellpadding="5">
+            <tr onClick="parent.location='Mymessage.html'">
+                <td><img src="images/普通文字消息.png" class="person_img"></td>
+                <td width="96%">图文消息</td>
+                <td width="3%"><a style="color:#F00; text-shadow:2px 2px 5px orange,-2px 2px 5px green;">1</a></td>
+                <td width="10px">&gt;</td>
+            </tr>
+            <tr onClick="parent.location='Tickets.html'">
+                <td><img src="images/电子门票.png" class="person_img"></td>
+                <td>电子门票</td>
+                <td></td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='Receipt.html'">
+                <td><img src="images/电子回单.png" class="person_img"></td>
+                <td>电子回单</td>
+                <td></td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='Myresults.html'">
+                <td><img src="images/xiangche.png" class="person_img"></td>
+                <td>赛事结果</td>
+                <td></td>
+                <td>&gt;</td>
+            </tr>
+            <tr onClick="parent.location='Certificate.html'">
+                <td><img src="images/shoucang.png" class="person_img"></td>
+                <td>电子证书</td>
+                <td></td>
+                <td>&gt;</td>
+            </tr>
+		</table>
+    </div>
+</div>
+</body>
+</html>

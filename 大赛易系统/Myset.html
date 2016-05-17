@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<link href="css/easysportstyle.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!--设置页开始-->
+<div data-role="page" data-theme="a" id="myset_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="EasySportIndex.html#user_page" rel="external" title="返回"><b> < </b></a><h2>我的设置</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+    </div> 
+        
+    <div>
+        <table width="100%" rules="rows" cellpadding="10">
+            <tr onClick="parent.location='#help_page'">
+                <td>帮助与反馈</td>
+                <td width="10px">&gt;</td>
+            </tr>
+            <tr onClick="parent.location='#about_page'" >
+                <td>关于大赛易</td>
+                <td>&gt;</td>
+            </tr>
+        </table>
+    </div>  
+    <div style="position:absolute; bottom:0; width:100%">
+    	<a data-role="button" onClick="">退出登录</a>
+        <br>
+    </div>   
+</div>
+<!--设置页结束-->
+
+<!--设置子页帮助页开始-->
+<div data-role="page" data-theme="a" id="help_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="#myset_page" title="返回"><b>&lt;</b></a><h2>帮助与反馈</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user"></a>
+    </div> 
+	<h3 align="center">热点问题</h3>
+    <div>
+		<table width="100%"rules="rows" cellpadding="10">
+            <tr>
+                <td>如何创建赛事？</td>
+                <td width="10px">&gt;</td>
+            </tr>
+            <tr>
+                <td>我能不能帮好友报名？</td>
+                <td>&gt;</td>
+            </tr>
+            <tr>
+                <td>参加赛事后能否取消？</td>
+                <td>&gt;</td>
+            </tr>
+        </table>
+	</div>
+</div>
+<!--设置子页帮助页结束-->
+
+<!--设置子页关于页开始-->
+<div data-role="page" data-theme="a" id="about_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="#myset_page" title="返回"><b>&lt;</b></a><h2>关于大赛易</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user"></a>
+    </div> 
+        
+    <div align="center">
+        <h3 align="center">拥有赛事活动官网，提高赛事活动宣传力度</h3>
+        <p>√ 独立域名，统一形象，pc端、微信端全支持</p>
+        <p>√ 信息发布、报名管理、参赛号生成等专业解决方案</p>
+        <p>√ 全托管，更低成本，更省心，更安全</p>
+    </div>
+ 
+</div>
+<!--设置子页关于页结束-->
+</body>
+</html>

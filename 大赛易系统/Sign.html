@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<link href="css/easysportstyle.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style type="text/css">
+	tr td:nth-child(2){
+		color:#000000;
+	}
+	.span_up,.span_over,.span_full{
+		font-size:11px; 
+		border-radius:5px; 
+		color:#FFFFFF;
+	}
+	.span_up{
+		background-color:#f2c61f; 
+		border: solid 5px #f2c61f; 
+	}
+	.span_over{
+		background-color:#CBCBCB; 
+		border: solid 5px #CBCBCB; 
+	}
+	.span_full{
+		background-color:#AD7FE5; 
+		border: solid 5px #AD7FE5; 
+	}
+	.sign_up{
+		background-color:#f91647 !important;
+		color:#ffffff !important;
+	}
+	.sign_over,.sign_full{
+		background-color:#CBCBCB !important;
+		color:#ffffff !important;
+	}
+</style>
+<script>
+	/*$(function check(){
+	
+		$.mobile.changePage("#pay_page",{
+	
+			transition:'slideup'
+	
+		});
+	
+	});*/
+
+	function check(){
+		$.mobile.changePage("#pay_page",{transition:'slideup'});
+	}
+	function checkpay(){
+		alert("报名成功！");
+		$.mobile.changePage("EventIndex.html",{transition:'flip'});
+	}
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="a" id="sign_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="EventIndex.html" rel="external" title="返回"><b> < </b></a><h2>报名页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+            <h3 align="center">徒步穿越丹霞山</h3>
+            <div>报名项目</div>   <br>         
+          	<div style="border: solid 1px #D3E8F1; border-radius:5px">
+            	<div style="margin-top:5px; font-weight:600; color:#000;">&nbsp;团体报名</div><hr color="#D3E8F1">
+                <table width="100%">
+                	<tr>
+                    	<td colspan="2">徒步穿越丹霞山选手招募[团体]&nbsp;<span class="span_up">正在报名</span></td>
+                    </tr>
+                    <tr>
+                    	<td width="72px">竞赛项目:</td>
+                        <td>全程徒步穿越丹霞山</td>
+                    </tr>
+                    <tr>
+                    	<td>年龄要求:</td>
+                        <td>18岁-60岁</td>
+                    </tr>
+                    <tr>
+                    	<td>截止时间:</td>
+                        <td>2016.11.10 12:30</td>
+                    </tr>
+                    <tr>
+                    	<td>人数限制:</td>
+                        <td>4人</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><div style="width:80%"><a href="#team_page" data-role="button" class="sign_up">免费报名</a></div></td>
+                    </tr>
+                </table>
+                <hr color="#D3E8F1">
+                <table width="100%">
+                	<tr>
+                    	<td colspan="2">徒步穿越丹霞山队伍招募[团体]&nbsp;<span class="span_full">名额已满</span></td>
+                    </tr>
+                    <tr>
+                    	<td width="72px">竞赛项目:</td>
+                        <td>全程徒步穿越丹霞山</td>
+                    </tr>
+                    <tr>
+                    	<td>年龄要求:</td>
+                        <td>18岁-60岁</td>
+                    </tr>
+                    <tr>
+                    	<td>截止时间:</td>
+                        <td>2016.11.10 12:30</td>
+                    </tr>
+                    <tr>
+                    	<td>人数限制:</td>
+                        <td>4人</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><div style="width:80%"><a href="#" data-role="button" class="sign_full">名额已满</a></div></td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div style="border: solid 1px #D3E8F1; border-radius:5px">
+            	<div style="margin-top:5px; font-weight:600; color:#000;">&nbsp;个人报名</div><hr color="#D3E8F1">
+                <table width="100%">
+                	<tr>
+                    	<td colspan="2">徒步穿越丹霞山选手招募[个人]&nbsp;<span class="span_over">已经结束</span></td>
+                    </tr>
+                    <tr>
+                    	<td width="72px">竞赛项目:</td>
+                        <td>全程徒步穿越丹霞山</td>
+                    </tr>
+                    <tr>
+                    	<td>年龄要求:</td>
+                        <td>18岁-60岁</td>
+                    </tr>
+                    <tr>
+                    	<td>截止时间:</td>
+                        <td>2016.11.10 12:30</td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2" align="center"><div style="width:80%"><a href="#fill_page" data-role="button" class="sign_over">报名已结束</a></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="team_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#sign_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名信息填写页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<form>
+            	<span class="must">*</span>&nbsp;选择您所属团队：<br><select>
+                                                                        <option>请选择您所属的团队</option>
+                                                                        <option>丹霞月雏(人数上限：4人，剩余名额：4个)</option>
+                                                                    </select>
+                <p style="margin-top:-8px"></p><font size="-1" color="red">如果您的团队未在列表中显示，请您通知团队负责人创建团队</font>   
+                <br><span class="must">*</span>&nbsp;团队邀请码：<br><input type="text" id="id" placeholder="请输入您的团队邀请码">
+                <p style="margin-top:-8px"></p><font size="-1" color="red">请填写邀请码避免报错团队，选择团队之前请和团队负责人联系沟通好！</font>
+            </form>
+        </div>
+        
+        <div style="position:absolute; bottom:0; width:100%">
+            <a href="#build_page" data-role="button" style="background-color:#f91647; color:#FFFFFF">创建我的团队</a>
+            <a href="#fill_page" data-role="button">下一步</a>
+            <br>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="build_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#team_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名信息填写页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<form>
+            	<span class="must">*</span>团队名称：<br><input type="text" id="team_name" placeholder="请输入团队名称">
+                <span class="must">*</span>组队类型:<br><select>
+                                <option>请选择</option>
+                                <option>单位组织</option>
+                                <option>自行组织</option>
+                        	</select>
+            	<span class="must">*</span>负责人姓名：<br><input type="text" id="teamapplicant_name" placeholder="请输入团队负责人真实姓名">
+                <span class="must">*</span>负责人手机号：<br><input type="tel" id="teamapplicant_phone" placeholder="请输入团队负责人手机号码">
+                <span class="must">*</span>所在地区：<br><input type="text" id="team_home" placeholder="请输入所在地">
+                <span class="must">*</span>设置邀请码：<br><input type="text" id="team_name" placeholder="请设置团队邀请码">
+            </form>
+        </div>
+        <div style="position:absolute; bottom:0; width:100%">
+            <a href="#" data-role="button">确认申请</a><br>
+        </div>
+    </div>
+	
+    <div data-role="page" data-theme="a" id="fill_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#sign_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名信息填写页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+        	<form>
+            	<span class="must">*</span>&nbsp;我的姓名：<br><input type="text" id="applicant_name" placeholder="请输入真实姓名">
+                <span class="must">*</span>&nbsp;我的出生日期：<br><input type="date" id="applicant_birthday" placeholder="请选择出生日期">
+                <span class="must">*</span>&nbsp;我的性别：<br><select>
+                                                                <option>请选择</option>
+                                                                <option>男</option>
+                                                                <option>女</option>
+                                                            </select>
+                <span class="must">*</span>&nbsp;我的血型：<br><select>
+                                                                <option>请选择</option>
+                                                                <option>我是O型血</option>
+                                                                <option>我是A型血</option>
+                                                                <option>我是B型血</option>
+                                                                <option>我是AB型血</option>
+                                                                <!--<option>我不知道我是哪种血型</option>-->
+                                                            </select>
+                <span class="must">*</span>&nbsp;我的身份证件编号：<br><input type="text" id="applicant_id" placeholder="请输入身份证编号">
+                <span class="must">*</span>&nbsp;我的手机号：<br><input type="tel" id="applicant_phone" placeholder="请输入手机号码">
+                <span class="must">*</span>&nbsp;我的电子邮箱：<br><input type="email" id="applicant_email" placeholder="请输入常用电子邮箱">
+                <span class="must">*</span>&nbsp;紧急联系人：<br><input type="text" id="emergency_name" placeholder="请输入紧急联系人姓名">
+                <span class="must">*</span>&nbsp;紧急联系电话：<br><input type="tel" id="emergency_phone" placeholder="请输入紧急联系人的电话号码">
+                <span class="must">*</span>&nbsp;我的通讯地址：<br><input type="text" id="applicant_name" placeholder="请输入通讯地址">
+                <input type="checkbox" checked="checked" style="margin-top:0px; margin-left:-2px">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#agreement_page" data-transition="slideup" style="font-size:small">&nbsp;&nbsp;我已阅读并同意《大赛易参赛者报名须知》</a>
+            </form>
+            <p><br></p>
+        </div>
+        <div style="position:absolute; bottom:0; width:100%">
+            <a data-role="button" onclick="check();">下一步</a>
+            <p></p>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="pay_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#fill_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>支付页面</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+            <!--该效果基于头像大小为160x160-->
+        </div>
+        <div data-role="content">
+            <table width="100%">
+            	<form>
+                    <tr>
+                        <td width="4%"><img src="images/userhead.png" style="border-radius:50%" width="60px" height="60px"></td>
+                        <td width="96%">大赛易</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><b>￥0.00</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            支付方式:<select>
+                                <option>微信支付</option>
+                                <!--<option>大赛易钱包支付</option>-->
+                                <option>银行卡支付</option>
+							</select>
+						</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">支付密码:<input type="password" placeholder="支付密码"></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+        <div style="position:absolute; bottom:0; width:100%">
+            <a data-role="button" onclick="checkpay();" href="EventIndex.html" rel="external" data-ajax="false">确认支付</a>
+            <br>
+        </div>
+    </div>
+    
+    <div data-role="page" data-theme="a" id="agreement_page">
+        <div data-role="header" data-position="fixed" style="margin-top:-1px">
+            <a href="#fill_page" data-transition="slidedown" title="返回"><b> < </b></a><h2>报名须知</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+        </div>
+        <div data-role="content">
+            <h3 align="center"  style="color:#000;">参赛者报名须知</h3>
+            <ol>
+                <li>本人自愿报名参加本次比赛及一切相关活动(以下统称"比赛")；</li>
+                <li>本人全面理解并同意遵守组委会及协办机构(以下统称"组办方")所制订的各项规程、规则、规定、要求及采取的措施；</li>
+                <li>本人身体健康，已为参赛做好充分准备，并愿意按照有关要求接受药物检查；</li>
+                <li>本人全面理解参赛可能出现的风险，且已准备必要的防范措施；本人愿意承担比赛期间发生的自 身意外风险责任，且同意组办方对于非组办方原因造成的伤害、死亡或其他任何形式的损失不承担任 何形式的赔偿；团体报名者同意组队方对于非组队方原因造成的伤害、死亡或其他任何形式的损失不承担任何形式的赔偿；</li>
+                <li>本人同意接受组办方在比赛期间提供的现场急救性质的医务治疗，但在医院救治等发生的相关费用由本人自理；</li>
+                <li>本人授权组办方及指定媒体无偿使用本人的肖像、姓名、声音和其它个人资料用于比赛的组织和推广；</li>
+                <li>本人承诺以自己的名义报名并参赛，绝不将报名后获得的号码布以任何方式转让给他人；</li>
+                <li>本人同意在比赛前和比赛期间不得损害、更改及遮盖马拉松官方号码布；</li>
+                <li>本人同意向组办方提供有效的身份证件和资料用于核实本人的身份，并同意承担因身份证件和资料不实所产生的全部责任；</li>
+                <li>本人同意组办方以本人为被保险人投保人身意外险，具体内容已从保险说明书中知晓，本人均予以认可；</li>
+                <li>本人或法定代理人已认真阅读并全面理解以上内容，且对上述所有内容予以确认并承担相应的法律责任。</li>
+            </ol>
+        </div>
+        <div style="position:absolute; bottom:0; width:100%">
+            <a href="#fill_page" data-role="button">确定</a>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>大赛易</title>
+<link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+<link href="css/bluetheme.min.css" rel="stylesheet" type="text/css">
+<link href="css/easysportstyle.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script>
+	$(document).bind('mobileinit',function(){
+		$.mobile.changePage.defaults.changeHash = false;
+		$.mobile.hashListeningEnabled = true;
+		$.mobile.pushStateEnabled = false;
+	});
+	$(function(){
+		$(":jqmData(role='page')").attr("data-title", document.title);
+	});
+</script>
+<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<style>
+tr td:nth-child(1){
+	color:#c94600;
+	background-color:#fdeee5;
+}
+</style>
+</head>
+<body>
+<div data-role="page" data-theme="a" id="user_page">  
+	<div data-role="header" data-position="fixed" style="margin-top:-1px">
+      <a href="Myeventcircle.html#details_page" rel="external" title="返回"><b> < </b></a><h2>电子回单</h2><a href="EasySportIndex.html#user_page" rel="external" class="head_a_user"><img src="images/userhead.png" class="head_user" width="34px" height="34px"></a>
+    </div> 
+    
+    <div data-role="content">
+        <div style="border:solid 1px #D3E8F1; margin-top:-10px" align="center">
+            <table width="100%" bordercolor="#dfb598" border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <td>打印日期：</td>
+                    <td>2016年4月30日</td>
+                </tr>
+                <tr>
+                    <td>打印时间:</td>
+                    <td>13:55:32</td>
+                </tr>
+                <tr>
+                    <td>打印用户：</td>
+                    <td>李泽韩</td>
+                </tr>
+                <tr>
+                    <td>打印次数:</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>交易日期：</td>
+                    <td>2016-4-30</td>
+                </tr>
+                <tr>
+                    <td>交易类型:</td>
+                    <td>汇出汇款</td>
+                </tr>
+                <tr>
+                    <td>付款方账号：</td>
+                    <td>6221533620000090222</td>
+                </tr>
+                <tr>
+                    <td>付款方名称:</td>
+                    <td>李泽韩</td>
+                </tr>
+                <tr>
+                    <td>收款方名称：</td>
+                    <td>李泽韩</td>
+                </tr>
+                <tr>
+                    <td>金额:</td>
+                    <td>70.00</td>
+                </tr>
+                <tr>
+                    <td>大写金额：</td>
+                    <td>柒拾元整</td>
+                </tr>
+                <tr>
+                    <td>币种:</td>
+                    <td> 人民币</td>
+                </tr>
+                <tr>
+                    <td>摘要：</td>
+                    <td>往来款</td>
+                </tr>
+                <tr>
+                    <td>参考号:</td>
+                    <td>BE3101000417876695</td>
+                </tr>
+                <tr>
+                    <td>消费地：</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>开户行:</td>
+                    <td>华兴支行</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

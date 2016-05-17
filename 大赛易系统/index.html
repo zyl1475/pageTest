@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>大赛易</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- //js -->
+<!-- FlexSlider -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+						$(window).load(function(){
+						  $('.flexslider').flexslider({
+							animation: "slide",
+							start: function(slider){
+							  $('body').removeClass('loading');
+							}
+						  });
+						});
+					  </script>
+<!-- //FlexSlider -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+
+<body>
+<!-- header -->
+	<div class="header">
+		<div class="container">
+             <div class="logo">
+				<a class="navbar-brand" href="http://www.dasaiyi.com">大赛易<span></span></a>
+			 </div>
+         <div>
+         <div id="button1" style="float:right; margin-top:3%; ">
+         <a href="Login.html" rel="external" class="login"><img src="images/login.png" alt="登录"></a>
+         <a href="Registration.html" rel="external" class="sign"><img src="images/sign.png" alt="注册"></a>
+         </div>
+         </div>
+		</div>
+	</div>
+<!-- //header -->
+<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<section class="slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<div class="banner-info">
+								<div class="banner-info-left">
+									<h1>最专业的体育赛事活动报名管理工具 </h1>
+									<p>专业为赛事活动组织者提供报名以及过程组织管理服务低成本、高效率、无纸化管理 </p>
+									<div class="more">
+										<a href="EasySportIndex.html"><bold>马上体验</bold></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="banner-info">
+								<div class="banner-info-left">
+									<h1>最专业的体育赛事活动报名管理工具 </h1>
+									<p>专业为赛事活动组织者提供报名以及过程组织管理服务低成本、高效率、无纸化管理 </p>
+									<div class="more">
+										<a href="EasySportIndex.html">马上体验</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="banner-info">
+								<div class="banner-info-left">
+									<h1>最专业的体育赛事活动报名管理工具 </h1>
+									<p>专业为赛事活动组织者提供报名以及过程组织管理服务低成本、高效率、无纸化管理 </p>
+									<div class="more">
+										<a href="EasySportIndex.html">马上体验</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>	
+			<div class="banner-pos">
+				<div class="col-md-3 banner-pos-left">
+					<div class="banner-pos-left-info">
+						<h3><i class="glyphicon glyphicon-cloud" aria-hidden="true"></i>报名管理</h3>
+						<p>查看所有的参与者报名数据，支持报名数据导入和导出</p>
+					</div>
+				</div>
+				<div class="col-md-3 banner-pos-left">
+					<div class="banner-pos-left-info">
+						<h3><i class="glyphicon glyphicon-globe" aria-hidden="true"></i>参赛号生成</h3>
+						<p>设置参赛号生成规则，可以自动或手动的生成参赛号码</p>
+					</div>
+				</div>
+				<div class="col-md-3 banner-pos-left">
+					<div class="banner-pos-left-info">
+						<h3><i class="glyphicon glyphicon-phone" aria-hidden="true"></i>签到&amp;领物</h3>
+						<p>生成物品领取二维码，组织者只需扫描二维码即可实现记录</p>
+					</div>
+				</div>
+				<div class="col-md-3 banner-pos-left">
+					<div class="banner-pos-left-info">
+						<h3><i class="glyphicon glyphicon-star" aria-hidden="true"></i>资金管理</h3>
+						<p>每一笔交易记录都有详细记录，随时提现资金无忧</p>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //banner -->
+<!-- welcome -->
+	<div class="welcome">
+		<div class="container">
+			<h3>更专业、更易用、更懂赛事 </h3>
+			<p class="ever">快速创建赛事活动</p>
+			<div class="welcome-grids">
+				<div class="col-md-3 welcome-grid">
+					<div class="welcome-grd">
+						<div class="icons">
+							<span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+						</div>
+						<h4>基于赛事活动</h4>
+						<p>创建赛事活动，围绕赛事活动展开招募</p>
+					</div>
+				</div>
+				<div class="col-md-3 welcome-grid">
+					<div class="welcome-grd">
+						<div class="icons">
+							<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+						</div>
+						<h4>发起招募 </h4>
+						<p>发起选手、志愿者、赞助等招募，支持个人和团体招募</p>
+					</div>
+				</div>
+				<div class="col-md-3 welcome-grid">
+					<div class="welcome-grd">
+						<div class="icons">
+							<span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+						</div>
+						<h4>自定义报名</h4>
+						<p>针对不同的赛事活动需求，组织者可以自定义自己的报名表</p>
+					</div>
+				</div>
+				<div class="col-md-3 welcome-grid">
+					<div class="welcome-grd">
+						<div class="icons">
+							<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+						</div>
+						<h4>代收款服务</h4>
+						<p>对接支付宝、微信支付，为组织者提供快捷的代收款服务</p>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //welcome -->
+<!-- banner-text -->
+	<div class="banner-text"  >
+		<div class="container">
+			<div class="wmuSlider example1">
+			   <div class="wmuSliderWrapper">
+					<article style="position: absolute; width: 100%; opacity: 0;"> 
+						<div class="banner-wrap">
+							<div class="banner-text-info banner-text-inf">
+								<h2>2014年4月16日下午三点半，“海大杯”足球赛在我院与外援间精彩上演。</h2>
+							</div>
+						</div>
+					</article>
+					<article style="position: absolute; width: 100%; opacity: 0;"> 
+						<div class="banner-wrap">
+							<div class="banner-text-info banner-text-inf1">
+								<h2>昨天，南京市第十三届世界步行日暨2015健身走金陵活动在玄武湖举行。</h2>
+							</div>
+						</div>
+					</article>
+					<article style="position: absolute; width: 100%; opacity: 0;"> 
+						<div class="banner-wrap">
+							<div class="banner-text-info banner-text-inf2">
+								<h2>2016广州马拉松赛将于12月6日举行，明天开始报名，10月9日截止。个人可通过广州马拉松官方网站报名。参赛号码11月16日公布。</h2>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+				<script src="js/jquery.wmuSlider.js"></script> 
+					<script>
+						$('.example1').wmuSlider();         
+					</script> 
+		</div>
+	</div>
+<!-- //banner-text -->
+
+               <!-- services -->
+               <div style="width:95%; margin:0 auto; ">
+               <table width="95%" border="0" class="t1">
+  <tr>
+    <td align="center"><img src="images/22.jpg" alt="图片" class="img-responsive" /><h4>国奥越野足球</h4><p>
+							北京国奥越野足球俱乐部用15年的艰苦努力描绘了一幅中国青少年足球运动的绚丽画卷，全体教练员用满腔热情铸就了业余足球运动的今日辉煌，为了中国足球运动早日腾飞我们要再创佳绩。.</p></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/20.jpg" alt="图片" class="img-responsive" /><h4>真跑者靓丽而行</h4><p>
+							可以说KISSRUN、男模、美女跑团、特步在起终点和服务区推出的各种活动……，各种吸引眼球的因素汇聚成了今天上午举行的南京浦口女子半程马拉松赛。你只有身入其中，才能体会到这项赛事为何让人着迷的过人之处。</p></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/18.jpg" alt="图片" class="img-responsive" /><h4>深圳国际马拉松</h4><p>
+						国际性赛事，25000人参加，马拉松项目限报8000名（含团体赛100队 ）、半程马拉松项目限报8000名、6公里跑项目限报9000名。.</p></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/24.jpg" alt="图片" class="img-responsive" /><h4>广州恒大淘宝足球</h4>
+							<p>2016赛季，哥伦比亚现役国脚杰克逊-马丁内斯以至今俱乐部最高转会费4200万欧元从西甲马德里竞技队加盟， 2月超级杯决赛2：0战胜江苏苏宁夺得第二座超级杯奖杯，宣布与巴西外援高拉特续约四年.</p></td>
+  </tr>
+</table>
+
+      
+     
+          
+            
+                 </div>
+				<!--swipebox -->	
+				<link rel="stylesheet" href="css/swipebox.css">
+					<script src="js/jquery.swipebox.min.js"></script> 
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+				<!--//swipebox Ends -->
+		</div>
+	</div>
+	
+<!-- //services -->
+
+<!-- footer -->
+
+	<div class="copy">
+		<div class="container">
+			<div class="copy-left">
+				<p>&copy;2016 Champion. All rights reserved | Design by <a href="#">大赛易</a></p>
+			</div>
+
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!--//footer-->
+<!-- for bootstrap working -->
+		<script src="js/bootstrap.js"> </script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>
