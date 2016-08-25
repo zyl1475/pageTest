@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	font-family: Arial , "微软雅黑", "Microsoft Yahei", "Microsoft Yahei UI";
+}
+a:link {
+	text-decoration: none;
+	color:#FFFFFF;
+}
+a:hover{
+	text-decoration: underline;
+	color:#2E93D5;
+}
+a:visited {
+	text-decoration: none;
+	color:#FFFFFF;
+}
+a:active {
+	text-decoration: none;
+	color:#2E93D5;
+}
+.header{
+	width:100%;
+	min-width:1000px;
+	max-width:4000px;
+	height:160px;
+}
+.top{
+	height:22px;
+	width:100%;
+	min-width:1000px;
+	background-color:#333333;
+	color:#FFFFFF;
+}
+.top_all{
+	width:1000px;
+	line-height:22px;
+	font-size:14px;/*small=13px , medium=16px*/
+}
+.top_left{
+	float:left;
+}
+.top_right{
+	float:right;
+}
+#datatime{
+	margin-right:20px;
+}
+.header_bottom{
+	width:100%;
+	min-width:1000px;
+	height:100px;
+	background-color:#2E93D5;
+}
+#login{
+	
+}
+.header_bottom_all{
+	width:1000px;
+	height:100px;
+}
+.center_ico{
+	background-image:url(../images/韶关学院省级教师发展中心2.png);
+	background-repeat:no-repeat;
+	height:100%;
+	width:458px;/*521*/
+	margin-left:-548px;/*-480*/
+}
+.motto&search{
+	width:400px;
+}
+.motto{
+	background-image: url(../images/schoolmotto.png);/*立志 崇德 勤学 创新.png*/
+	background-repeat:no-repeat;
+	height:100px;
+	width:244px;
+	float:right;
+	margin-top:-100px;
+	margin-right:157px;
+}
+.search{
+	float:right;
+	margin-top:-60px;
+}
+#search_bar{
+	width:150px;
+	height:22px;
+	border:1px solid #C1C1C1;
+	border-radius:10px;
+	margin-right:-36px;
+}
+#search_button{
+	border:1px solid #CCCCCC;
+	border-radius:0 10px 10px 0;
+	height:25px;
+	width:33px;
+	background-color:#2E93D5;
+}
+#bar{
+	width:1000px;
+	height:38px;/*38px*/
+	font-family: "楷体", "微软雅黑", "Microsoft Yahei", "Microsoft Yahei UI", Arial;
+}
+.bar_button{
+	float:left;
+	height:38px;
+	width:125px;
+	font-size:22px;
+	line-height:38px;
+	list-style:none;
+	box-sizing:content-box;
+}
+.bar_button:hover{
+	float:left;
+	height:36px;
+	width:123px;
+	font-size:22px;
+	line-height:38px;
+	background-color:#2E93D5;
+	color:#FFFFFF;
+	border:solid 1px #FFFFFF;
+}
+.bar_button:active{
+	float:left;
+	height:36px;
+	width:123px;
+	font-size:22px;
+	line-height:38px;
+	background-color:#2E81F5;
+	color:#FFFFFF;
+	border:solid 1px #FFFFFF;
+	margin:1px -1px -1px 1px;
+}
+.bar_btn_child{
+	background-image:url(../images/图书馆.png);
+	background-size: auto;
+	background-repeat:no-repeat;
+	background-position:right;
+	width:1000px;
+	height:180px;
+	background-color:#FFFFFF;
+	border:1px solid #CDCDCD;
+}
+/*登录*/
+.header_login{
+	width:1000px; 
+	height:0px;
+}
+.login_box{
+	outline:0;
+	width:250px;
+	height:180px;
+	margin-left:750px;
+	margin-top:-135px;
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	z-index:100;
+	background-color:rgba(255,255,255,0.80);
+}
+@media screen and (min-width:1366px){
+	.login_box{
+		outline:0;
+		width:250px;
+		height:180px;
+		margin-left:790px;
+		margin-top:-135px;
+		border: 1px solid #CCCCCC;
+		position: absolute;
+		z-index:100;
+		background-color:rgba(255,255,255,0.80);
+	}
+}
+@media screen and (min-width:1400px){
+	.login_box{
+		outline:0;
+		width:250px;
+		height:180px;
+		margin-left:810px;
+		margin-top:-135px;
+		border: 1px solid #CCCCCC;
+		position: absolute;
+		z-index:100;
+		background-color:rgba(255,255,255,0.80);
+	}
+}
+@media screen and (min-width:1440px){
+	.login_box{
+		outline:0;
+		width:250px;
+		height:180px;
+		margin-left:830px;
+		margin-top:-135px;
+		border: 1px solid #CCCCCC;
+		position: absolute;
+		z-index:100;
+		background-color:rgba(255,255,255,0.80);
+	}
+}
+@media screen and (min-width:1455px){
+	.login_box{
+		outline:0;
+		width:250px;
+		height:180px;
+		margin-left:850px;
+		margin-top:-135px;
+		border: 1px solid #CCCCCC;
+		position: absolute;
+		z-index:100;
+		background-color:rgba(255,255,255,0.80);
+	}
+}
+#user,#pass{
+	width:180px;
+	height:30px;
+	border-radius:8px;
+	font-size:medium;
+}
+#login_btn{
+	width:180px;
+	height:28px;
+	line-height:28px;
+	background-color:#2E93D5;
+	color:#FFFFFF;
+	border-radius:4px;
+	font-size:22px;
+	font-family:'楷体';
+	border:1px solid #2E91D5;
+	-webkit-user-select: none;
+}
+#login_btn:hover{
+	width:180px;
+	height:28px;
+	line-height:28px;
+	background-color:#2E89D5;
+	color:#FFFFFF;
+	border-radius:4px;
+	font-size:22px;
+	font-family:'楷体';
+	-webkit-user-select: none;
+}
+#login_btn:active{
+	width:180px;
+	height:28px;
+	line-height:28px;
+	background-color:#2E93D5;
+	color:#DDDDDD;
+	border-radius:4px;
+	font-size:22px;
+	font-family:'楷体';
+	-webkit-user-select: none;
+	margin:1px -1px -1px 1px;
+}
+#remember{
+	vertical-align:middle;
+	margin-top:0px;
+}
