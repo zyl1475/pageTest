@@ -1,0 +1,698 @@
+﻿<!doctype html>
+<html>
+<head>
+<link rel="shoricut icon" href="images/shaoguanuniversity.png"/>
+<meta charset="utf-8" http-equiv="content-type" content="text/html"/>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="description" content="韶关学院省级教师发展中心官方网站。韶关学院省级教师发展中心是韶关学院为教师自身发展倾力打造的交流与学习平台。" />
+<meta name="keywords" content="韶关学院,教师发展中心,韶关学院教师发展中心,韶关学院省级教师发展中心,省级教师发展中心,韶大,韶大教师发展中心,韶大教师发展,韶关教师发展中心,韶大发展中心,韶关学院发展中心" />
+<title>韶关学院省级教师发展中心</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css" />
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+<link href="css/footer.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/header.js" type="text/javascript"></script>
+</head>
+<body>
+	<!--<div hidden=""><a name="top"></a></div>-->
+	<!--header页开始-->
+	<div class="header" align="center">
+    	<!--顶层-->
+    	<div class="top">
+        	<div class="top_all">
+            	<span class="top_left"><span id="datatime"></span><a href="" onClick="add_bookmarks();">加入收藏</a></span> <span class="top_right"><span id="login">用户登录</span></span>
+            </div>
+        </div>
+        
+        <!--底层-->
+        <div class="header_bottom">
+        	<div class="header_bottom_all">
+                <div class="center_ico"></div>
+                <div class="motto&search">
+                    <span class="motto"></span>
+                    <span class="search">
+                        <input id="search_bar" type="search" placeholder=" 请输入关键字">
+                        <button id="search_button" onClick="tosearch();"><img src="images/搜索白.png" width="15px" height="15px"/></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!--导航栏-->
+        <div id="bar">
+        	<div id="bar_home" class="bar_button">首页</div>
+            <div id="bar_center" class="bar_button">中心概况</div>
+            <div id="bar_continue" class="bar_button">继续教育</div>
+            <div id="bar_recruit" class="bar_button">招生就业</div>
+            <div id="bar_train" class="bar_button">在职培训</div>
+            <div id="bar_teach" class="bar_button">网络教学</div>
+            <div id="bar_resource" class="bar_button">教学资源</div>
+            <div id="bar_service" class="bar_button">管理服务</div>
+        </div>
+        
+        <!--登录框-->
+        <div class="header_login">
+            <div class="login_box" style="display:none" tabindex="0" hidefocus="true">
+            	<table width="100%" border="0" cellpadding="5" style="margin-top:10px; font-size:small">
+                	<tbody align="center">
+                    	<tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><input type="text" id="user" autofocus placeholder="请输入账号"/></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><input type="password" id="pass" placeholder="请输入密码"/></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><div id="login_btn" tabindex="0" hidefocus="true">登录</div></td>
+                        </tr>
+                        <tr>
+                        	<td style="padding:8px 5px 4px 5px !important"><label><input type="checkbox" id="remember" onClick="checkbox(this);" title="记住账号密码一周免登陆"/>记住账号密码<label></td>
+                            <td align="left" style="padding:5px 5px 6px 5px !important"><a>忘记密码</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+	<!--header页结束-->
+
+
+	<!--content页开始-->
+    <div class="page" align="center">
+    	<div class="thousand"><!--width:1000px-->
+            <div class="photo_carousel">
+                <!--图片轮播开始-->
+                <div id="myCarousel" class="carousel slide">
+                	<!-- 轮播（Carousel）指标 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>   
+                	<!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                        	<img src="images/banner1.jpg" alt="">
+                            <div class="carousel-caption">
+                            	<span>标题 1</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                        	<img src="images/banner2.jpg" alt="">
+                            <div class="carousel-caption">
+                            	<span>标题 2</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                        	<img src="images/banner3.jpg" alt="">
+                            <div class="carousel-caption">
+                            	<span>标题 3</span>
+                            </div>
+                        </div>
+                	</div>
+                </div> 
+                <script>
+					<!-- 轮播（Carousel）初始化 -->
+					$(function(){
+						$("#myCarousel").carousel('cycle');
+					});
+                </script>
+                <!--图片轮播结束-->
+            </div>
+            
+            <div class="first_news"><!--第一栏新闻-->
+            	<div class="left_news"><!--左侧新闻-->
+                	<div class="left_header"><!--左侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">通知公告</span><span class="english">Info</span></div>
+                		<div class="more_right"><span><a href="info.html">更多</a></span></div>
+                    </div>
+                    <div class="left_footer"><!--左侧新闻容器-->
+                    	<div class="footer_news">
+                            <table width="100%" border="0" cellpadding="2">
+                                <tbody align="left">
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_news"><!--右侧新闻-->
+                	<div class="right_header"><!--右侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">招生培训</span><span class="english">Training</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="right_footer">
+                    	<div class="right_footer_news">
+                        	<table width="100%" border="0" cellpadding="2">
+                            	<tbody>
+                                	<tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="second_news">
+            	<div class="all_header">
+                	<div class="titles_left"><span class="titles">管理服务</span><span class="english">Services</span></div>
+                </div>
+                <div class="all_footer">
+                	<div class="all_news">
+                    	<div class="icons"><!--信息管理-->
+                        	<div class="information_management_icon"></div>
+                            <div class="words"><span>信息管理</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="continuing_education_icon"></div>
+                            <div><span>继续教育</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="network_teaching_icon"></div>
+                            <div><span>网络教学</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="training_management_icon"></div>
+                            <div><span>培训管理</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="office_oa_icon"></div>
+                            <div><span>办公OA</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="graduation_report_icon"></div>
+                            <div><span>毕业报到</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="digital_library_icon"></div>
+                            <div><span>数字图书馆</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="teaching_resources_icon"></div>
+                            <div><span>教学资源</span></div>
+                        </div>
+                        <div class="icons">
+                        	<div class="teaching_calendar_icon"></div>
+                            <div><span>教学日历</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="third_news">
+            	<div class="left_news"><!--左侧新闻-->
+                	<div class="left_header"><!--左侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">教育动态</span><span class="english">Trends</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="left_footer"><!--左侧新闻容器-->
+                    	<div class="footer_news">
+                            <table width="100%" border="0" cellpadding="2">
+                                <tbody align="left">
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_news"><!--右侧新闻-->
+                	<div class="right_header"><!--右侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">培训课程</span><span class="english">Courses</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="right_footer">
+                    	<div class="right_footer_news">
+                        	<table width="100%" border="0" cellpadding="2">
+                            	<tbody>
+                                	<tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="photos">
+            	<div>
+                	<img src="images/banner1.jpg" width="100%" height="100px;">
+                </div>
+            </div>
+            
+            <div class="fourth_news">
+            	<div class="left_news"><!--左侧新闻-->
+                	<div class="left_header"><!--左侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">教学管理</span><span class="english">Management</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="left_footer"><!--左侧新闻容器-->
+                    	<div class="footer_news">
+                            <table width="100%" border="0" cellpadding="2">
+                                <tbody align="left">
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_news"><!--右侧新闻-->
+                	<div class="right_header"><!--右侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">备课平台</span><span class="english">Platform</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="right_footer">
+                    	<div class="right_footer_news">
+                        	<table width="100%" border="0" cellpadding="2">
+                            	<tbody align="center">
+                                	<tr>
+                                    	<td><div class="none_line"><span><a>语文</a></span></div></td>
+                                        <td><div class="none_line"><span><a>数学</a></span></div></td>
+                                        <td><div class="none_line"><span><a>英语</a></span></div></td>
+                                        <td><div class="none_line"><span><a>政治</a></span></div></td>
+                                        <td><div class="none_line"><span><a>历史</a></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><a>地理</a></span></div></td>
+                                        <td><div class="none_line"><span><a>物理</a></span></div></td>
+                                        <td><div class="none_line"><span><a>化学</a></span></div></td>
+                                        <td><div class="none_line"><span><a>生物</a></span></div></td>
+                                        <td><div class="none_line"><span><a>体育</a></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><a>美术</a></span></div></td>
+                                        <td><div class="none_line"><span><a>音乐</a></span></div></td>
+                                        <td><div class="none_line"><span><a>其他</a></span></div></td>
+                                        <td><div class="none_line"><span><a></a></span></div></td>
+                                        <td><div class="none_line"><span><a></a></span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fifth_news">
+            	<div class="all_header">
+                	<div class="titles_left"><span class="titles">名师课堂</span><span class="english">Services</span></div>
+                    <div class="more_right"><span><a href="#">更多</a></span></div>
+                </div>
+                <div class="all_video">
+                    <div class="one_video">
+                    	<div class="video_pic"><img src="../QQ图片20160718084343.jpg" width="100%" height:"100%"/></div>
+                        <div class="video_name"><span><a>中小学教师网络教学示 中小学教师网络教学中小学教师网络教学</a></span></div>
+                        <div class="video_tt"><span><a>某名师</a></span><span>2016-07-29</span></div>
+                    </div>
+                    <div class="one_video">
+                    	<div class="video_pic"><img src="../QQ图片20160718084343.jpg" width="100%" height:"100%"/></div>
+                        <div class="video_name"><span><a>中小学教师网络教学示</a></span></div>
+                        <div class="video_tt"><span><a>某名师</a></span><span>2016-07-29</span></div>
+                    </div>
+                    <div class="one_video">
+                    	<div class="video_pic"><img src="../QQ图片20160718084343.jpg" width="100%" height:"100%"/></div>
+                        <div class="video_name"><span><a>中小学教师网络教学示</a></span></div>
+                        <div class="video_tt"><span><a>某名师</a></span><span>2016-07-29</span></div>
+                    </div>
+                    <div class="one_video">
+                    	<div class="video_pic"><img src="../QQ图片20160718084343.jpg" width="100%" height:"100%"/></div>
+                        <div class="video_name"><span><a>中小学教师网络教学示</a></span></div>
+                        <div class="video_tt"><span><a>某名师</a></span><span>2016-07-29</span></div>
+                    </div>
+                    <div class="one_video">
+                    	<div class="video_pic"><img src="../QQ图片20160718084343.jpg" width="100%" height:"100%"/></div>
+                        <div class="video_name"><span><a>中小学教师网络教学示</a></span></div>
+                        <div class="video_tt"><span><a>某名师</a></span><span>2016-07-29</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sixth_news">
+            	<div class="left_news"><!--左侧新闻-->
+                	<div class="left_header"><!--左侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">反思博客</span><span class="english">Blog</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="left_footer"><!--左侧新闻容器-->
+                    	<div class="footer_news">
+                            <table width="100%" border="0" cellpadding="2">
+                                <tbody align="left">
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_news"><!--右侧新闻-->
+                	<div class="right_header"><!--右侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">教师空间</span><span class="english">Zone</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="right_footer">
+                    	<div class="right_footer_news">
+                        	<table width="100%" border="0" cellpadding="2">
+                            	<tbody align="center">
+                                	<tr>
+                                    	<td><div class="none_line"><span><a>张三</a></span></div></td>
+                                        <td><div class="none_line"><span><a>李四</a></span></div></td>
+                                        <td><div class="none_line"><span><a>王五</a></span></div></td>
+                                        <td><div class="none_line"><span><a>郭红</a></span></div></td>
+                                        <td><div class="none_line"><span><a>王新宇</a></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><a>周琴</a></span></div></td>
+                                        <td><div class="none_line"><span><a>玛丽</a></span></div></td>
+                                        <td><div class="none_line"><span><a>王宝钗</a></span></div></td>
+                                        <td><div class="none_line"><span><a>黄康丽</a></span></div></td>
+                                        <td><div class="none_line"><span><a>福尔康</a></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><a>张永琪</a></span></div></td>
+                                        <td><div class="none_line"><span><a>司徒欧阳</a></span></div></td>
+                                        <td><div class="none_line"><span><a>谭聪泽</a></span></div></td>
+                                        <td><div class="none_line"><span><a>陈华明</a></span></div></td>
+                                        <td><div class="none_line"><span><a>王豹权</a></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><a>张永泰</a></span></div></td>
+                                        <td><div class="none_line"><span><a>郑国泰</a></span></div></td>
+                                        <td><div class="none_line"><span><a>恒民安</a></span></div></td>
+                                        <td><div class="none_line"><span><a>马丽云</a></span></div></td>
+                                        <td><div class="none_line"><span><a>马腾辉</a></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><a>黄华</a></span></div></td>
+                                        <td><div class="none_line"><span><a>陈美心</a></span></div></td>
+                                        <td><div class="none_line"><span><a>黄米皛</a></span></div></td>
+                                        <td><div class="none_line"><span><a>黄鑫</a></span></div></td>
+                                        <td><div class="none_line"><span><a>邵日妮</a></span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="seventh_new">
+            	<div class="left_news"><!--左侧新闻-->
+                	<div class="left_header"><!--左侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">教学资源</span><span class="english">Resources</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="left_footer"><!--左侧新闻容器-->
+                    	<div class="footer_news">
+                            <table width="100%" border="0" cellpadding="2">
+                                <tbody align="left">
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                                        <td><div class="line">&nbsp;</div></td>
+                                        <td><span><div class="news_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作  于“国培计划”（2016）---省级示范性于“国培计划”（2016）---省级示范性</a></div></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_news"><!--右侧新闻-->
+                	<div class="right_header"><!--右侧新闻头部-->
+                    	<div class="titles_left"><span class="titles">热点下载</span><span class="english">Download</span></div>
+                		<div class="more_right"><span><a href="#">更多</a></span></div>
+                    </div>
+                    <div class="right_footer">
+                    	<div class="right_footer_news">
+                        	<table width="100%" border="0" cellpadding="2">
+                            	<tbody>
+                                	<tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作</a></div></span></div></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><div class="none_line"><span><div class="none_ellipsis"><a>关于“国培计划”（2016）---省级示范性工作 关于“国培计划”（2016）---省级示范性关于“国培计划”（2016）---省级示范性</a></div></span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--content页结束-->
+    
+    
+    <!--footer页开始-->
+	<div class="footer" align="center">
+        <div class="bottom">
+        	<div class="bottom_all">
+            	<!--联系方式开始-->
+            	<div class="contact">
+                	<div class="contact_all" align="left">
+                    	<div class="address"><span>地址：广东省韶关市浈江区大学路228号</span></div><!--地址-->
+                        <div class="phone"><span>电话：0751-88888888</span><span>邮编：512000</span></div><!--电话&邮编-->
+                        <div class="email"><span>邮箱：shaoguanuniversity@edu.com</span></div><!--邮箱-->
+                    </div>
+                </div>
+                <!--联系方式结束-->
+                
+                <!--校徽开始-->
+                <div class="the_badge" align="center">
+                	<div class="school_badge"></div><!--韶关学院 116x120 -->
+                </div>
+                <!--校徽结束-->
+                
+                <!--二维码开始-->
+                <div class="qr_code"  align="center">
+                	<div class="qr_code_all"><!--官方微信微博定宽容器-->
+                    	<div class="wechat"><!--微信容器-->
+                        	<div class="wechat_qr_code"></div><!--官方微信二维码 90x90 -->
+                            <div class="official_wechat">
+                            	<div class="wechat_icon"></div><!--微信图标 20x20 -->
+                                <div class="wechat_word"><span>官方微信</span></div><!--官方微信-->
+                            </div>
+                        </div>
+                        <div class="microblog"><!--微博容器-->
+                        	<div class="microblog_qr_code"></div><!--官方微博二维码 90x90 -->
+                            <div class="official_microblog">
+                            	<div class="sina_icon"></div><!--新浪微博图标 20x20 -->
+                                <div class="sina_word"><span>官方微博</span></div><!--官方微博-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--二维码结束-->
+                
+            </div>
+        </div><!--底层-->
+        <div class="copy">
+        	<div class="copy_all">
+            	<div class="friendly_link">
+                	<span>友情链接：</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院校园网">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院数字图书馆">韶关学院数字图书馆</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院继续教育学院">韶关学院继续教育学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院网络中心">韶关学院网络中心</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                </div>
+            	<div class="copyright">
+                	<span>版权所有</span>&copy;<span>韶关学院教师发展中心</span>
+                </div>
+            </div>
+        </div><!--copy层-->
+    </div>
+	<!--footer页结束-->
+    
+    
+    <!--悬浮框开始-->
+        <div id="test" class="suspension_frame" align="center" hidden="hidden">
+            <!--1280=130px、1366=170px-->
+            <div class="frame_btn"><span><a>联系电话</a></span></div>
+            <div class="frame_btn"><span><a>在线咨询</a></span></div>
+            <div class="frame_btn"><span><a>关于我们</a></span></div>
+            <div class="frame_btn" onClick="returnTop();"><span><a>返回顶部</a></span></div>
+            <div class="frame_code_word" title="官方微信公众号二维码，快来关注我吧！">
+                <div class="frame_qr_code"></div>
+                <div class="frame_word"><span>扫一扫二维码</span><p>快来关注我吧</p></div>
+            </div>
+        </div>
+        
+        <script>
+			<!--悬浮框位置判断-->
+			setInterval(function(){
+				var windows_width = window.innerWidth;
+				var frame_left = windows_width - 142;
+				if(windows_width < 1280){
+					$("#test").attr("hidden","hidden");
+				}else{
+					$("#test").removeAttr("hidden");
+					$("#test").attr("style","margin-left:"+frame_left+"px");
+				}
+			}, 100); 
+			
+			<!--返回顶部-->
+			var sdelay=0;
+			function returnTop() {
+				$('body,html').animate({ scrollTop: 0 }, 240);
+			}   
+    	</script>
+    	<!--悬浮框结束-->
+</body>
+</html>
