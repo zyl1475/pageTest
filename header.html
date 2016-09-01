@@ -9,6 +9,7 @@
 <title>韶关学院省级教师发展中心</title>
 <link href="css/header.css" rel="stylesheet" type="text/css" />
 <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.cookie.js" type="text/javascript"></script>
 <script src="js/header.js" type="text/javascript"></script>
 </head>
 
@@ -23,8 +24,8 @@
         </div>
         
         <!--底层-->
-        <div class="bottom">
-        	<div class="bottom_all">
+        <div class="header_bottom">
+        	<div class="header_bottom_all">
                 <div class="center_ico"></div>
                 <div class="motto&search">
                     <span class="motto"></span>
@@ -33,7 +34,7 @@
                         <button id="search_button" onClick="tosearch();"><img src="images/搜索白.png" width="15px" height="15px"/></button>
                     </span>
                 </div>
-            <div>
+            </div>
         </div>
         
         <!--导航栏-->
@@ -46,44 +47,269 @@
             <div id="bar_teach" class="bar_button">网络教学</div>
             <div id="bar_resource" class="bar_button">教学资源</div>
             <div id="bar_service" class="bar_button">管理服务</div>
-            <!--<div class="bar_btn_child">
-            	<table align="left" style="margin:10px; border:0" cellpadding="5">
-                	<tbody>
+            <!--<li id="bar_home" class="bar_button">首页</li>
+            <li id="bar_center" class="bar_button">中心概况</li>
+            <li id="bar_continue" class="bar_button">继续教育</li>
+            <li id="bar_recruit" class="bar_button">招生就业</li>
+            <li id="bar_train" class="bar_button">在职培训</li>
+            <li id="bar_teach" class="bar_button">网络教学</li>
+            <li id="bar_resource" class="bar_button">教学资源</li>
+            <li id="bar_service" class="bar_button">管理服务</li>-->
+        </div>
+        
+        <div class="header_login">
+            <div class="login_box" style="display:none" tabindex="0" hidefocus="true">
+            	<table width="100%" border="0" cellpadding="5" style="margin-top:10px; font-size:small">
+                	<tbody align="center">
                     	<tr>
-                        	<td colspan="3" style="font-size:24px; font-family:'华文行楷','楷体'">立志崇德勤学创新</td>
+                        	<td colspan="2"><input type="text" id="user" autofocus placeholder="请输入账号"/></td>
                         </tr>
                         <tr>
-                        	<td colspan="3"></td>
+                        	<td colspan="2"><input type="password" id="pass" placeholder="请输入密码"/></td>
                         </tr>
                         <tr>
-                        	<td>中心简介1</td>
-                            <td>中心简介1</td>
-                            <td>中心简介1</td>
-                            <td>中心简介1</td>
+                        	<td colspan="2"><div id="login_btn" tabindex="0" hidefocus="true">登录</div></td>
                         </tr>
                         <tr>
-                        	<td>中心简介2</td>
-                            <td>中心简介2</td>
-                            <td>中心简介2</td>
-                            <td>中心简介2</td>
-                        </tr>
-                        <tr>
-                        	<td>中心简介3</td>
-                            <td>中心简介3</td>
-                            <td>中心简介3</td>
-                            <td>中心简介3</td>
-                        </tr>
-                        <tr>
-                        	<td>中心简介4</td>
-                            <td>中心简介4</td>
-                            <td>中心简介4</td>
-                            <td>中心简介4</td>
+                        	<td><label><input type="checkbox" id="remember" onClick="checkbox(this);" title="记住账号密码一周免登陆"/>记住账号密码<label></td>
+                            <td align="left"><a>忘记密码</a></td>
                         </tr>
                     </tbody>
                 </table>
-            </div>-->
+            </div>
+        </div>
+        <style>
+        	td span{
+				 margin:0px 25px 10px 10px;
+			}
+			.bar_btn_child_line{
+				background: -webkit-gradient(linear, 0 0, 100% 0,from(#BDD3DD), to(#6AC1FC));
+				background: -moz-linear-gradient(#BDD3DD, #6AC1FC);
+				background: -o-linear-gradient(#BDD3DD, #6AC1FC);
+				background: linear-gradient(left center, #BDD3DD, #6AC1FC); 
+				background-color:#6AC1FC; 
+				height:3px; 
+				margin-top:6px;
+			}
+        </style>
+        <div class="bar_btn_child" style="display:none;">
+            <table width="580px" align="left" style="margin:10px; border:0">
+                <tbody>
+                    <tr>
+                        <td style="font-size:24px; font-family:'华文行楷','楷体';"><span style="margin-left:10px;">立志崇德勤学创新</span></td>
+                    </tr>
+                    <tr>
+                        <td><div class="bar_btn_child_line"></div></td>
+                    </tr>
+                    <tr>
+                    	<td>
+                        	<div id="center_child" style="display:none">
+                                <table width="" cellpadding="6" style="margin-top:5px">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td><div><span><a>中心概况1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="continue_child" style="display:none">
+                                <table width="" cellpadding="6" style="margin-top:5px">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td><div><span><a>继续教育1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="recruit_child" style="display:none">
+                                <table width="" cellpadding="6" style="margin-top:5px">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td><div><span><a>招生就业1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="train_child" style="display:none">
+                                <table width="" cellpadding="6" style="margin-top:5px">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td><div><span><a>在职培训1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="teach_child" style="display:none">
+                                <table width="" cellpadding="6" style="margin-top:5px">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td><div><span><a>网络教学1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="resource_child" style="display:none">
+                                <table width="" cellpadding="6" style="margin-top:5px">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td><div><span><a>教学资源1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="service_child" style="display:none">
+                                <table width="" cellpadding="6" style="margin-top:5px">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td><div><span><a>管理服务1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span><span><a>中心简介1</a></span></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
         </div>
     </div>
 	<!--header页结束-->    
+    
+    <script>
+	function checktoshow(){
+		flag = "";
+		setTimeout(function(){
+			$(".bar_btn_child").hover(function(){flag = true;return flag;},function(){flag = false;return flag;});
+		},120);
+	}
+	
+		$("#bar_center").mouseover(function(){
+			$("#continue_child").attr("style","display:none");
+			$("#recruit_child").attr("style","display:none");
+			$("#train_child").attr("style","display:none");
+			$("#teach_child").attr("style","display:none");
+			$("#resource_child").attr("style","display:none");
+			$("#service_child").attr("style","display:none");
+			$(".bar_btn_child").attr("style","display:block");
+			$("#center_child").attr("style","display:block");
+		});
+		$("#bar_center").mouseout(function(){
+			
+				checktoshow();
+				setTimeout(function(){
+					if(flag == false){
+						$(".bar_btn_child").attr("style","display:none");
+						$("#center_child").attr("style","display:none");
+					}else{
+						$("#center_child").attr("style","display:block");
+					}
+				},121);
+		});
+		
+		$("#bar_continue").mouseover(function(){
+			$("#center_child").attr("style","display:none");
+			$("#recruit_child").attr("style","display:none");
+			$("#train_child").attr("style","display:none");
+			$("#teach_child").attr("style","display:none");
+			$("#resource_child").attr("style","display:none");
+			$("#service_child").attr("style","display:none");
+			$(".bar_btn_child").attr("style","display:block");
+			$("#continue_child").attr("style","display:block");
+		});
+		$("#bar_continue").mouseout(function(){
+			
+				checktoshow();
+				setTimeout(function(){
+					if(flag == false){
+						$(".bar_btn_child").attr("style","display:none");
+						$("#continue_child").attr("style","display:none");
+					}else{
+						$("#continue_child").attr("style","display:block");
+					}
+				},121);
+			
+		});
+		
+		$(".bar_btn_child").hover(function(){
+			$(".bar_btn_child").attr("style","display:block");
+		},function(){
+			$(".bar_btn_child").attr("style","display:none");
+			$("#center_child").attr("style","display:none");
+			$("#continue_child").attr("style","display:none");
+			$("#recruit_child").attr("style","display:none");
+			$("#train_child").attr("style","display:none");
+			$("#teach_child").attr("style","display:none");
+			$("#resource_child").attr("style","display:none");
+			$("#service_child").attr("style","display:none");
+		});
+		/*$(".bar_btn_child").mouseover(function(){
+			$(".bar_btn_child").attr("style","display:block");
+		});
+		$(".bar_btn_child").mouseout(function(){
+			$(".bar_btn_child").attr("style","display:none");
+			$("#center_child").attr("style","display:none");
+		});*/
+    	/*$("#bar_center").hover(function(){
+			$(".bar_btn_child").attr("style","display:block");
+			$("#center_child").attr("style","display:block");
+		},function(){
+			
+			checktoshow();
+			alert("toshowis:" + flag);
+			if(flag = true){
+				return;
+			}else{
+				$(".bar_btn_child").attr("style","display:none");
+				$("#center_child").attr("style","display:none");
+			}
+		});
+		$(".bar_btn_child").hover(function(){
+			$(".bar_btn_child").attr("style","display:block");
+		},function(){
+			$("#center_child").attr("style","display:none");
+			$(".bar_btn_child").attr("style","display:none");
+		});*/
+    </script>
 </body>
 </html>

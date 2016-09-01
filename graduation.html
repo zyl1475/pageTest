@@ -1,0 +1,984 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shoricut icon" href="images/shaoguanuniversity.png"/>
+<meta charset="utf-8" http-equiv="content-type" content="text/html"/>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="description" content="韶关学院省级教师发展中心官方网站。韶关学院省级教师发展中心是韶关学院为教师自身发展倾力打造的交流与学习平台。" />
+<meta name="keywords" content="韶关学院,教师发展中心,韶关学院教师发展中心,韶关学院省级教师发展中心,省级教师发展中心,韶大,韶大教师发展中心,韶大教师发展,韶关教师发展中心,韶大发展中心,韶关学院发展中心" />
+<title>韶关学院省级教师发展中心-毕业报到</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css" />
+<link href="css/footer.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/header.js" type="text/javascript"></script>
+<script src="js/footer.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<!--header页开始-->
+	<div class="header" align="center">
+    	<!--顶层-->
+    	<div class="top">
+        	<div class="top_all">
+            	<span class="top_left"><span id="datatime"></span><a href="" onClick="add_bookmarks();">加入收藏</a></span> <span class="top_right"><span id="login">用户登录</span></span>
+            </div>
+        </div>
+        
+        <!--底层-->
+        <div class="header_bottom">
+        	<div class="header_bottom_all">
+                <div class="center_ico"></div>
+                <div class="motto&search">
+                    <span class="motto"></span>
+                    <span class="search">
+                        <input id="search_bar" type="search" placeholder=" 请输入关键字">
+                        <button id="search_button" onClick="tosearch();"><img src="images/搜索白.png" width="15px" height="15px"/></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!--导航栏-->
+        <div id="bar">
+        	<div id="bar_home" class="bar_button">首页</div>
+            <div id="bar_center" class="bar_button">中心概况</div>
+            <div id="bar_continue" class="bar_button">继续教育</div>
+            <div id="bar_recruit" class="bar_button">招生就业</div>
+            <div id="bar_train" class="bar_button">在职培训</div>
+            <div id="bar_teach" class="bar_button">网络教学</div>
+            <div id="bar_resource" class="bar_button">教学资源</div>
+            <div id="bar_service" class="bar_button">管理服务</div>
+        </div>
+        
+        <!--登录框-->
+        <div class="header_login">
+            <div class="login_box" style="display:none" tabindex="0" hidefocus="true">
+            	<table width="100%" border="0" cellpadding="5" style="margin-top:10px; font-size:small">
+                	<tbody align="center">
+                    	<tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><input type="text" id="user" autofocus placeholder="请输入账号"/></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><input type="password" id="pass" placeholder="请输入密码"/></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><div id="login_btn" tabindex="0" hidefocus="true">登录</div></td>
+                        </tr>
+                        <tr>
+                        	<td style="padding:8px 5px 4px 5px !important"><label><input type="checkbox" id="remember" onClick="checkbox(this);" title="记住账号密码一周免登陆"/>记住账号密码<label></td>
+                            <td align="left" style="padding:5px 5px 6px 5px !important"><a>忘记密码</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+	<!--header页结束-->
+    <style>
+    .graduation{
+		width:100%;
+		height:530px;
+	}
+	.register{
+		width:1000px;
+		height:100%;
+	}
+	.register_bar,.register_message{
+		height:100%;
+		float:left;
+	}
+	.register_bar{
+		width:250px;
+	}
+	.register_message{
+		width:750px;
+	}
+	.register_step{
+		width:250px;
+		height:47px;
+		line-height:47px;
+		background-color:#2E93D5;
+		color:#FFFFFF;
+		font-family:'楷体';
+		font-size:24px;
+		border-bottom: solid 3px #339933;
+	}
+	.register_step span,.register_btn span{
+		margin-left:20px;
+	}
+	.register_btn{
+		width:100%;
+		line-height:40px;
+		height:40px;
+		color:#000000;
+		-webkit-user-select: none;	
+	}
+	.register_btn:hover{
+		background-color:#2E93D5;
+		color:#FFFFFF;
+	}
+	.register_btn:active{
+		background-color:#2E93C9;
+		color:#FFFFFF;
+		margin:1px -1px -1px 1px;
+	}
+	.register_btn span{
+		font-size:16px;
+	}
+	.register_header{
+		width:100%;
+		height:47px;
+		line-height:65px;
+		border-bottom:3px solid #2E93D5;
+	}
+	.register_tit{
+		float:left;
+		margin-left:13px;
+		font-family:'楷体';
+		font-size:22px;
+	}
+	.register_site{
+		float:right;
+		font-size:15px;
+		margin-top:3px;
+		margin-bottom:-3px;
+	}
+	#site span{
+		margin:0 2px 0 2px;
+	}
+	span a{
+		color:#000000;
+	}
+	.register_core{
+		width:100%;
+		height:100%;
+		margin:15px 15px 15px 0;
+	}
+	.notice_of_registration,.register_ol{
+		width:720px;
+		height:450px;
+	}
+	.register_foot_btn{
+		width:400px;
+		height:40px;
+		margin-top:10px;
+	}
+	.agree{
+		width:223px;
+		height:38px;
+		line-height:38px;
+		float:left;
+	}
+	#agree_rull{
+		vertical-align: middle;
+		margin-top:-1px;
+	}
+	.next_btn{
+		float:right;
+		width:120px;
+		height:38px;
+		line-height:38px;
+		background-color:#2E93D5;
+		color:#FFFFFF;
+		font-family:'楷体';
+		font-size:24px;
+		border-radius:4px;
+		-webkit-user-select: none;
+		border:1px solid #2E91D5;
+	}
+	.next_btn:hover{
+		background-color:#2E89D5;
+	}
+	.next_btn:active{
+		background-color:#2E93D5;
+	}
+	.notes_ps{
+		width:520px;
+		float:left;
+	}
+	.notes_ps span{
+		color:red;
+	}
+	#table_form{
+		color:#000000;
+		font-size:14px;
+	}
+	
+	#table_form span{
+		color:red;
+		font-size: 18px;
+	}
+	
+	#table_form input,select{
+		height:35px;
+		width:100%;
+		border:none;
+		outline:medium;
+	}
+	.register_confirm{
+		width:120px;
+		height:38px;
+		line-height:38px;
+		background-color:#2E93D5;
+		color:#FFFFFF;
+		font-family:'楷体';
+		font-size:24px;
+		border-radius:4px;
+		-webkit-user-select: none;
+		border:1px solid #2E91D5;
+		margin:20px 0 -20px 0;
+	}
+	.register_confirm:hover,.to_print:hover,.ok:hover{
+		background-color:#2E89D5;
+	}
+	.register_confirm:active,.to_print:active,.ok:active{
+		background-color:#2E93D5;
+	}
+	#print_table td{
+		height:35px;
+		width:120px;
+		font-size:15px;
+	}
+	.to_print,.ok{
+		float:left;
+		width:120px;
+		height:38px;
+		line-height:38px;
+		background-color:#2E93D5;
+		color:#FFFFFF;
+		font-family:'楷体';
+		font-size:24px;
+		border-radius:4px;
+		-webkit-user-select: none;
+		border:1px solid #2E91D5;
+		margin:20px 10px -20px 10px;
+	}
+	.print_btn{
+		width:280px;
+		height:40px;
+	}
+    </style>
+    
+    <!--报到页开始-->
+    <div class="graduation" align="center">
+    	<div class="register">
+        	<div class="register_bar">
+            	<div class="register_step" align="left"><span>毕业报到</span></div>
+                <div class="register_btn" id="notice_of_registration" align="left"><span>报到须知</span></div>
+                <div class="register_btn" id="register_ol" align="left"><span>在线报到</span></div>
+                <div class="register_btn" id="print_receipt" align="left"><span>打印回执</span></div>
+                <div class="register_btn" id="information_correction" align="left"><span>信息更正</span></div>
+                <div class="register_btn" id="archives_query" align="left"><span>档案查询</span></div>
+            </div>
+            <div class="register_message">
+            	<div class="register_header">
+                	<div class="register_tit" align="left">
+                    	<span>毕业报到</span>
+                    </div>
+                    <div class="register_site">
+                    	<span id="site">当前位置：<a>首页</a><span>></span><a>毕业报到</a><span>></span><a>报到须知</a></span>
+                    </div>
+                </div>
+                <div class="register_core">
+                	<!--报到须知-->
+                	<div class="notice_of_registration">
+                        <div class="actual_content" align="left">
+                            <h4 align="center">2016年应届师范类毕业生报到须知</h4><!--须知标题-->
+                                各位应届毕业生（含往届今年到期暂缓生）：
+                                
+                                   为了简化程序，方便高校毕业生随时随地报到,本局已在2011年开通了广东省高校毕业生网上报到登记系统。现将有关事项通知如下：
+                                
+                                   <br>一、请认真填写高校毕业生报到登记表，确保信息的真实性，不要重复报到，完成报到手续后请妥善保管好《报到证》，不需要到现场报到盖章；
+                                
+                                   <br>二、因特殊原因未能在网上报到的同学，仍可选择现场报到，报到地点按原户口（或生源）所在地的各市、县（区）级市人力资源和社会保障局报到；
+                                
+                                  <br> 三、有正式单位（是指具有人事档案管理权的单位）接收的毕业生，报到登记后请将《报到证》交给单位，由单位统一到有关部门办理派遣分配手续；
+                                
+                                   <br>四、未就业毕业生可通过本系统查找档案去向，需要办理人事档案保管手续的请咨询档案所在地的人才服务机构；
+                                
+                                   <br>五、学生档案请不要自带，要由学校通过EMS邮政快递或派专人寄送；
+                                
+                                   <br>六、温馨提示：毕业生报到登记表的个人就业情况和联系电话可在毕业生报到手机号码变更处进入修改。
+                                
+                                广东省人才服务局           
+                                
+                                《高校毕业生报到诚信承诺书》
+                                在此我郑重承诺：
+                                我已仔细阅读应届普通高校毕业生报到须知，清楚并理解其内容。
+                                  一、自觉遵守应届普通高校毕业生报到的有关政策规定；
+                                  二、真实、准确地提供本人个人信息、证明资料、证件等相关材料；
+                                  三、认真履行应届普通高校毕业生的各项义务，如及时更改已变更的手机号码等；
+                                  四、对违反以上承诺所造成的后果，本人自愿承担相应责任。
+                                  <br>
+							<div align="center">
+                                <div class="register_foot_btn" align="center"><!--下一步-->
+                                    <div class="agree"><label><input type="checkbox" id="agree_rull">我已仔细阅读以上内容并同意遵守</label></div>
+                                    <div class="next_btn"><span>下一步</span></div>
+                                </div>
+                            </div>
+						</div>
+                    </div>
+                    <!--在线报到-->
+                    <div class="register_ol" style="display:none">
+                    	<div class="form_of_register">
+                        	<div class="notes_ps">注:请认真核对报到表信息，确认报到后不能修改！其中带<span>*</span>项为必填项！</div>
+                            <form>
+                                <table id="table_form" width="650px" border="1">
+                                    <tbody align="center">
+                                        <tr>
+                                            <td colspan="7"><h4><b>师范类毕业生报到登记表</b></h4></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="100px"><span>*</span>姓名</td>
+                                            <td><input type="text" id="register_name" placeholder="请输入您的姓名" style="width:120px;height:35px"/></td>
+                                            <td colspan="2" width="100px"><span>*</span>性别</td>
+                                            <td width="100">
+                                                <select id="register_sex">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="男">男</option>
+                                                    <option value="女">女</option>
+                                                </select>
+                                            </td>
+                                            <td width="80"><span>*</span>民族</td>
+                                            <td>
+                                                <select id="register_nations">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="汉族" selected>汉族</option>
+                                                    <option value="少数民族">少数民族</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>身份证</td>
+                                            <td colspan="3"><input type="tel" id="register_id" placeholder="请输入您的身份证号码" maxlength="18"/></td>
+                                            <td><span>*</span>生源地</td>
+                                            <td colspan="2"><input type="text" id="register_source" placeholder="请输入您的生源地"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>毕业院校</td>
+                                            <td colspan="3"><input type="text" id="register_school" placeholder="请输入您的毕业院校" maxlength="18"/></td>
+                                            <td><span>*</span>所学专业</td>
+                                            <td colspan="2"><input type="text" id="register_speciality" placeholder="请输入您所学的专业"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>学制</td>
+                                            <td>
+                                                <select id="register_system">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                </select>
+                                            </td>
+                                            <td colspan="2"><span>*</span>学历</td>
+                                            <td>
+                                                <select id="register_education">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="大专">大专</option>
+                                                    <option value="本科">本科</option>
+                                                    <option value="硕士研究生">硕士研究生</option>
+                                                    <option value="博士研究生">博士研究生</option>
+                                                </select>
+                                            </td>
+                                            <td><span>*</span>毕业时间</td>
+                                            <td><input type="date" id="register_time" min="2008-07-01" placeholder="YYYY-MM-DD" maxlength="10"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>手机号码</td>
+                                            <td><input type="tel" id="register_phone" placeholder="请输入您的手机号" style="width:120px" maxlength="11"/></td>
+                                            <td width="80"><span>*</span>电子邮箱</td>
+                                            <td colspan="2"><input type="email" id="register_email" placeholder="请输入您的邮箱" style="width:140px"/></td>
+                                            <td>个人微信</td>
+                                            <td><input type="text" id="register_wechat" placeholder="请输入您个人微信"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>家庭电话</td>
+                                            <td><input type="tel" id="register_tel" placeholder="请输入您的家庭电话" style="width:120px" maxlength="13"/></td>
+                                            <td><span>*</span>家庭地址</td>
+                                            <td colspan="4"><input type="text" id="register_address" placeholder="请输入您的家庭地址"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>是否双困</td>
+                                            <td colspan="6">
+                                                <select id="register_impoverished">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="是">是</option>
+                                                    <option value="否" selected>否</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>报到证号</td>
+                                            <td colspan="6"><!--<input type="text" id="register_number" placeholder="请入如报到证号"/>-->
+                                            	（<select id="register_year" style="width:60px">
+                                                    <option>2014</option>
+                                                    <option>2015</option>
+                                                    <option>2016</option>
+                                                    <option selected>2017</option>
+                                                    <option>2018</option>
+                                                    <option>2019</option>
+                                                    <option>2020</option>
+                                                    <option>2021</option>
+                                                    <option>2022</option>
+                                                </select>
+                                                <select id="register_province" style="width:40px">
+                                                	<option>请选择</option>
+                                                    <option>京</option>
+                                                    <option>津</option>
+                                                    <option>冀</option>
+                                                    <option>晋</option>
+                                                    <option>蒙</option>
+                                                    <option>辽</option>
+                                                    <option>吉</option>
+                                                    <option>黑</option>
+                                                    <option>沪</option>
+                                                    <option>苏</option>
+                                                    <option>浙</option>
+                                                    <option>皖</option>
+                                                    <option>闽</option>
+                                                    <option>赣</option>
+                                                    <option>鲁</option>
+                                                    <option>豫</option>
+                                                    <option>鄂</option>
+                                                    <option>湘</option>
+                                                    <option selected>粤</option>
+                                                    <option>桂</option>
+                                                    <option>琼</option>
+                                                    <option>渝</option>
+                                                    <option>川</option>
+                                                    <option>黔</option>
+                                                    <option>滇</option>
+                                                    <option>藏</option>
+                                                    <option>陕</option>
+                                                    <option>甘</option>
+                                                    <option>青</option>
+                                                    <option>宁</option>
+                                                    <option>新</option>
+                                                    <option>港</option>
+                                                    <option>澳</option>
+                                                    <option>台</option>
+                                                </select>
+                                                ）毕字第 <input type="tel" id="register_number" style="width:50%"/>号
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>上传报到证</td>
+                                            <td colspan="6"><input type="file" id="register_certificate" accept="image/png,image/jpeg,image/gif"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>就业情况</td>
+                                            <td colspan="6">
+                                                <select id="employment_situation">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="已就业">已就业</option>
+                                                    <option value="未就业" selected>未就业</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>就业性质</td>
+                                            <td>
+                                                <select id="employment_nature">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="政府机关">政府机关</option>
+                                                    <option value="事业单位">事业单位</option>
+                                                    <option value="国有企业">国有企业</option>
+                                                    <option value="私营企业">私营企业</option>
+                                                    <option value="外资企业">外资企业</option>
+                                                </select>
+                                            </td>
+                                            <td><span>*</span>单位名称</td>
+                                            <td colspan="4"><input type="text" id="employment_unit_name" placeholder="请输入您的就业单位名称"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>*</span>登记求职</td>
+                                            <td colspan="6">
+                                                <select id="job_wanted">
+                                                    <option value="请选择">请选择</option>
+                                                    <option value="是" selected>是</option>
+                                                    <option value="否">否</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        	<div class="register_confirm"><span>确认报到</span></div>
+						</div>
+                    </div>
+                    <!--打印回执-->
+                    <div class="print_receipt" style="display:none">
+                    	<div class="print_of_table">
+                        	<table id="print_table" width="700px" border="1">
+                                <tbody align="center">
+                                    <tr>
+                                        <td colspan="7"><h4><b>师范类毕业生报到登记信息表</b></h4></td>
+                                    </tr>
+                                    <tr>
+                                        <td>姓名</td>
+                                        <td>某某某</td>
+                                        <td colspan="2" width="100px">性别</td>
+                                        <td>男</td>
+                                        <td>民族</td>
+                                        <td>汉族</td>
+                                    </tr>
+                                    <tr>
+                                        <td>身份证</td>
+                                        <td colspan="3">012345678910111213</td>
+                                        <td>生源地</td>
+                                        <td colspan="2">广东省韶关市浈江区</td>
+                                    </tr>
+                                    <tr>
+                                        <td>毕业院校</td>
+                                        <td colspan="3">韶关学院</td>
+                                        <td>所学专业</td>
+                                        <td colspan="2">计算机应用</td>
+                                    </tr>
+                                    <tr>
+                                        <td>学制</td>
+                                        <td>4</td>
+                                        <td colspan="2">学历</td>
+                                        <td>本科</td>
+                                        <td>毕业时间</td>
+                                        <td>2016-06-24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>手机号码</td>
+                                        <td>18318337694</td>
+                                        <td>电子邮箱</td>
+                                        <td colspan="2">18318337694@16.com</td>
+                                        <td>个人微信</td>
+                                        <td>18318337694</td>
+                                    </tr>
+                                    <tr>
+                                        <td>家庭电话</td>
+                                        <td>0751-88888888</td>
+                                        <td>家庭地址</td>
+                                        <td colspan="4">广东省韶关市浈江区XXXXXX</td>
+                                    </tr>
+                                    <tr>
+                                        <td>是否双困</td>
+                                        <td colspan="6">否</td>
+                                    </tr>
+                                    <tr>
+                                        <td>报到证号</td>
+                                        <td colspan="6">（2017 粤）毕字第 0123456789 号
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>上传报到证</td>
+                                        <td colspan="6"><img src=""  width="100%" height="250px"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>就业情况</td>
+                                        <td colspan="6">未就业</td>
+                                    </tr>
+                                    <tr>
+                                        <td>就业性质</td>
+                                        <td></td>
+                                        <td>单位名称</td>
+                                        <td colspan="4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>登记求职</td>
+                                        <td colspan="6">是</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="print_btn" align="center">
+                                <div class="to_print"><span>打印</span></div>
+                                <div class="ok"><span>确定</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    	$(".next_btn").click(function(){
+			var box_checked = $("#agree_rull").is(':checked');
+			if(box_checked == true){
+				//下一步
+				$(".notice_of_registration").attr("style","display:none");
+				$(".register_ol").attr("style","display:block");
+			}else{
+				alert("请仔细阅读以上内容并同意遵守！");
+			}
+			//
+			var theheight = window.innerHeight;
+			var footerdiv = $(".footer");
+			var nonediv = $("#nonediv");
+			try{
+				nonediv.remove();
+			}catch(e){
+				
+			}
+			var content_height2 = $(".form_of_register").height();
+			var dis_height2 = $(".form_of_register").attr("dispaly");
+			if(content_height2 <= 400 && dis_height2 != "none"){
+				if(theheight>890){
+					var nheight = theheight - 890;
+					footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nheight+"px;'></div>");
+				}else{
+					
+				}
+			}else{
+				var nc_height = content_height2 - 400;
+				footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nc_height+"px;'></div>");
+			}
+		});
+		
+		
+		$(".register_confirm").click(function(){
+			var student_name = $("#register_name").val();//姓名
+			var student_sex = $("#register_sex").val();//性别
+			var student_nations = $("#register_nations").val();//民族
+			var student_id = $("#register_id").val();//身份证
+			var student_source = $("#register_source").val();//生源地
+			var student_school = $("#register_school").val();//毕业学校
+			var student_speciality = $("#register_speciality").val();//所学专业
+			var student_system = $("#register_system").val();//学制
+			var student_education = $("#register_education").val();//学历
+			var student_time = $("#register_time").val();//毕业时间
+			var student_phone = $("#register_phone").val();//手机号
+			var student_email = $("#register_email").val();//邮箱
+			var student_wechat = $("#register_wechat").val();//微信
+			var student_tel = $("#register_tel").val();//家庭电话
+			var student_address = $("#register_address").val();//家庭地址
+			var student_impoverished = $("#register_impoverished").val();//是否双困
+			var student_year = $("#register_year").val();//报到证年
+			var student_province = $("#register_province").val();//报到证省
+			var student_number = $("#register_number").val();//报到证号
+			var student_certificate = $("#register_certificate").val();//报到证图片
+			var student_situation = $("#employment_situation").val();//就业情况
+			var student_nature = $("#employment_nature").val();//就业性质
+			var student_unit_name = $("#employment_unit_name").val();//单位名称
+			var student_job = $("#job_wanted").val();//是否登记求职
+			var checkpic = /^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpg|.JPG|.gif|.GIF|.png|.PNG|.jpeg|.JPEG)$/;
+				
+			if(student_name != "" && student_name.length > 1){
+				if(student_sex == "男" || student_sex == "女"){
+					if((student_nations == "汉族" || student_nations == "少数民族") && student_nations != "请选择"){
+						if(student_id != "" && student_id.length > 0 && student_id.length == 18){
+							if(student_source != "" && student_source.length >= 2){
+								if(student_school != "" && student_school.length >= 4){
+									if(student_speciality != "" && student_speciality.length >=2){
+										if(student_system != "请选择"){
+											if(student_education != "请选择"){
+												if(student_time != ""){
+													if(student_phone != "" && student_phone.length == 11){
+														if(student_email != "" && student_email.length >= 5){
+															if(student_tel != "" && student_tel.length <= 13){
+																if(student_address != "" && student_address.length >= 8){
+																	if(student_impoverished != "请选择"){
+																		if(student_year != "请选择"){
+																			if(student_province != "请选择"){
+																				if(student_number != "" && student_number.length >= 6){
+																					if(student_certificate != "" && checkpic.test(student_certificate) == true){
+																						if(student_situation !="请选择"){
+																							if(student_situation =="未就业"){
+																								if(student_job != "请选择"){
+																									//未就业审核通过
+																									var log_off = confirm("已确认以上信息无误？确定提交报到？");
+																									if(log_off == true){ 
+																										//执行提交操作
+																										
+																										
+																										
+																										
+																										//跳转至打印回执
+																										var theheight = window.innerHeight;
+																										var footerdiv = $(".footer");
+																										var nonediv = $("#nonediv");
+																										try{
+																											nonediv.remove();
+																										}catch(e){
+																											
+																										}
+																										var content_height3 = $(".print_receipt").height();
+																										var dis_height3 = $(".print_receipt").attr("dispaly");
+																										$(".register_ol").attr("style","display:none");
+																										$(".print_receipt").attr("style","display:block");
+																										if(content_height3 <= 400){
+																											if(theheight>890){
+																												var nheight = theheight - 890;
+																												footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nheight+"px;'></div>");
+																											}else{
+																												
+																											}
+																										}else{
+																											var nc_height = content_height3 - 400;
+																											footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nc_height+"px;'></div>");
+																										}
+																									}else{
+																										return false;
+																									}
+																								}else{
+																									alert("请选择是否登记求职");
+																									return false;
+																								}
+																							}else if(student_nature != "请选择"){
+																								if(student_unit_name != "" && student_unit_name.length >= 2){
+																									if(student_job != "请选择"){
+																										//已就业审核通过
+																										var log_off = confirm("已确认以上信息无误？确定提交报到？");
+																										if(log_off == true){ 
+																											//执行提交操作
+																											
+																											
+																											
+																											//跳转至打印回执
+																											var theheight = window.innerHeight;
+																											var footerdiv = $(".footer");
+																											var nonediv = $("#nonediv");
+																											try{
+																												nonediv.remove();
+																											}catch(e){
+																												
+																											}
+																											var content_height3 = $(".print_receipt").height();
+																											var dis_height3 = $(".print_receipt").attr("dispaly");
+																											$(".register_ol").attr("style","display:none");
+																											$(".print_receipt").attr("style","display:block");
+																											if(content_height3 <= 400 && dis_height3 != "none"){
+																												if(theheight>890){
+																													var nheight = theheight - 890;
+																													footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nheight+"px;'></div>");
+																												}else{
+																													
+																												}
+																											}else{
+																												var nc_height = content_height3 - 400;
+																												footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nc_height+"px;'></div>");
+																											}
+																										}else{
+																											return false;
+																										}
+																									}else{
+																										alert("请选择是否登记求职");
+																										return false;
+																									}
+																								}else{
+																									alert("请填写正确的就业单位名称");
+																									return false;
+																								}
+																							}else{
+																								alert("请选择您的就业性质");
+																								return false;
+																							}
+																						}else{
+																							alert("请选择您的就业情况");
+																							return false;
+																						}
+																					}else{
+																						alert("请选择需上传的报到证图片，仅支持png,jpg,gif格式");
+																						return false;
+																					}
+																				}else{
+																					alert("请根据报到证号填写报到证号码");
+																					return false;
+																				}
+																			}else{
+																				alert("请根据报到证上省份选择省份");
+																				return false;
+																			}
+																		}else{
+																			alert("请根据报到证上年份选择年份");
+																			return false;
+																		}
+																	}else{
+																		alert("请选择是否为双困");
+																		return false;
+																	}
+																}else{
+																	alert("请填写完整的家庭地址");
+																	return false;
+																}
+															}else{
+																alert("请填写正确的家庭电话");
+																return false;
+															}
+														}else{
+															alert("请填写正确的电子邮箱");
+															return false;
+														}
+													}else{
+														alert("请填写正确的手机号码");
+														return false;
+													}
+												}else{
+													alert("请填写完整的毕业时间(YYYY-MM-DD)");
+													return false;
+												}
+											}else{
+												alert("请选择正确的学历");
+												return false;
+											}
+										}else{
+											alert("请选择正确的学制");
+											return false;
+										}
+									}else{
+										alert("请填写完整的所学专业");
+										return false;
+									}
+								}else{
+									alert("请填写完整的毕业院校");
+									return false;
+								}
+							}else{
+								alert("请填写完整的生源地");
+								return false;
+							}
+						}else{
+							alert("请填写完整的身份证号码");
+							return false;
+						}
+					}else{
+						alert("请选择民族");
+						return false;
+					}
+				}else{
+					alert("请选择性别");
+					return false;
+				}
+			}else{
+				alert("请填写完整的姓名");
+				return false;
+			}
+		});
+		
+		$(".to_print").click(function(){
+			
+		});
+		
+		$(".ok").click(function(){
+			$("#register_name").val("");
+			$("#register_sex").val("请选择");
+			$("#register_nations").val("汉族");
+			$("#register_id").val("");
+			$("#register_source").val("");
+			$("#register_school").val("");
+			$("#register_speciality").val("");
+			$("#register_system").val("请选择");
+			$("#register_education").val("请选择");
+			$("#register_time").val("");
+			$("#register_phone").val("");
+			$("#register_email").val("");
+			$("#register_wechat").val("");
+			$("#register_tel").val("");
+			$("#register_address").val("");
+			$("#register_impoverished").val("否");
+			$("#register_year").val("2017");
+			$("#register_province").val("粤");
+			$("#register_number").val("");
+			$("#register_certificate").val("");
+			$("#register_certificate").outerHTML=$("#register_certificate").outerHTML.replace(/(value=\").+\"/i,"$1\""); 
+			$("#employment_situation").val("未就业");
+			$("#employment_nature").val("请选择");
+			$("#employment_unit_name").val("");
+			$("#job_wanted").val("是");
+			$("#agree_rull").prop("checked",false);
+			
+			$(".print_receipt").attr("style","display:none");
+			$(".notice_of_registration").attr("style","display:block");
+			var theheight = window.innerHeight;
+			var footerdiv = $(".footer");
+			var nonediv = $("#nonediv");
+			try{
+				nonediv.remove();
+			}
+			catch(e){
+				
+			}
+			var content_height = $(".actual_content").height();
+			var dis_height = $(".actual_content").attr("dispaly");
+			if(content_height <= 400 && dis_height != "none"){
+				if(theheight>890){
+					var nheight = theheight - 890;
+					footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nheight+"px;'></div>");
+				}else{
+					
+				}
+			}else{
+				var nc_height = content_height - 400;
+				footerdiv.before("<div id='nonediv' style='width:100%;border:0;height:"+nc_height+"px;'></div>");
+			}
+		});
+    </script>
+    <!--报到页结束-->
+    
+    <!--footer页开始-->
+	<div class="footer" align="center">
+        <div class="bottom">
+        	<div class="bottom_all">
+            	<!--联系方式开始-->
+            	<div class="contact">
+                	<div class="contact_all" align="left">
+                    	<div class="address"><span>地址：广东省韶关市浈江区大学路228号</span></div><!--地址-->
+                        <div class="phone"><span>电话：0751-88888888</span><span>邮编：512000</span></div><!--电话&邮编-->
+                        <div class="email"><span>邮箱：shaoguanuniversity@edu.com</span></div><!--邮箱-->
+                    </div>
+                </div>
+                <!--联系方式结束-->
+                
+                <!--校徽开始-->
+                <div class="the_badge" align="center">
+                	<div class="school_badge"></div><!--韶关学院 116x120 -->
+                </div>
+                <!--校徽结束-->
+                
+                <!--二维码开始-->
+                <div class="qr_code"  align="center">
+                	<div class="qr_code_all"><!--官方微信微博定宽容器-->
+                    	<div class="wechat"><!--微信容器-->
+                        	<div class="wechat_qr_code"></div><!--官方微信二维码 90x90 -->
+                            <div class="official_wechat">
+                            	<div class="wechat_icon"></div><!--微信图标 20x20 -->
+                                <div class="wechat_word"><span>官方微信</span></div><!--官方微信-->
+                            </div>
+                        </div>
+                        <div class="microblog"><!--微博容器-->
+                        	<div class="microblog_qr_code"></div><!--官方微博二维码 90x90 -->
+                            <div class="official_microblog">
+                            	<div class="sina_icon"></div><!--新浪微博图标 20x20 -->
+                                <div class="sina_word"><span>官方微博</span></div><!--官方微博-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--二维码结束-->
+                
+            </div>
+        </div><!--底层-->
+        <div class="copy">
+        	<div class="copy_all">
+            	<div class="friendly_link">
+                	<span>友情链接：</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院校园网">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院数字图书馆">韶关学院数字图书馆</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院继续教育学院">韶关学院继续教育学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院网络中心">韶关学院网络中心</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                </div>
+            	<div class="copyright">
+                	<span>版权所有</span>&copy;<span>韶关学院教师发展中心</span>
+                </div>
+            </div>
+        </div><!--copy层-->
+    </div>
+	<!--footer页结束-->
+</body>
+</html>

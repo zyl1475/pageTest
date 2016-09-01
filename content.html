@@ -1,0 +1,556 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" http-equiv="content-type" content="text/html"/>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>韶关学院省级教师发展中心</title>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<style>
+body{
+	width:100%;
+	margin:0px 0px 0px 0px;
+	font-family: Arial , "Microsoft Yahei UI" , "微软雅黑" , "Microsoft Yahei";
+}
+.page{
+	width:100%;
+}
+.thousand{
+	width:1000px;
+}
+.flexslider {
+	margin-top:-17px;
+	width: 100%;
+	height: 460px;
+	zoom: 1;
+}
+
+.flexslider .slides li {
+	width: 100%;
+	height: 100%;
+	margin-top:-18px;
+}
+
+.flex-direction-nav a {
+	width: 100%;
+	height: 50px;
+	background: url(images/ad_ctr.png) no-repeat;
+	-webkit-transition: all .5s ease;
+}
+
+.flex-control-nav {
+	width:100%;
+	position: absolute;
+	bottom: 0px;
+	text-align:center;
+}
+
+.flex-control-nav li {
+	margin: 0 2px;
+	display: inline-block;
+}
+
+.flex-control-paging li a {
+	background: url(images/dot.png) no-repeat 0 -16px;
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+	background-position: 0 0;
+}
+
+.flexslider .slides a img {
+	width: 1000px;
+	height: 460px;
+	display: block;
+}
+</style>
+</head>
+
+<body>
+	<div class="page" align="center">
+    <div class="thousand">
+	<!--图片轮播开始-->
+	<div id="banner_tabs" class="flexslider" align="center">
+	<ul class="slides">
+		<li>
+			<a title="" href="#">
+				<img alt="" style="background: url(images/banner1.jpg) no-repeat center;">
+			</a>
+		</li>
+		<li>
+			<a title="" href="#">
+				<img alt="" style="background: url(images/banner2.jpg) no-repeat center;">
+			</a>
+		</li>
+		<li>
+			<a title="" href="#">
+				<img alt="" style="background: url(images/banner3.jpg) no-repeat center;">
+			</a>
+		</li>
+        <li>
+			<a title="" href="#">
+				<img alt="" style="background: url(images/banner3.jpg) no-repeat center;">
+			</a>
+		</li>
+	</ul>
+    <div style="width:1000px; height:50px; background-color:rgba(0,0,0,0.65); position: relative; bottom:0 ;top:399px;">
+    
+    	<div style="width:1000px; height:50px; line-height:50px;" align="left">
+        	<ol style="list-style:none; color:#FFF; font-family:'楷体'; font-size:28px; margin-left:-20px">
+            	<li>复制粘贴复制粘贴复制粘贴复制粘贴复制粘贴复制粘贴</li>
+            </ol>
+        </div>
+        <div style="width:200px; height:50px;">
+    	<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            <li><a></a></li>
+            <li><a></a></li>
+            <li><a></a></li>
+            <li><a></a></li>
+        </ol>
+        </div>
+	</div>
+	
+</div>
+<script src="js/slider.js"></script>
+<script type="text/javascript">
+$(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+})
+</script>
+    <!--图片轮播结束-->
+    
+    <div>
+    <style>
+	.lefts,.rights{
+		height:25px;
+		border-bottom:solid 2px #2E93D5;
+	}
+	.lefts{
+		width:628px;
+		float:left;
+	}
+	.rights{
+		width:363px;
+		float:right;
+	}
+	.titles_left{
+		float:left;
+		margin-top:-5px;
+	}
+	.more_right{
+		float:right;
+		margin-right:10px;
+		font-size:15px;
+	}
+		.titles{
+			color:#000000;
+			font-family:'楷体';
+			font-size:24px;
+			margin:0 5px 0 10px;
+		}
+    	.english{
+			color:#2E93D5;
+			font-family:'Georgia';
+			font-size:larger;
+		}
+		.news_left{
+			width:608px;
+			height:204px;
+		}
+		.news_right{
+			width:343px;
+			height:204px;
+		}
+		.data{
+			color:#2E93D5;
+			font-family:'Georgia';
+			font-size:22px;
+		}
+		.year{
+			font-size:large;
+		}
+		.line{
+			border-left:1px solid #777777; 
+			height:26px;
+		}
+		.none_line{
+			border:0;
+			height:26px;
+		}
+    </style>
+    	<!--通知公告开始-->
+        <div style="width:1000px; height:210px;">
+    	<div class="lefts">
+            <div class="lefts">
+                <div class="titles_left"><span class="titles">通知公告</span><span class="english">Info</span></div>
+                <div class="more_right"><span><a>更多</a></span></div>
+            </div>
+            <div class="news_left" align="center">
+            	<table width="100%" border="0" cellpadding="2">
+                	<tbody align="left">
+                    	<tr>
+                        	<td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                            <td><div class="line">&nbsp;</div></td>
+                            <td><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></td>
+                        </tr>
+                        <tr>
+                        	<td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                            <td><div class="line">&nbsp;</div></td>
+                            <td><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></td>
+                        </tr>
+                        <tr>
+                        	<td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                            <td><div class="line">&nbsp;</div></td>
+                            <td><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></td>
+                        </tr>
+                        <tr>
+                        	<td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                            <td><div class="line">&nbsp;</div></td>
+                            <td><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></td>
+                        </tr>
+                        <tr>
+                        	<td width="107px"><span class="data">07-29.<span class="year">2016</span></span></td>
+                            <td><div class="line">&nbsp;</div></td>
+                            <td><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--通知公告结束-->
+        
+        <!--招生培训开始-->
+        <div class="rights">
+        	<div class="rights">
+                <div class="titles_left"><span class="titles">招生培训</span><span class="english">Training</span></div>
+                <div class="more_right"><span>更多</span></div>
+            </div>
+            <div class="news_right" align="center">
+            	<table width="100%" border="0" cellpadding="2">
+                	<tbody>
+                    	<tr>
+                        	<td><div class="none_line"><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></div></td>
+                        </tr>
+                        <tr>
+                        	<td><div class="none_line"><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></div></td>
+                        </tr>
+                        <tr>
+                        	<td><div class="none_line"><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></div></td>
+                        </tr>
+                        <tr>
+                        	<td><div class="none_line"><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></div></td>
+                        </tr>
+                        <tr>
+                        	<td><div class="none_line"><span><a>关于“国培计划”（2016）---省级示范性工作</a></span></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--招生培训结束-->
+    </div>
+    </div>
+    <!--管理服务开始-->
+    <div>
+        <div>
+        	<div class="titles_left">管理服务</div>
+        	<div class="more_right">更多</div>
+        </div>
+        <div>
+        	<div>
+            	<div></div>
+                <div>信息管理</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>继续教育</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>网络教学</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>培训管理</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>办公OA</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>毕业报到</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>数字图书馆</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>教学资源</div>
+            </div>
+            <div>
+            	<div></div>
+                <div>教学日历</div>
+            </div>
+        </div>
+    </div>
+    <!--管理服务结束-->
+    
+    <div>
+    	<!--教育动态-->
+    	<div>
+            <div>
+                <div><span class="titles">教育动态</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            	<table width="100%" border="0">
+                	<tbody align="left">
+                    	<tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--教育动态结束-->
+        
+        <!--培训课程开始-->
+        <div>
+        	<div>
+                <div><span class="titles">培训课程</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <!--培训课程结束-->
+    </div>
+    
+    <div>
+    	<!--图片轮播2-->
+        <div>
+        </div>
+    </div>
+    
+    <div>
+    	<!--教学管理-->
+    	<div>
+            <div>
+                <div><span class="titles">教学管理</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            	<table width="100%" border="0">
+                	<tbody align="left">
+                    	<tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--教学管理结束-->
+        
+        <!--备课平台开始-->
+        <div>
+        	<div>
+                <div><span class="titles">备课平台</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <!--备课平台结束-->
+    </div>
+    
+    <!--名师课堂-->
+    <div>
+    	<div>
+        	<div class="titles">名师课堂</div>
+            <div>更多</div>
+        </div>
+        <div>
+        	<!--视频分类-->
+            <div>语文</div>
+            <div>数学</div>
+            <div>英语</div>
+            <div>历史</div>
+            <div>政治</div>
+            <div>地理</div>
+            <div>化学</div>
+            <div>物理</div>
+            <div>生物</div>
+            <div>其他</div>
+        </div>
+        <div>
+        	<!--视频资源-->
+        </div>
+    </div>
+    
+    <div>
+    	<!--反思博客-->
+    	<div>
+            <div>
+                <div><span class="titles">反思博客</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            	<table width="100%" border="0">
+                	<tbody align="left">
+                    	<tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--反思博客结束-->
+        
+        <!--教师空间开始-->
+        <div>
+        	<div>
+                <div><span class="titles">教师空间</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <!--教师空间结束-->
+    </div>
+    
+    <div>
+    	<!--教学资源-->
+    	<div>
+            <div>
+                <div><span class="titles">教学资源</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            	<table width="100%" border="0">
+                	<tbody align="left">
+                    	<tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--教学资源结束-->
+        
+        <!--热点下载开始-->
+        <div>
+        	<div>
+                <div><span class="titles">热点下载</span></div>
+                <div><span>更多</span></div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <!--热点下载结束-->
+    </div>
+    </div>
+    </div>
+</body>
+</html>
