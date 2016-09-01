@@ -142,7 +142,7 @@ $(function(){
 	
 	
 	$("#bar_home").click(function(){
-		window.location.href='home.html';
+		window.location.href='https://htmlpreview.github.io/?https://raw.githubusercontent.com/zyl1475/pageTest/gh-pages/home.html';
 	});
 });
 
