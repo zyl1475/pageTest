@@ -6,7 +6,7 @@
 	max-width:4000px;
 	height:100%;
 	min-height:530px;
-	max-height:3000px;
+	max-height:auto;
 }
 .content_info{
 	width:1000px;
