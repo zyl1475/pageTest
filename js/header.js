@@ -138,6 +138,12 @@ $(function(){
 	}else {
 		remember.removeAttr("checked");
 	}
+	
+	
+	
+	$("#bar_home").click(function(){
+		window.location.href='home.html';
+	});
 });
 
 function showloginbox(){
@@ -206,3 +212,5 @@ function tosearch(){
 		return false;
 	}
 }
+
+
