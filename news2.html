@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shoricut icon" href="images/shaoguanuniversity.png"/>
+<meta charset="utf-8" http-equiv="content-type" content="text/html"/>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="description" content="韶关学院省级教师发展中心官方网站。韶关学院省级教师发展中心是韶关学院为教师自身发展倾力打造的交流与学习平台。" />
+<meta name="keywords" content="韶关学院,教师发展中心,韶关学院教师发展中心,韶关学院省级教师发展中心,省级教师发展中心,韶大,韶大教师发展中心,韶大教师发展,韶关教师发展中心,韶大发展中心,韶关学院发展中心" />
+<title>韶关学院省级教师发展中心 - 通知公告</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/header.css" rel="stylesheet" type="text/css" />
+<link href="css/info.css" rel="stylesheet" type="text/css" />
+<link href="css/footer.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/header.js" type="text/javascript"></script>
+<script src="js/footer.js" type="text/javascript"></script>
+<script>
+$(function(){
+	var ca =$("#central_announcement");
+	var pa =$("#personnel_announcement");
+	var ta =$("#teaching_announcement");
+	var oa =$("#office_announcement");
+	var ht = $(".head_tit");
+	var site = $("#site a");
+	ca.click(function() {
+    	ca.attr("style","background-color:#2E93D5;color:#FFFFFF;width:100%;height:40px;line-height:40px;");
+		pa.attr("style","");
+		ta.attr("style","");
+		oa.attr("style","");
+		ht.children("span").html("中心通告");
+		site.last().html("中心通告");
+	});
+	pa.click(function() {
+    	ca.attr("style","");
+		pa.attr("style","background-color:#2E93D5;color:#FFFFFF;width:100%;height:40px;line-height:40px;");
+		ta.attr("style","");
+		oa.attr("style","");
+		ht.children("span").html("人事通告");
+		site.last().html("人事通告");
+	});
+	ta.click(function() {
+    	ca.attr("style","");
+		pa.attr("style","");
+		ta.attr("style","background-color:#2E93D5;color:#FFFFFF;width:100%;height:40px;line-height:40px;");
+		oa.attr("style","");
+		ht.children("span").html("教学通告");
+		site.last().html("教学通告");
+	});
+	oa.click(function() {
+    	ca.attr("style","");
+		pa.attr("style","");
+		ta.attr("style","");
+		oa.attr("style","background-color:#2E93D5;color:#FFFFFF;width:100%;height:40px;line-height:40px;");
+		ht.children("span").html("办公通告");
+		site.last().html("办公通告");
+	});
+});
+
+</script>
+</head>
+
+<body>
+	<!--header页开始-->
+	<div class="header" align="center">
+    	<!--顶层-->
+    	<div class="top">
+        	<div class="top_all">
+            	<span class="top_left"><span id="datatime"></span><a href="" onClick="add_bookmarks();">加入收藏</a></span> <span class="top_right"><span id="login">用户登录</span></span>
+            </div>
+        </div>
+        
+        <!--底层-->
+        <div class="header_bottom">
+        	<div class="header_bottom_all">
+                <div class="center_ico"></div>
+                <div class="motto&search">
+                    <span class="motto"></span>
+                    <span class="search">
+                        <input id="search_bar" type="search" placeholder=" 请输入关键字">
+                        <button id="search_button" onClick="tosearch();"><img src="images/搜索白.png" width="15px" height="15px"/></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!--导航栏-->
+        <div id="bar">
+        	<div id="bar_home" class="bar_button">首页</div>
+            <div id="bar_center" class="bar_button">中心概况</div>
+            <div id="bar_continue" class="bar_button">继续教育</div>
+            <div id="bar_recruit" class="bar_button">招生就业</div>
+            <div id="bar_train" class="bar_button">在职培训</div>
+            <div id="bar_teach" class="bar_button">网络教学</div>
+            <div id="bar_resource" class="bar_button">教学资源</div>
+            <div id="bar_service" class="bar_button">管理服务</div>
+        </div>
+        
+        <!--登录框-->
+        <div class="header_login">
+            <div class="login_box" style="display:none" tabindex="0" hidefocus="true">
+            	<table width="100%" border="0" cellpadding="5" style="margin-top:10px; font-size:small">
+                	<tbody align="center">
+                    	<tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><input type="text" id="user" autofocus placeholder="请输入账号"/></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><input type="password" id="pass" placeholder="请输入密码"/></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2" style="padding:6px 5px 6px 5px !important"><div id="login_btn" tabindex="0" hidefocus="true">登录</div></td>
+                        </tr>
+                        <tr>
+                        	<td style="padding:8px 5px 4px 5px !important"><label><input type="checkbox" id="remember" onClick="checkbox(this);" title="记住账号密码一周免登陆"/>记住账号密码<label></td>
+                            <td align="left" style="padding:5px 5px 6px 5px !important"><a>忘记密码</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+	<!--header页结束-->
+    
+    <div class="content" align="center">
+        <div class="content_info">
+        	<div class="line"></div>
+            <div class="news_body">
+                <span class="new_body_tit">2016年“省培计划”——中小学教师信息技术应用能力提升工程培训圆满结束</span><br/>
+                日期：<span class="news_date">2016-07-08 </span> &nbsp; &nbsp;作者：<span class="news_writer">某某某</span><br>
+                <br>
+                <div class="content_line"></div>
+                <div id="new_body_content" align="left">
+                <p> &nbsp; &nbsp; &nbsp; &nbsp;2016年7月5日至8日，我省2016年“省培计划”——中小学教师信息技术应用能力提升工程管理者高级研修班在长沙举办。全省各市州、县市区140余名信息技术应用能力提升工程培训和发展测评工作负责人以及部分能力提升工程网络研修承办机构负责人参加了此次培训。</p>
+                <img src="images/20160712111041_124488_2016071205.jpg" width="100%" height="100%"/>
+                <p align="center">培训现场照片</p>
+                <p> &nbsp; &nbsp; &nbsp; &nbsp;本次培训内容丰富。省教育厅教师工作与师范教育处副处长王俊良作了重要讲话，论述了开展信息技术应用能力提升工程的必要性；湖南省中小学教师发展中心主任贾腊生就十三五教师培训工作要点思考做了专题报告；湖南省电化教育馆馆长杨颖总结了2014-2015年度我省能力提升工程种子教师研修工作，并对2016年度能力提升工程种子教师研修集中培训工作提出了新的要求；省工程办、湖南省中小学教师发展中心信息技术科科长杨予平对我省能力提升工程培训情况做了总结，并对下半年的工作进行了部署；省工程办刘宁老师对我省能力提升工程全员培训实施流程做了详细说明；省工程办王觅老师讲解了我省信息技术应用能力发展测评系统操作流程；华中师范大学吴砥教授对十三五教育信息化发展趋势与信息技术应用能力提升需求进行了分析；最后，湘西州代表谢文斌、长沙市代表胡续伯、岳阳市代表肖裔、衡阳常宁市代表张羽、邵阳邵东县代表曾可爱等就信息技术应用能力提升工程实施与管理经验进行了交流与研讨。</p>
+				<p> &nbsp; &nbsp; &nbsp; &nbsp;经过两天的紧张培训，研修班取得了预期效果，于7月8日圆满结束。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+	.line{
+		width:100%;
+		background-color:#2E93D5;
+		height:3px;
+		border:0;
+		margin-bottom:20px;
+	}
+    	.sidebar_left,.content_right{
+			height:50px;
+		}
+		.news_body{
+			margin-top:3px;
+			width:800px;
+			height:auto;
+		}
+		.new_body_tit{
+			text-align:center;
+			font-size:22px;
+		}
+		.content_line{
+			width:100%;
+			background-color:#CCCCCC;
+			height:1px;
+			border:0;
+			margin-bottom:20px;
+		}
+		#new_body_content{
+			font-size:medium;
+		}
+    </style>
+
+	<!--footer页开始-->
+	<div class="footer" align="center">
+        <div class="bottom">
+        	<div class="bottom_all">
+            	<!--联系方式开始-->
+            	<div class="contact">
+                	<div class="contact_all" align="left">
+                    	<div class="address"><span>地址：广东省韶关市浈江区大学路228号</span></div><!--地址-->
+                        <div class="phone"><span>电话：0751-88888888</span><span>邮编：512000</span></div><!--电话&邮编-->
+                        <div class="email"><span>邮箱：shaoguanuniversity@edu.com</span></div><!--邮箱-->
+                    </div>
+                </div>
+                <!--联系方式结束-->
+                
+                <!--校徽开始-->
+                <div class="the_badge" align="center">
+                	<div class="school_badge"></div><!--韶关学院 116x120 -->
+                </div>
+                <!--校徽结束-->
+                
+                <!--二维码开始-->
+                <div class="qr_code"  align="center">
+                	<div class="qr_code_all"><!--官方微信微博定宽容器-->
+                    	<div class="wechat"><!--微信容器-->
+                        	<div class="wechat_qr_code"></div><!--官方微信二维码 90x90 -->
+                            <div class="official_wechat">
+                            	<div class="wechat_icon"></div><!--微信图标 20x20 -->
+                                <div class="wechat_word"><span>官方微信</span></div><!--官方微信-->
+                            </div>
+                        </div>
+                        <div class="microblog"><!--微博容器-->
+                        	<div class="microblog_qr_code"></div><!--官方微博二维码 90x90 -->
+                            <div class="official_microblog">
+                            	<div class="sina_icon"></div><!--新浪微博图标 20x20 -->
+                                <div class="sina_word"><span>官方微博</span></div><!--官方微博-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--二维码结束-->
+                
+            </div>
+        </div><!--底层-->
+        <div class="copy">
+        	<div class="copy_all">
+            	<div class="friendly_link">
+                	<span>友情链接：</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院校园网">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院数字图书馆">韶关学院数字图书馆</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院继续教育学院">韶关学院继续教育学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院网络中心">韶关学院网络中心</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                    <a href="#" rel="external" target="_blank" title="韶关学院">韶关学院</a>&nbsp;<span>/</span>
+                </div>
+            	<div class="copyright">
+                	<span>版权所有</span>&copy;<span>韶关学院教师发展中心</span>
+                </div>
+            </div>
+        </div><!--copy层-->
+    </div>
+	<!--footer页结束-->
+</body>
+</html>
