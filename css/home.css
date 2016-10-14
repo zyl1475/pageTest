@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+a{
+	cursor:default;	
+}
 .page a:link {
 	text-decoration: none;
 	color:#000000;
@@ -196,7 +199,7 @@
 	margin:13px 10px -3px 10px;
 }
 .video_pic{
-	width:100%;
+	width:166px;/*176*/
 	height:110px;
 	border:1px solid #CCCCCC;
 }
@@ -231,7 +234,6 @@
 	width:100%;
 	height:201px;
 }
-
 #myCarousel img{
 	width:1000px;
 	height:450px;
@@ -264,6 +266,7 @@
 	display:block;
 	line-height:30px;
 	margin-top:-10px;
+	cursor:default;
 }
 @media screen and (max-width:768px){
 	.carousel-caption{
@@ -287,6 +290,7 @@
 	top:25%;
 	color:#FFFFFF;
 	margin-top:40px;
+	border: solid 1px #CBCBCB;
 }
 .frame_btn{
 	background-color:#2E93D5;
@@ -294,13 +298,15 @@
 	height:35px;
 	line-height:35px;
 	margin:0 0 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor:default;
 }
 .frame_btn:hover{
-	width:100%;
-	height:35px;
 	background-color:rgba(225,225,225,0.3);
 	color:#2E93D5;
-	line-height:35px;
 	font-weight:bold;
 	margin:2px 0 2px 0;
 	transition:all 0.5s linear;

@@ -1,23 +1,22 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-	width:100%;
 	margin:0px 0px 0px 0px;
 	font-family: Arial , "微软雅黑", "Microsoft Yahei", "Microsoft Yahei UI";
 }
-a:link {
+.top_all a:link {
 	text-decoration: none;
 	color:#FFFFFF;
 }
-a:hover{
+.top_all a:hover{
 	text-decoration: underline;
 	color:#2E93D5;
 }
-a:visited {
+.top_all a:visited {
 	text-decoration: none;
 	color:#FFFFFF;
 }
-a:active {
+.top_all a:active {
 	text-decoration: none;
 	color:#2E93D5;
 }
@@ -55,7 +54,11 @@ a:active {
 	background-color:#2E93D5;
 }
 #login{
-	
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor:default;
 }
 .header_bottom_all{
 	width:1000px;
@@ -89,59 +92,13 @@ a:active {
 	height:22px;
 	border:1px solid #C1C1C1;
 	border-radius:10px;
-	margin-right:-36px;
+	margin-right:-20px;
 }
 #search_button{
-	border:1px solid #CCCCCC;
-	border-radius:0 10px 10px 0;
-	height:25px;
-	width:33px;
-	background-color:#2E93D5;
-}
-#bar{
-	width:1000px;
-	height:38px;/*38px*/
-	font-family: "楷体", "微软雅黑", "Microsoft Yahei", "Microsoft Yahei UI", Arial;
-}
-.bar_button{
-	float:left;
-	height:38px;
-	width:125px;
-	font-size:22px;
-	line-height:38px;
-	list-style:none;
-	box-sizing:content-box;
-}
-.bar_button:hover{
-	float:left;
-	height:36px;
-	width:123px;
-	font-size:22px;
-	line-height:38px;
-	background-color:#2E93D5;
-	color:#FFFFFF;
-	border:solid 1px #FFFFFF;
-}
-.bar_button:active{
-	float:left;
-	height:36px;
-	width:123px;
-	font-size:22px;
-	line-height:38px;
-	background-color:#2E81F5;
-	color:#FFFFFF;
-	border:solid 1px #FFFFFF;
-	margin:1px -1px -1px 1px;
-}
-.bar_btn_child{
-	background-image:url(../images/图书馆.png);
-	background-size: auto;
-	background-repeat:no-repeat;
-	background-position:right;
-	width:1000px;
-	height:180px;
-	background-color:#FFFFFF;
-	border:1px solid #CDCDCD;
+	margin:3px 4px -3px -4px;
+	width:16px;
+	height:16px;
+	outline:none;
 }
 /*登录*/
 .header_login{
@@ -227,32 +184,166 @@ a:active {
 	font-size:22px;
 	font-family:'楷体';
 	border:1px solid #2E91D5;
+	user-select: none;
 	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor:default;
 }
 #login_btn:hover{
-	width:180px;
-	height:28px;
-	line-height:28px;
 	background-color:#2E89D5;
-	color:#FFFFFF;
-	border-radius:4px;
-	font-size:22px;
-	font-family:'楷体';
-	-webkit-user-select: none;
 }
 #login_btn:active{
-	width:180px;
-	height:28px;
-	line-height:28px;
 	background-color:#2E93D5;
 	color:#DDDDDD;
-	border-radius:4px;
-	font-size:22px;
-	font-family:'楷体';
-	-webkit-user-select: none;
 	margin:1px -1px -1px 1px;
 }
 #remember{
 	vertical-align:middle;
 	margin-top:0px;
+}
+.forget{
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor:default;
+}
+/*导航*/
+@media screen and (min-width:1280px){
+	#mobile_nav{
+		display:none;
+	}
+}
+.mainNav {
+	font-family: "楷体", "微软雅黑", "Microsoft Yahei", "Microsoft Yahei UI", Arial;
+	width:1000px;
+    height: 37px;
+    line-height: 37px;
+    background-color:#ffffff;
+	text-align:center;
+	margin:0 auto;
+}
+.mainNav .nav {
+	width:1000px;
+}
+.mainNav ul li { 
+	float:left; 
+	position: relative ;
+	width:125px;
+	font-size:22px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor:default;
+}
+.nav li:hover{
+	height:36px;
+	margin-top:1px;
+	background-color:#2E93D5;
+	color:#FFFFFF;
+}
+.mainNav ul li a { 
+	display:block;
+	padding:0 8px; 
+	color:#000000;
+	font-size:22px;
+}
+.mainNav ul li a:hover { 
+	background:none; 
+}
+/* 二级菜单 */
+.jnNav2,.jnNav3,.jnNav4,.jnNav5,.jnNav6,.jnNav7,.jnNav8{
+	background:#FFFFFF;
+    border: 1px solid #B1B1B1;
+	border-top:0;
+    overflow: hidden;
+    position: absolute;
+    top: 37px;
+    width: 1000px;
+    z-index: 1000;
+    height:188px;
+	display:none;
+}
+.jnNav2 {
+    left: -125px;
+}
+.jnNav2 .subitem,.jnNav3 .subitem,.jnNav4 .subitem,.jnNav5 .subitem,.jnNav6 .subitem,.jnNav7 .subitem,.jnNav8 .subitem{
+    float: left;
+    height: auto !important;
+    min-height: 187px;
+    padding: 10px 12px;
+    width: 450px;
+}
+.jnNav2 .subitem dl,.jnNav3 .subitem dl,.jnNav4 .subitem dl,.jnNav5 .subitem dl,.jnNav6 .subitem dl,.jnNav7 .subitem dl,.jnNav8 .subitem dl {
+    border-top: 1px dashed #C4C4C4;
+    overflow: hidden;
+    padding: 8px 0;
+	float:left;
+}
+.jnNav2 .subitem .fore,.jnNav3 .subitem .fore,.jnNav4 .subitem .fore,.jnNav5 .subitem .fore,.jnNav6 .subitem .fore,.jnNav7 .subitem .fore,.jnNav8 .subitem .fore {
+    border-top-style: none;
+    padding-top: 0;
+}
+.jnNav2 .subitem dt,.jnNav3 .subitem dt,.jnNav4 .subitem dt,.jnNav5 .subitem dt,.jnNav6 .subitem dt,.jnNav7 .subitem dt,.jnNav8 .subitem dt {
+    float: left;
+    font-weight: bold;
+    line-height: 16px;
+    padding:0;
+    text-align: center;
+    width:100px;
+	font-size:18px;
+	color:#09F;
+}
+.jnNav2 .subitem dd,.jnNav3 .subitem dd,.jnNav4 .subitem dd,.jnNav5 .subitem dd,.jnNav6 .subitem dd,.jnNav7 .subitem dd,.jnNav8 .subitem dd {
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    width: 553px;
+}
+.jnNav2 .subitem em,.jnNav3 .subitem em,.jnNav4 .subitem em,.jnNav5 .subitem em,.jnNav6 .subitem em,.jnNav7 .subitem em,.jnNav8 .subitem em {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-style: normal;
+    height: 16px;
+    line-height: 14px;
+    margin: 5px 0;
+    padding: 0 8px;
+}
+.jnNav2 .subitem em a,.jnNav3 .subitem em a,.jnNav4 .subitem em a,.jnNav5 .subitem em a,.jnNav6 .subitem em a,.jnNav7 .subitem em a,.jnNav8 .subitem em a {
+    color: #666666;
+    white-space: nowrap;
+	font-size:17px;
+	font-weight:600;
+	padding:5px;
+}
+.jnNav2 .subitem em.noborder,.jnNav3 .subitem em.noborder,.jnNav4 .subitem em.noborder,.jnNav5 .subitem em.noborder,.jnNav6 .subitem em.noborder,.jnNav7 .subitem em.noborder,.jnNav8 .subitem em.noborder {
+    border-right: 0 none;
+}
+.jnNav3 {
+    left: -250px;
+}
+.jnNav4 {
+    left: -375px;
+}
+.jnNav5 {
+    left: -500px;
+}
+.jnNav6 {
+    left: -625px;
+}
+.jnNav7 {
+    left: -750px;
+}
+.jnNav8 {
+    left: -875px;
+}
+.nav_pic{
+	float:right;
+	margin-top:20px;
+}
+.nav_pic img{
+	width:400px;
+	height:146px;
 }
